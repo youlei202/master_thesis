@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  13 AUG 2014 17:32
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  13 AUG 2014 22:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1936,38 +1936,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15]
 
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 209.
-
-
-LaTeX Font Warning: Font shape `U/wasy/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 209.
-
-
-LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 209.
-
-
-LaTeX Font Warning: Font shape `U/bbold/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 209.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 209.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
-
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.9099pt.
  We now make it that large for the rest of the document.
@@ -1975,19 +1943,51 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [16]
 
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15.06> not available
+(Font)              size <14.4> substituted on input line 247.
+
+
+LaTeX Font Warning: Font shape `U/wasy/m/n' in size <15.06> not available
+(Font)              size <14.4> substituted on input line 247.
+
+
+LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.06> not available
+(Font)              size <14.4> substituted on input line 247.
+
+
+LaTeX Font Warning: Font shape `U/bbold/m/n' in size <15.06> not available
+(Font)              size <14.4> substituted on input line 247.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 247.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 247.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 247.
+
+)
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.84666pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [17]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
 \openout2 = `body/chapter04.aux'.
 
- (./body/chapter04.tex [18
-
-
-
-]
+ (./body/chapter04.tex
 第五章
 )
 
@@ -1996,7 +1996,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19]
+[19
+
+
+
+]
 \openout2 = `body/chapter05.aux'.
 
  (./body/chapter05.tex [20
@@ -2296,10 +2300,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 29007 strings out of 494004
- 553464 string characters out of 3150891
- 616699 words of memory out of 3000000
- 31557 multiletter control sequences out of 15000+200000
+ 29011 strings out of 494004
+ 553542 string characters out of 3150891
+ 616847 words of memory out of 3000000
+ 31561 multiletter control sequences out of 15000+200000
  69298 words of font info for 343 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  61i,26n,47p,881b,491s stack positions out of 5000i,500n,10000p,200000b,50000s

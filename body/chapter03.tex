@@ -199,9 +199,45 @@ $A(\{n_4\},[t_0,t_2])=\{a_2\}$ & $A(\{n_1,n_2,n_3\},[t_0,t_2])=\{a_1,a_2\}$ \\
 \subsection{路由相关的两个关键属性}
 \label{chap3:路由相关的两个关键属性}
 
-设节点集合$N$在时间区间$[t_0,t_0+t_l]$内的移动模式为$P(N,[t_0,t_0+t_l])$，目的节点$n_d$的移动
-
 \subsubsection{投递概率}
+
+设节点集合$N$在时间区间$[t_0,t_0+t_l]$内的移动模式为$P(N,[t_0,t_0+t_l])$，目的节点$n_d$的移动模式为$\mathcal{P}(n_d,[t_0,t_0+\tau_l])$，共同常访地点集合记为$A$，则有$A=A(N,[t_0,t_0+\tau_l])\cap A(n_d,[t_0,t_0+\tau_l])$。记任意地点$a_j$及任意节点$n_i\in N$满足节点$n_i$和$n_d$
+都在某一时间访问$a_j$。设随机变量$T_{i,j}$及$T_{d,j}$分别代表$n_i$和$n_d$到达$a_j$的时间，若要使消息能够成功传递，则须满足$T_{i,j}<T_{d,j}<\tau_l$，换言之，$n_i$须先于$n_d$到达$a_j$托管消息，且$n_d$需在消息到期之前到达$a_j$取出消息。为了便于讨论，设起始时间点$t_0=0$。此外，如\ref{chap3:系统模型及基本定义}节所述，任意节点访问任意地点的时间间隔服从指数分布。从公式\ref{eq:meeting_interval}可以计算出节点$n_i$访问地点$a_j$的指数分布参数$\lambda_{i,j}$，即
+
+\[
+\lambda_{i,j} = \sfrac{1}{M_{i,j}}
+\]
+
+对于$A$为空集的情形，默认其预测投递概率为0，到达其它地点的期望时延为$\infty$。对于$A$非空的情形，可依公式(\ref{eq:probability})预测节点$n_i$对$n_d$的投递率。进一步的，节点集$N$对$n_d$的投递率可依公式(\ref{eq:probability2})预测。
+\begin{multline}
+P_{i,d}=1-\prod_{a_j\in A}\left(1-P(T_{i,j}<T_{d,j}<\tau_l) \right) \\
+=1-\prod_{a_j\in A}\left(1-\int _{0}^{\tau _l}\!\!\!\!\int _{t_{i,j}}^{\tau _l}f_{T_{i,j},T_{d,j}}\left(t_{i,j},t_{d,j}\right)dt_{d,j}dt_{i,j}\right)\\
+=1-\prod_{a_j\in A}\left(1-\int _{0}^{\tau _l}\!\!\!\!\int _{t_{i,j}}^{\tau _l}f_{T_{i,j}}(t_{i,j})f_{T_{d,j}}(t_{d,j}) dt_{d,j}dt_{i,j}\right) \\
+=1-\prod_{a_j\in A}\left(1-\int _{0}^{\tau _l}\!\!\!\!\int _{t_{i,j}}^{\tau _l}\lambda _{d,j} \lambda _{i,j} e^{-\left(\lambda _{d,j}t_{d,j}+\lambda _{i,j}t_{i,j}\right)}dt_{d,j}dt_{i,j}\right)\\
+=1-\prod_{a_j\in A}\left(1-\frac{\lambda _{i,j} \left(1-e^{-\tau _l \left(\lambda _{d,j}+\lambda _{i,j}\right)}\right)}{\lambda _{d,j}+\lambda _{i,j}}
+-\left(e^{\tau _l \lambda _{i,j}}-1\right) e^{-\tau _l \left(\lambda _{d,j}+\lambda _{i,j}\right)}\right)
+\label{eq:probability}
+\end{multline}
+\begin{multline}
+P_{N,d}=1-\prod_{n_i\in N}(1-P_{i,d}) \\
+=1-\prod_{n_i\in N}\prod_{a_j\in A}\left(1-\frac{\lambda _{i,j} \left(1-e^{-\tau _l \left(\lambda _{d,j}+\lambda _{i,j}\right)}\right)}{\lambda _{d,j}+\lambda _{i,j}}
+-\left(e^{\tau _l \lambda _{i,j}}-1\right) e^{-\tau _l \left(\lambda _{d,j}+\lambda _{i,j}\right)}\right)
+\label{eq:probability2}
+\end{multline}
+特别而言，当消息生存时间设为无穷时，即$\tau_l=\infty$，有
+\begin{multline}
+P_{i,d} = 1-
+\prod_{a_j\in A}\left(1-\int _0^{\infty }\!\!\!\!\int _{t_{i,j}}^{\infty }\lambda _{d,j} \lambda _{i,j} e^{-\left(\lambda _{d,j} t_{d,j}+\lambda _{i,j} t_{i,j}\right)}dt_{d,j}dt_{i,j} \right)\\
+=1-\prod_{a_j\in A}\left(1-\frac{\lambda _{i,j}}{\lambda _{d,j}+\lambda _{i,j}}\right)
+\label{eq:probability_infty}
+\end{multline}
+对于$P_{N,d}$，有
+\begin{equation}
+P_{N,d} = 1-\prod_{n_i\in N}\prod_{a_j\in A}\left(1-\frac{\lambda _{i,j}}{\lambda _{d,j}+\lambda _{i,j}}\right) 
+=1-\prod_{n_i\in N}\prod_{a_j\in A}\frac{\lambda _{d,j}}{\lambda _{d,j}+\lambda _{i,j}}
+\label{eq:probability2_infty}
+\end{equation}
+
 
 \subsubsection{期望时延}
 

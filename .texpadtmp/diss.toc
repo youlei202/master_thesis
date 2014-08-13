@@ -20,21 +20,21 @@
 \contentsline {subsection}{\numberline {4.1.2}基本定义}{12}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}路由问题概览}{14}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}移动模式}{14}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}路由相关的两个关键属性}{17}{subsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.1}投递概率}{17}{subsubsection.4.2.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2.2}期望时延}{17}{subsubsection.4.2.2.2}
-\contentsline {subsection}{\numberline {4.2.3}路由问题形式化定义}{17}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}$N_{opt}$搜索问题分析}{17}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}计算复杂性证明}{17}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}局部陷阱}{17}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}基于禁忌搜索的求解方法}{17}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}最优化路由算法}{17}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Local-MPAR:基于局部搜索的路由算法}{17}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Tabu-MPAR:基于禁忌搜索的路由算法}{17}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}仿真实验}{17}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}自变量：消息生存时间}{17}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}自变量：节点缓存}{17}{subsection.4.5.2}
-\contentsline {section}{\numberline {4.6}结论}{17}{section.4.6}
+\contentsline {subsection}{\numberline {4.2.2}路由相关的两个关键属性}{16}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}投递概率}{16}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}期望时延}{18}{subsubsection.4.2.2.2}
+\contentsline {subsection}{\numberline {4.2.3}路由问题形式化定义}{18}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}$N_{opt}$搜索问题分析}{18}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}计算复杂性证明}{18}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}局部陷阱}{18}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}基于禁忌搜索的求解方法}{18}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}最优化路由算法}{18}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Local-MPAR:基于局部搜索的路由算法}{18}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Tabu-MPAR:基于禁忌搜索的路由算法}{18}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}仿真实验}{18}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}自变量：消息生存时间}{18}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}自变量：节点缓存}{18}{subsection.4.5.2}
+\contentsline {section}{\numberline {4.6}结论}{18}{section.4.6}
 \contentsline {chapter}{\numberline {第五章\hspace {0.3em}}基于消息传输收益的最优队列调度算法}{19}{chapter.5}
 \contentsline {chapter}{\numberline {第六章\hspace {0.3em}}基于跳数的启发式距离向量算法}{21}{chapter.6}
 \contentsline {part}{第二部分\hspace {1em}机会网数据分发协议研究}{23}{part.2}
