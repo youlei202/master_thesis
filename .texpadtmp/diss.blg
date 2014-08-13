@@ -37,45 +37,49 @@ You can't pop an empty literal stack for entry Ibrahim:2009we
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
 You can't pop an empty literal stack for entry Ibrahim:2009we
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
-You've used 3 entries,
+You can't pop an empty literal stack for entry Jedari:2013uo
+while executing---line 3617 of file ../GBT7714-2005NLang.bst
+You can't pop an empty literal stack for entry Jedari:2013uo
+while executing---line 3617 of file ../GBT7714-2005NLang.bst
+You've used 4 entries,
             6888 wiz_defined-function locations,
-            1253 strings with 9431 characters,
-and the built_in function-call counts, 1731 in all, are:
-= -- 170
-> -- 35
-< -- 1
-+ -- 19
-- -- 8
-* -- 153
-:= -- 236
-add.period$ -- 11
-call.type$ -- 3
-change.case$ -- 3
-chr.to.int$ -- 3
-cite$ -- 4
-duplicate$ -- 117
-empty$ -- 192
-format.name$ -- 16
-if$ -- 386
+            1260 strings with 9613 characters,
+and the built_in function-call counts, 2155 in all, are:
+= -- 212
+> -- 44
+< -- 2
++ -- 24
+- -- 10
+* -- 185
+:= -- 295
+add.period$ -- 15
+call.type$ -- 4
+change.case$ -- 4
+chr.to.int$ -- 4
+cite$ -- 5
+duplicate$ -- 146
+empty$ -- 241
+format.name$ -- 22
+if$ -- 485
 int.to.chr$ -- 1
-int.to.str$ -- 4
-missing$ -- 3
-newline$ -- 25
-num.names$ -- 6
-pop$ -- 24
+int.to.str$ -- 5
+missing$ -- 4
+newline$ -- 31
+num.names$ -- 8
+pop$ -- 30
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 4
 quote$ -- 0
-skip$ -- 37
+skip$ -- 50
 stack$ -- 0
-substring$ -- 184
-swap$ -- 6
+substring$ -- 212
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 16
 warning$ -- 1
-while$ -- 15
+while$ -- 18
 width$ -- 0
-write$ -- 52
-(There were 6 error messages)
+write$ -- 68
+(There were 8 error messages)

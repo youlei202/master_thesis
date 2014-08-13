@@ -15,8 +15,21 @@
 
 % \usepackage[sectionbib]{chapterbib}%每章都用参考文献
 
-\usepackage{algorithmicx}
 \usepackage{algorithm2e}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage{bbold}
+\usepackage{xfrac}
+\usepackage{algorithmic}
+\usepackage{upgreek}
+\usepackage{multirow}
+\usepackage{arydshln}
+\usepackage{subfigure}
 
 \newboolean{DOIT}
 \setboolean{DOIT}{false}%编译某些只想自己看的内容，编译true，否则false
@@ -93,6 +106,13 @@
 
 % 目录
 \tableofcontents
+
+\theoremstyle{plain}
+\newtheorem{definition}{定义}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{proposition}{命题}
+\newtheorem{postulation}{公设}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% 正文

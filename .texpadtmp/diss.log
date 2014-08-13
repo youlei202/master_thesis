@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  13 AUG 2014 14:07
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  13 AUG 2014 17:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1153,24 +1153,10 @@ File: sjtuthesis.cfg 2012/12/05 v0.5 sjtuthesis configuration file
 \c@exmp=\count307
 \c@rem=\count308
 \c@case=\count309
-) (/usr/local/texlive/2012/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
-Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
-
-Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count310
-\c@ALG@rem=\count311
-\c@ALG@nested=\count312
-\ALG@tlm=\skip87
-\ALG@thistlm=\skip88
-\c@ALG@Lnr=\count313
-\c@ALG@blocknr=\count314
-\c@ALG@storecount=\count315
-\c@ALG@tmpcounter=\count316
-\ALG@tmplength=\skip89
 ) (/usr/local/texlive/2012/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Invalid UTF-8 byte or sequence at line 322 replaced by U+FFFD.
 Package: algorithm2e 2008/00/00 v3.10 algorithms environments
-\c@AlgoLine=\count317
+\c@AlgoLine=\count310
 Invalid UTF-8 byte or sequence at line 778 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 780 replaced by U+FFFD.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/tools/xspace.sty
@@ -1185,14 +1171,14 @@ Package `algorithm2e' Release 4.01 -- december 14 2009 --
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 - Author: Christophe Fiorio (fiorio@lirmm.fr)
 ********************************************************
-\skiptotal=\skip90
-\skiplinenumber=\skip91
-\skiprule=\skip92
-\skiphlne=\skip93
-\skiptext=\skip94
-\skiplength=\skip95
-\algomargin=\skip96
-\skipalgocfslide=\skip97
+\skiptotal=\skip87
+\skiplinenumber=\skip88
+\skiprule=\skip89
+\skiphlne=\skip90
+\skiptext=\skip91
+\skiplength=\skip92
+\algomargin=\skip93
+\skipalgocfslide=\skip94
 \algowidth=\dimen258
 \inoutsize=\dimen259
 \inoutline=\dimen260
@@ -1201,18 +1187,18 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \interspacetitleboxruled=\dimen263
 \algocf@inoutbox=\box47
 \algocf@inputbox=\box48
-\AlCapSkip=\skip98
-\AlCapHSkip=\skip99
+\AlCapSkip=\skip95
+\AlCapHSkip=\skip96
 \algocf@nlbox=\box49
 \algocf@hangingbox=\box50
 \algocf@capbox=\box51
-\algoheightruledefault=\skip100
-\algoheightrule=\skip101
-\algotitleheightruledefault=\skip102
-\algotitleheightrule=\skip103
-\c@algocfline=\count318
-\c@algocfproc=\count319
-\c@algocf=\count320
+\algoheightruledefault=\skip97
+\algoheightrule=\skip98
+\algotitleheightruledefault=\skip99
+\algotitleheightrule=\skip100
+\c@algocfline=\count311
+\c@algocfproc=\count312
+\c@algocf=\count313
 \algocf@algoframe=\box52
 \algocf@algobox=\box53
 Invalid UTF-8 byte or sequence at line 2420 replaced by U+FFFD.
@@ -1223,35 +1209,185 @@ Invalid UTF-8 byte or sequence at line 2532 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 2584 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 2592 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 2592 replaced by U+FFFD.
-) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.aux (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/abstract.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/introduction.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter01.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter02.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter02_a.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter03.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter04.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter05.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter05_a.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter06.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter07.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter07_a.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter08.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter09.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/conclusion.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/pub.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/ack.aux))
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/bbold/bbold.sty
+Package: bbold 1994/04/06 Bbold symbol package
+LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty (/usr/local/texlive/2012/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 42.
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2012/04/23 v3570 L3 Experimental prototype document functions
+\l_xtemplate_tmp_dim=\dimen264
+\l_xtemplate_tmp_int=\count314
+\l_xtemplate_tmp_muskip=\muskip12
+\l_xtemplate_tmp_skip=\skip101
+Variant \prop_get:NoNTF already defined; not changing it on line 105
+Variant \prop_get:NoNT already defined; not changing it on line 106
+Variant \prop_get:NoNF already defined; not changing it on line 107
+)
+Package: xfrac 2012/02/26 v3465 L3 Experimental split-level fractions
+\l_xfrac_slash_box=\box54
+\l_xfrac_tmp_box=\box55
+\l_xfrac_denominator_bot_sep_dim=\dimen265
+\l_xfrac_numerator_bot_sep_dim=\dimen266
+\l_xfrac_numerator_top_sep_dim=\dimen267
+\l_xfrac_slash_left_sep_dim=\dimen268
+\l_xfrac_slash_right_sep_dim=\dimen269
+\l_xfrac_slash_left_muskip=\muskip13
+\l_xfrac_slash_right_muskip=\muskip14
+.................................................
+. xtemplate info: "declare-object-type"
+. 
+. Declaring object type 'xfrac' taking 3 argument(s) on line 96.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \sfrac with arg. spec. 'omom' on line 436.
+.................................................
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count315
+\c@ALC@line=\count316
+\c@ALC@rem=\count317
+\c@ALC@depth=\count318
+\ALC@tlm=\skip102
+\algorithmicindent=\skip103
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/arydshln/arydshln.sty
+Package: arydshln 2004/08/31 v1.71 
+\dashlinedash=\dimen270
+\dashlinegap=\dimen271
+\adl@box=\box56
+\adl@height=\dimen272
+\adl@heightsave=\dimen273
+\adl@depth=\dimen274
+\adl@depthsave=\dimen275
+\adl@finaldepth=\dimen276
+\adl@columns=\count319
+\adl@ncol=\count320
+\adl@currentcolumn=\count321
+\adl@currentcolumnsave=\count322
+\adl@totalheight=\count323
+\adl@totalheightsave=\count324
+\adl@dash=\count325
+\adl@gap=\count326
+\adl@cla=\count327
+\adl@clb=\count328
+\adl@everyvbox=\toks35
+\adl@LTpagetotal=\dimen277
+) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.aux (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/abstract.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/introduction.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter01.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter02.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter02_a.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter03.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter04.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter05.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter05_a.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter06.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter07.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter07_a.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter08.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter09.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/conclusion.aux)
+(/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/pub.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/ack.aux))
 \openout1 = `diss.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 49.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 62.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 62.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -1259,60 +1395,60 @@ LaTeX Font Info:    ... okay on input line 49.
 .................................................
 \symlegacymaths=\mathgroup12
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 49.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 49.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 49.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 49.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 49.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 49.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 49.
-LaTeX Font Info:    Redeclaring math accent \check on input line 49.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 49.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 49.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 49.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 49.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 49.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 49.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 49.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 49.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 49.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 49.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 49.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 49.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 49.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 49.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 49.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 49.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 62.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 62.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 62.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 62.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 62.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 62.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 62.
+LaTeX Font Info:    Redeclaring math accent \check on input line 62.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 62.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 62.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 62.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 62.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 49.
+(Font)              `operators' in the math version `normal' on input line 62.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU1/TeXGyreTermes(0)/m/n on input line 49.
+(Font)                  OT1/cmr/m/n --> EU1/TeXGyreTermes(0)/m/n on input line 62.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 49.
+(Font)              `operators' in the math version `bold' on input line 62.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/TeXGyreTermes(0)/m/n on input line 49.
+(Font)                  OT1/cmr/bx/n --> EU1/TeXGyreTermes(0)/m/n on input line 62.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/TeXGyreTermes(0)/m/n --> EU1/TeXGyreTermes(0)/m/n on input line 49.
+(Font)                  EU1/TeXGyreTermes(0)/m/n --> EU1/TeXGyreTermes(0)/m/n on input line 62.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  EU1/TeXGyreTermes(0)/m/n --> EU1/TeXGyreTermes(0)/m/n on input line 49.
+(Font)                  EU1/TeXGyreTermes(0)/m/n --> EU1/TeXGyreTermes(0)/m/n on input line 62.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/TeXGyreTermes(0)/m/it on input line 49.
+(Font)                  OT1/cmr/m/it --> EU1/TeXGyreTermes(0)/m/it on input line 62.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/TeXGyreTermes(0)/bx/n on input line 49.
+(Font)                  OT1/cmr/bx/n --> EU1/TeXGyreTermes(0)/bx/n on input line 62.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 49.
+(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 62.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 49.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 62.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/TeXGyreTermes(0)/m/n --> EU1/TeXGyreTermes(0)/bx/n on input line 49.
+(Font)                  EU1/TeXGyreTermes(0)/m/n --> EU1/TeXGyreTermes(0)/bx/n on input line 62.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  EU1/TeXGyreTermes(0)/m/n --> EU1/TeXGyreTermes(0)/bx/n on input line 49.
+(Font)                  EU1/TeXGyreTermes(0)/m/n --> EU1/TeXGyreTermes(0)/bx/n on input line 62.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/TeXGyreTermes(0)/bx/it on input line 49.
+(Font)                  OT1/cmr/bx/it --> EU1/TeXGyreTermes(0)/bx/it on input line 62.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 49.
+(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 62.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 49.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 62.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1348,40 +1484,40 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count321
-\AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring ON on input line 49.
+\c@lstlisting=\count329
+\AtBeginShipoutBox=\box57
+Package hyperref Info: Link coloring ON on input line 62.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
  (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count322
+\c@section@level=\count330
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 62.
+LaTeX Info: Redefining \pageref on input line 62.
+LaTeX Info: Redefining \nameref on input line 62.
  (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.out) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.out)
 \@outlinefile=\write3
 \openout3 = `diss.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 80.
+LaTeX Font Info:    Try loading font information for U+msa on input line 93.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 80.
+LaTeX Font Info:    Try loading font information for U+msb on input line 93.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 80.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 93.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 80.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 93.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-\g_fontspec_family_Adobe Heiti Std_int=\count323
+\g_fontspec_family_Adobe Heiti Std_int=\count331
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1416,42 +1552,42 @@ File: QDU.pdf Graphic file (type QTm)
  <use  "QDU.pdf" >
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <42.16> not available
-(Font)              size <24.88> substituted on input line 80.
+(Font)              size <24.88> substituted on input line 93.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <26.1> not available
-(Font)              size <24.88> substituted on input line 80.
+(Font)              size <24.88> substituted on input line 93.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <22.08> not available
-(Font)              size <20.74> substituted on input line 80.
+(Font)              size <20.74> substituted on input line 93.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <42.16> not available
-(Font)              size <24.88> substituted on input line 80.
+(Font)              size <24.88> substituted on input line 93.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <26.1> not available
-(Font)              size <24.88> substituted on input line 80.
+(Font)              size <24.88> substituted on input line 93.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <22.08> not available
-(Font)              size <20.74> substituted on input line 80.
+(Font)              size <20.74> substituted on input line 93.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 80.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 93.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 80.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 93.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 80.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 93.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 80.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 93.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 80.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 93.
 
 .................................................
 . fontspec info: "defining-font"
@@ -1482,7 +1618,7 @@ LaTeX Warning: Command \nobreakspace invalid in math mode on input line 80.
 . <->"Adobe Song
 . Std/ICU:script=latn;language=DFLT;mapping=tex-text;embolden=4.000000000;"
 .................................................
-\g_fontspec_family_Adobe Fangsong Std_int=\count324
+\g_fontspec_family_Adobe Fangsong Std_int=\count332
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1515,26 +1651,26 @@ LaTeX Warning: Command \nobreakspace invalid in math mode on input line 80.
 .................................................
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.54> not available
-(Font)              size <10.95> substituted on input line 80.
+(Font)              size <10.95> substituted on input line 93.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <7.53> not available
-(Font)              size <8> substituted on input line 80.
+(Font)              size <8> substituted on input line 93.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <10.54> not available
-(Font)              size <10.95> substituted on input line 80.
+(Font)              size <10.95> substituted on input line 93.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <7.53> not available
-(Font)              size <8> substituted on input line 80.
+(Font)              size <8> substituted on input line 93.
 
 .................................................
 . fontspec info: "no-scripts"
 . 
 . Font STXinwei does not contain any OpenType `Script' information.
 .................................................
-\g_fontspec_family_STXinwei_int=\count325
+\g_fontspec_family_STXinwei_int=\count333
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1585,6 +1721,11 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 \tf@toc=\write4
 \openout4 = `diss.toc'.
 
+\c@definition=\count334
+\c@theorem=\count335
+\c@lemma=\count336
+\c@proposition=\count337
+\c@postulation=\count338
  [6]
 \openout2 = `introduction.aux'.
 
@@ -1666,26 +1807,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 第四章
 
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 23.
+LaTeX Warning: Reference `chap3:总结' on page 11 undefined on input line 7.
 
 
-LaTeX Font Warning: Font shape `U/wasy/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 23.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 23.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 23.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 23.
-
-)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1696,6 +1820,42 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
+File: paper-MPAR/send_to_box.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/send_to_box.pdf" >
+File: paper-MPAR/receive_from_box.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/receive_from_box.pdf" >
+\g_fontspec_family_Adobe Kaiti Std_int=\count339
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'AdobeKaitiStd(0)' created for font 'Adobe Kaiti Std' with
+. options
+. [Ligatures=TeX,BoldFeatures={FakeBold={4.000000000}},BoldItalicFeatures={FakeBold={4.000000000}},BoldSlantedFeatures={FakeBold={4.000000000}},BoldFont={*},ItalicFont={*},BoldItalicFont={*},SlantedFont={*},BoldSlantedFont={*}].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"Adobe Kaiti Std/ICU:script=latn;language=DFLT;mapping=tex-text;"
+. 
+. * 'bold' with NFSS spec.:
+. <->"Adobe Kaiti
+. Std/ICU:script=latn;language=DFLT;mapping=tex-text;embolden=4.000000000;"
+. 
+. * 'italic' with NFSS spec.:
+. <->"Adobe Kaiti Std/ICU:script=latn;language=DFLT;mapping=tex-text;"
+. 
+. * 'sl/' with NFSS spec.:
+. <->"Adobe Kaiti Std/ICU:script=latn;language=DFLT;mapping=tex-text;"
+. 
+. * 'bold italic' with NFSS spec.:
+. <->"Adobe Kaiti
+. Std/ICU:script=latn;language=DFLT;mapping=tex-text;embolden=4.000000000;"
+. 
+. * 'sl/,FakeBold={4.000000000}' with NFSS spec.:
+. <->"Adobe Kaiti
+. Std/ICU:script=latn;language=DFLT;mapping=tex-text;embolden=4.000000000;"
+.................................................
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.9099pt.
@@ -1703,9 +1863,131 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [12]
+File: paper-MPAR/time_slots.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/time_slots.pdf" >
+LaTeX Font Info:    Try loading font information for U+bbold on input line 41.
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/bbold/Ubbold.fd)
+LaTeX Font Info:    Calculating math sizes for size <8.43495> on input line 51.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <8.43495> not available
+(Font)              size <8> substituted on input line 51.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.21747> not available
+(Font)              size <5> substituted on input line 51.
+
+
+LaTeX Font Warning: Font shape `U/wasy/m/n' in size <8.43495> not available
+(Font)              size <8> substituted on input line 51.
+
+
+LaTeX Font Warning: Font shape `U/wasy/m/n' in size <4.21747> not available
+(Font)              size <5> substituted on input line 51.
+
+
+LaTeX Font Warning: Font shape `U/bbold/m/n' in size <8.43495> not available
+(Font)              size <8> substituted on input line 51.
+
+
+LaTeX Font Warning: Font shape `U/bbold/m/n' in size <4.21747> not available
+(Font)              size <5> substituted on input line 51.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 52.
+
+
+LaTeX Font Warning: Font shape `U/bbold/m/n' in size <10.54> not available
+(Font)              size <10.95> substituted on input line 52.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.84666pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 72.
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+)
+File: paper-MPAR/example1.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/example1.pdf" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
+
+LaTeX Font Warning: Font shape `U/bbm/m/n' in size <8.43495> not available
+(Font)              size <8> substituted on input line 117.
+
+
+LaTeX Font Warning: Font shape `U/bbm/m/n' in size <4.21747> not available
+(Font)              size <5> substituted on input line 117.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.84666pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15.06> not available
+(Font)              size <14.4> substituted on input line 209.
+
+
+LaTeX Font Warning: Font shape `U/wasy/m/n' in size <15.06> not available
+(Font)              size <14.4> substituted on input line 209.
+
+
+LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.06> not available
+(Font)              size <14.4> substituted on input line 209.
+
+
+LaTeX Font Warning: Font shape `U/bbold/m/n' in size <15.06> not available
+(Font)              size <14.4> substituted on input line 209.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 209.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 209.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 209.
+
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.84666pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
 \openout2 = `body/chapter04.aux'.
 
- (./body/chapter04.tex
+ (./body/chapter04.tex [18
+
+
+
+]
 第五章
 )
 
@@ -1714,14 +1996,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13
-
-
-
-]
+[19]
 \openout2 = `body/chapter05.aux'.
 
- (./body/chapter05.tex [14
+ (./body/chapter05.tex [20
 
 
 
@@ -1734,7 +2012,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15] [16
+[21] [22
 
 
 ]
@@ -1744,7 +2022,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17] [18]
+[23] [24]
 \openout2 = `body/chapter05_a.aux'.
 
  (./body/chapter05_a.tex
@@ -1756,13 +2034,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19
+[25
 
 
 ]
 \openout2 = `body/chapter06.aux'.
 
- (./body/chapter06.tex [20
+ (./body/chapter06.tex [26
 
 
 
@@ -1775,10 +2053,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21]
+[27]
 \openout2 = `body/chapter07.aux'.
 
- (./body/chapter07.tex [22
+ (./body/chapter07.tex [28
 
 
 
@@ -1791,7 +2069,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23] [24
+[29] [30
 
 
 ]
@@ -1801,7 +2079,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25] [26]
+[31] [32]
 \openout2 = `body/chapter07_a.aux'.
 
  (./body/chapter07_a.tex
@@ -1813,13 +2091,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27
+[33
 
 
 ]
 \openout2 = `body/chapter08.aux'.
 
- (./body/chapter08.tex [28
+ (./body/chapter08.tex [34
 
 
 
@@ -1832,10 +2110,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29]
+[35]
 \openout2 = `body/chapter09.aux'.
 
- (./body/chapter09.tex [30
+ (./body/chapter09.tex [36
 
 
 
@@ -1848,10 +2126,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31]
+[37]
 \openout2 = `body/conclusion.aux'.
 
- (./body/conclusion.tex [32
+ (./body/conclusion.tex [38
 
 
 
@@ -1862,7 +2140,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33] [34
+[39] [40
 
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.bbl
@@ -1886,12 +2164,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35
+[41
 
 ]
 \openout2 = `body/pub.aux'.
 
- (./body/pub.tex [36
+ (./body/pub.tex [42
 
 
 ]
@@ -1901,7 +2179,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[37] [38
+[43] [44
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lot)
 \tf@lot=\write5
@@ -1914,7 +2192,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39] [40
+[45] [46
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lof)
 \tf@lof=\write6
@@ -1927,7 +2205,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41] [42
+[47] [48
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.loa)
 \tf@loa=\write7
@@ -1940,10 +2218,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43]
+[49]
 \openout2 = `body/ack.aux'.
 
- (./body/ack.tex [44
+ (./body/ack.tex [50
 
 
 
@@ -1965,31 +2243,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45] [46
+[51] [52
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 176--176
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--176
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--176
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--176
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--176
+Underfull \hbox (badness 10000) in paragraph at lines 196--196
 
  []
 
@@ -1999,28 +2277,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47] [48
+[53] [54
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
  (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.aux (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/abstract.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/introduction.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter01.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter02.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter02_a.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter03.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter04.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter05.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter05_a.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter06.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter07.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter07_a.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter08.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter09.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/conclusion.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/pub.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/ack.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 178.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 178.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 198.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 198.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 17.28pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 28008 strings out of 494004
- 530466 string characters out of 3150891
- 585446 words of memory out of 3000000
- 30647 multiletter control sequences out of 15000+200000
- 37773 words of font info for 197 fonts, out of 3000000 for 9000
+ 29007 strings out of 494004
+ 553464 string characters out of 3150891
+ 616699 words of memory out of 3000000
+ 31557 multiletter control sequences out of 15000+200000
+ 69298 words of font info for 343 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 61i,11n,47p,881b,385s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,26n,47p,881b,491s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (56 pages).
+Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (62 pages).

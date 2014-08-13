@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -22,5 +22,12 @@
 \newblock {Analysis of relay protocols for throwbox-equipped dtns}[J].
 \newblock {\ldots} in Mobile, 2009.
 \newblock \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5291625}.
+
+\bibitem[Jedari and Xia(2013)]{Jedari:2013uo}
+\textsc{Jedari B, Xia F}.
+\newblock {A Survey on Routing and Data Dissemination in Opportunistic Mobile
+  Social Networks}[J].
+\newblock arXiv.org, 2013.
+\newblock \url{http://arxiv.org/abs/1311.0347}.
 
 \end{thebibliography}
