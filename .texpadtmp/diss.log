@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  12 AUG 2014 22:01
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  13 AUG 2014 14:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1667,25 +1667,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 第四章
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 21.
+(Font)              size <14.4> substituted on input line 23.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 21.
+(Font)              size <14.4> substituted on input line 23.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 21.
+(hyperref)                removing `math shift' on input line 23.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 21.
+(hyperref)                removing `subscript' on input line 23.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 21.
+(hyperref)                removing `math shift' on input line 23.
 
 )
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.84666pt.
@@ -1693,13 +1696,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
 \openout2 = `body/chapter04.aux'.
 
- (./body/chapter04.tex [12
-
-
-
-]
+ (./body/chapter04.tex
 第五章
 )
 
@@ -1708,7 +1714,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]
+[13
+
+
+
+]
 \openout2 = `body/chapter05.aux'.
 
  (./body/chapter05.tex [14
@@ -1855,7 +1865,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [33] [34
 
 
-] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.bbl)
+] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.bbl
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 18.
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/euenc/eu1lmtt.fd
+File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'AdobeFangsongStd(0)' created for font 'Adobe Fangsong Std' with
+. options
+. [Ligatures=TeX,BoldFeatures={FakeBold={4.000000000}},BoldItalicFeatures={FakeBold={4.000000000}},BoldSlantedFeatures={FakeBold={4.000000000}},BoldFont={*},ItalicFont={*},BoldItalicFont={*},SlantedFont={*},BoldSlantedFont={*}].
+. 
+. This font family consists of the following shapes:
+.................................................
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.80452pt.
@@ -1991,12 +2015,12 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 27960 strings out of 494004
- 529411 string characters out of 3150891
- 584378 words of memory out of 3000000
- 30606 multiletter control sequences out of 15000+200000
- 37749 words of font info for 194 fonts, out of 3000000 for 9000
+ 28008 strings out of 494004
+ 530466 string characters out of 3150891
+ 585446 words of memory out of 3000000
+ 30647 multiletter control sequences out of 15000+200000
+ 37773 words of font info for 197 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 61i,11n,47p,881b,386s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,11n,47p,881b,385s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (56 pages).

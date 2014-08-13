@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{3}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,5 +10,17 @@
 \newblock {Mobile ad hoc networking: milestones, challenges, and new research
   directions}[J].
 \newblock Communications Magazine, IEEE, 2014, 52(1):85--96.
+
+\bibitem[Henderson et al.(2004)]{Henderson:2004ul}
+\textsc{Henderson T, Kotz D, Abyzov I}.
+\newblock {The changing usage of a mature campus-wide wireless network}[J].
+\newblock 2004:187--201.
+\newblock \url{http://dl.acm.org/citation.cfm?id=1023739}.
+
+\bibitem[Ibrahim et al.(2009)]{Ibrahim:2009we}
+\textsc{Ibrahim M, Nain P, Carreras I}.
+\newblock {Analysis of relay protocols for throwbox-equipped dtns}[J].
+\newblock {\ldots} in Mobile, 2009.
+\newblock \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5291625}.
 
 \end{thebibliography}
