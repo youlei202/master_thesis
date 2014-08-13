@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Conti and Giordano(2014)]{Conti:2014gg}
+\textsc{Conti M, Giordano S}.
+\newblock {Mobile ad hoc networking: milestones, challenges, and new research
+  directions}[J].
+\newblock Communications Magazine, IEEE, 2014, 52(1):85--96.
+
+\end{thebibliography}
