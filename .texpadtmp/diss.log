@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  13 AUG 2014 22:12
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  13 AUG 2014 22:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1806,22 +1806,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 第四章
-
-LaTeX Warning: Reference `chap3:总结' on page 11 undefined on input line 7.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.84666pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[11]
 File: paper-MPAR/send_to_box.pdf Graphic file (type QTm)
- <use  "paper-MPAR/send_to_box.pdf" >
+<use  "paper-MPAR/send_to_box.pdf" >
 File: paper-MPAR/receive_from_box.pdf Graphic file (type QTm)
  <use  "paper-MPAR/receive_from_box.pdf" >
 \g_fontspec_family_Adobe Kaiti Std_int=\count339
@@ -1856,6 +1842,16 @@ File: paper-MPAR/receive_from_box.pdf Graphic file (type QTm)
 . Std/ICU:script=latn;language=DFLT;mapping=tex-text;embolden=4.000000000;"
 .................................................
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.84666pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.9099pt.
@@ -1865,40 +1861,40 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [12]
 File: paper-MPAR/time_slots.pdf Graphic file (type QTm)
  <use  "paper-MPAR/time_slots.pdf" >
-LaTeX Font Info:    Try loading font information for U+bbold on input line 41.
+LaTeX Font Info:    Try loading font information for U+bbold on input line 42.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/bbold/Ubbold.fd)
-LaTeX Font Info:    Calculating math sizes for size <8.43495> on input line 51.
+LaTeX Font Info:    Calculating math sizes for size <8.43495> on input line 52.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <8.43495> not available
-(Font)              size <8> substituted on input line 51.
+(Font)              size <8> substituted on input line 52.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.21747> not available
-(Font)              size <5> substituted on input line 51.
+(Font)              size <5> substituted on input line 52.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <8.43495> not available
-(Font)              size <8> substituted on input line 51.
+(Font)              size <8> substituted on input line 52.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <4.21747> not available
-(Font)              size <5> substituted on input line 51.
+(Font)              size <5> substituted on input line 52.
 
 
 LaTeX Font Warning: Font shape `U/bbold/m/n' in size <8.43495> not available
-(Font)              size <8> substituted on input line 51.
+(Font)              size <8> substituted on input line 52.
 
 
 LaTeX Font Warning: Font shape `U/bbold/m/n' in size <4.21747> not available
-(Font)              size <5> substituted on input line 51.
+(Font)              size <5> substituted on input line 52.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 52.
+LaTeX Font Warning: Command \small invalid in math mode on input line 53.
 
 
 LaTeX Font Warning: Font shape `U/bbold/m/n' in size <10.54> not available
-(Font)              size <10.95> substituted on input line 52.
+(Font)              size <10.95> substituted on input line 53.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1907,7 +1903,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 72.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 73.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
@@ -1922,11 +1918,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [14]
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <8.43495> not available
-(Font)              size <8> substituted on input line 117.
+(Font)              size <8> substituted on input line 118.
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <4.21747> not available
-(Font)              size <5> substituted on input line 117.
+(Font)              size <5> substituted on input line 118.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1943,41 +1939,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [16]
 
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 247.
-
-
-LaTeX Font Warning: Font shape `U/wasy/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 247.
-
-
-LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 247.
-
-
-LaTeX Font Warning: Font shape `U/bbold/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 247.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 247.
-
-)
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.84666pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [17]
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15.06> not available
+(Font)              size <14.4> substituted on input line 253.
+
+
+LaTeX Font Warning: Font shape `U/wasy/m/n' in size <15.06> not available
+(Font)              size <14.4> substituted on input line 253.
+
+
+LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.06> not available
+(Font)              size <14.4> substituted on input line 253.
+
+
+LaTeX Font Warning: Font shape `U/bbold/m/n' in size <15.06> not available
+(Font)              size <14.4> substituted on input line 253.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 253.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 253.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 253.
+
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.9099pt.
@@ -2295,15 +2291,12 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 198.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 17.28pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 29011 strings out of 494004
- 553542 string characters out of 3150891
- 616847 words of memory out of 3000000
- 31561 multiletter control sequences out of 15000+200000
+ 29010 strings out of 494004
+ 553534 string characters out of 3150891
+ 617851 words of memory out of 3000000
+ 31560 multiletter control sequences out of 15000+200000
  69298 words of font info for 343 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  61i,26n,47p,881b,491s stack positions out of 5000i,500n,10000p,200000b,50000s
