@@ -176,6 +176,7 @@ M_{i,j}=\left.\sum_{k=1}^{k=h}r^{i}_{k,j}\middle/h\right.
 \]
 
 移动模式$\mathcal{P}$指明了节点群组$\{n_1,n_2,n_3\}$在时间区间$[t_0,t_2]$内的的常访区域集合，即$A(\{n_1,n_2,n_3\},[t_0,t_2])=\{a_2\}$。对于集合$\overline{N}\\\{n_d\}$，共有$2^{n-1}-1$个非空子集，每一个子集可被看做用于向目的节点$n_d$合作投递消息的一个整体。在本例中，基于移动记录，提取出非空节点集$\{n_1,n_2,n_3\}$以及目的节点$n_4$的移动模式，结果如下\\
+\begin{center}
 \begin{tabular}{ll}
  & \\
 $\mathcal{P}(\{n_1\},[t_0,t_2])=[1,0]$ & $\mathcal{P}(\{n_1,n_2\},[t_0,t_2])=[1,0]$ \\
@@ -183,8 +184,10 @@ $\mathcal{P}(\{n_2\},[t_0,t_2])=[1,1]$ & $\mathcal{P}(\{n_1,n_3\},[t_0,t_2])=[0,
 $\mathcal{P}(\{n_3\},[t_0,t_2])=[0,1]$ & $\mathcal{P}(\{n_2,n_3\},[t_0,t_2])=[0,1]$ \\
 $\mathcal{P}(\{n_4\},[t_0,t_2])=[1,1]$ & $\mathcal{P}(\{n_1,n_2,n_3\},[t_0,t_2])=[0,1]$ \\
  &
-\end{tabular}\\
-对应的常访地点集合，如下\\
+\end{tabular}
+\end{center}
+对应的常访地点集合，如下
+\begin{center}
 \begin{tabular}{ll}
  & \\
 $A(\{n_1\},[t_0,t_2])=\{a_1\}$ & $A(\{n_1,n_2\},[t_0,t_2])=\{a_1\}$ \\
@@ -193,7 +196,7 @@ $A(\{n_3\},[t_0,t_2])=\{a_2\}$ & $A(\{n_2,n_3\},[t_0,t_2])=\{a_2\}$ \\
 $A(\{n_4\},[t_0,t_2])=\{a_2\}$ & $A(\{n_1,n_2,n_3\},[t_0,t_2])=\{a_1,a_2\}$ \\
  &
 \end{tabular}
-
+\end{center}
 \subsection{路由相关的两个关键属性}
 \label{chap3:路由相关的两个关键属性}
 
@@ -239,25 +242,388 @@ P_{N,d} = 1-\prod_{n_i\in N}\prod_{a_j\in A}\left(1-\frac{\lambda _{i,j}}{\lambd
 对于\figurename~\ref{fig:chap3_example1}中的例子，为简便起见，讨论$\tau_l=\infty$的情况（形式化定义时，会给出一般情况下的定义）。对于节点集合$\{n_1,n_2,n_3\}$而言，常访地点集合$A(N,[t_0,t_3])=\{a_2\}$；对于目的节点$n_d$而言，其常访地点集合$A(n_4,[t_0,t_3])=\{a_1,a_2\}$；由此可得出共同常访地点$A=\{a_2\}$。每一个“节点—地点”对的平均访问时间间隔，可从公式(\ref{eq:meeting_interval})获得，即
 
 \[
-\begin{array}{cccc}
+\begin{array}{llll}
 M_{1,1}=4.05 & M_{2,1}=4.2 & M_{3,1}=7.05 & M_{4,1}=3.05 \\
 M_{1,2}=3.8 & M_{2,2}=4.4 & M_{3,2}=8.3 & M_{4,2}=3.4
 \end{array}
 \]
 
+由以上计算结果，可预测节点集合$N$的投递概率，如下
+
+\begin{multline*}
+P_{\{n_1,n_2,n_3\},4}=
+1-\left(\frac{\lambda_{4,2}}{\lambda_{1,2}+\lambda_{4,2}}\middle)\middle(\frac{\lambda_{4,2}}{\lambda_{2,2}+\lambda_{4,2}}\middle)\middle(\frac{\lambda_{4,2}}{\lambda_{3,2}+\lambda_{4,2}}\right) \\
+= 1-\left(\frac{M_{1,2}}{M_{1,2}+M_{4,2}}\middle)\middle(\frac{M_{2,2}}{M_{2,2}+M_{4,2}}\middle)\middle(\frac{M_{3,2}}{M_{3,2}+M_{4,2}}\right) 
+= 0.789
+\end{multline*}
+
 \subsubsection{期望时延}
+
+除了投递概率之外，另一个关键的属性即节点移动到其他地点的期望时延。设节点$n_i$的常访地点集合为$A_i$，用随机变量$D_i$代表$n_i$移动到下一个地点$a_j\in A_i$的期望时延。形式上，有$D_i=\min\{T_{i,1},T_{i,2},\ldots,T_{i,|A_i|}\}$，由此可求得$D_i$的概率密度函数为
+\[f_{D_i}(t)=\sum_{a_k\in A_i}\lambda_{i,k}\prod_{a_h\in A_i}e^{-\lambda_{i,h}t}\]
+于是有
+\begin{multline}
+E[D_i]=\int_{-\infty}^{\infty}tf_{D_i}(t)dt 
+=\sum_{a_k\in A_i}\int_{0}^{\infty}t\lambda_{i,k}\prod_{a_h\in A_i}e^{-\lambda_{i,h}t}dt \\
+=\sum_{a_k\in A_i}\frac{\lambda_{i,k}}{\left(\sum_{a_k\in A_i}\lambda_{i,h}\right)^2}
+=\frac{1}{\sum_{a_k\in A_i}\lambda_{i,k}}
+\label{eq:delay}
+\end{multline}
+对于\figurename~\ref{fig:chap3_example1}所示例子，可以分别对节点$n_1$, $n_2$及$n_3$根据公式(\ref{eq:delay})计算期望时延$E[D_i]$。
+\[
+\begin{array}{l}
+E[D_1]=\sfrac{1}{\lambda_{1,1}}=M_{1,1}=4.05\\
+E[D_2]=\frac{1}{\lambda_{2,1}+\lambda_{2,2}}=\frac{M_{2,1}M_{2,2}}{M_{2,1}+M_{2,2}}=2.15\\
+E[D_3]=\sfrac{1}{\lambda_{3,2}}=M_{3,2}=8.3 
+\end{array}
+\]
+对于任意一对节点$n_i$和$n_j$，若$E[D_i]<E[D_j]$，则从期望意义上讲，$n_i$到达下一个新地点的时间要早于$n_j$，这意味着$n_i$能够更早的将消息托管到新的投掷盒。在机会网络中多使用多拷贝策略进行路由，快速的向网络中传播足够数目的消息副本，对提升路由性能至关重要。期望时延$E[D]$是一个很好的衡量指标，应尽可能的利用$E[D]$较小的节点分发消息。在本章提出的基于局部搜索的路由算法Local-MPAR中，$E[D]$被用于衡量节点作为网络中唯一的活跃节点是否合适。在基于禁忌搜索的路由算法Tabu-MPAR中，$E[D]$被用作向网络中非对称喷洒消息副本的衡量指标。在\tablename~\ref{tab:chap3_example1}所示例子中，节点$n_2$最适合作为活跃节点，因为其期望时延$E[D]$最低，因此在期望意义上，$n_2$可以较早的将消息拷贝托管给其它地点的投掷盒。
 
 \subsection{路由问题形式化定义}
 \label{chap3:路由问题形式化定义}
 
+机会网络中的路由问题，其优化目标可有多种。衡量路由算法性能的最主要的两个指标，即是消息投递率和平均端到端时延。尽管端到端时延在路由优化中被看做一项非常重要的指标，但路由的性能表现仍需要以可被接受的投递概率为基础。换言之，较高的投递概率是保证网络正常工作的基础。本章意图最大化消息的投递概率，进而提高路由性能表现。即寻找子集$N\subseteq\overline{N}$，从而使得$P_{N,d}\geq P_{N',d}$对于$\forall N'\subseteq\overline{N}$成立，其中$n_d$是消息的目的节点。
+
+在\figurename~\ref{fig:chap3_example1}所示例子中，可依\ref{chap3:路由相关的两个关键属性}小节中公式(\ref{eq:probability2})，预测集合$\{n_1,n_2,n_3\}$所有非空子集的投递率，如下
+\[
+\begin{array}{ll}
+P_{\{n_1\},4}=0.430 & P_{\{n_1,n_2\},4}=0.670  \\
+P_{\{n_2\},4}=0.673 & P_{\{n_2,n_3\},4}=0.600  \\
+P_{\{n_3\},4}=0.291 & P_{\{n_1,n_3\},4}=0.626  \\
+P_{\{n_1,n_2,n_3\}}=0.789\\
+\end{array}
+\]
+
+在本例中，最优集合即$\{n_1,n_2,n_3\}$。注意计算结果为估计投递率，并不直接与持有该消息的节点数目成正比。投递率$P_{N,d}$基于节点集合$N$，$N$在整个路由过程中被看做一个整体。对于某个$N'\subset N$而言，概率$P_{N,d}<P_{N',d}$是可能发生的。事实上，如\figurename~\ref{fig:chap3_example1}所示，对于集合$\{n_2,n_3\}$而言，其预测投递率低于集合$\{n_2\}$的预测投递率。如果忽略缓存限制和能耗资源，向整个网络中广播每条消息会获得最好的性能表现，因为在这种情况下增加中继节点的数目，可以提高消息的投递率（或者说至少不可能降低）。然而这种理想的情况在机会网络中往往并不存在。真实情况下，往往倾向于选择能够符合一定移动模式的最小节点群组，对消息进行投递。从例中可以看出，如果把持有该消息的所有节点视为一个整体，则其预测投递率被两项指标所影响：（1）节点集对应的移动模式，（2）节点集的大小。在正式定义路由问题之前，首先给出最优节点集合$N_{opt}$的定义。
+
+\begin{definition} The optimal set $N_{opt}$\\
+最优集合$N_{opt}$包含网络中的一组节点, 且有
+\begin{displaymath}
+N_{opt}= \min\{\mathrel{\mathop{\arg\max}\limits_{N\subseteq \overline{N}}}P_{N,d}\}
+\end{displaymath}
+\end{definition}
+
+最优集合是能够取得最高预测投递率的最小集合，集合中的节点以合作的方式将消息传递给目的节点。基于此，可定义最优路由问题。
+
+\begin{definition}$N_{opt}$搜索问题.\\
+令$f(\mathbf{x})$代表目标函数， $g(\mathbf{x})$代表限制函数, 其中决策变量表示为$\mathbf{x}=\{x_1,x_2,\ldots,x_n\}$，有 
+\begin{tabular}{l}
+\parbox{\linewidth}{
+\begin{multline*}
+f(\mathbf{x})=\sum_{i=1}^{i=n}x_i\log\left(\prod_{a_j\in A}\left(1-\frac{\lambda _{i,j} \left(1-e^{-\tau _l \left(\lambda _{d,j}+\lambda _{i,j}\right)}\right)}{\lambda _{d,j}+\lambda _{i,j}}\right.-\left.\left(e^{\tau _l \lambda _{i,j}}-1\right) e^{-\tau _l \left(\lambda _{d,j}+\lambda _{i,j}\right)}\right)\right)
+\end{multline*}
+}
+\end{tabular}
+\[
+g(\mathbf{x})=\left|\sum_{i=1}^{i=n}x_i\right|
+\]
+于是问题可以被形式化为如下
+\[
+\begin{array}{c}
+\min f(\mathbf{x}) \\
+s.t.\forall\mathbf{x'},~g(\mathbf{x'})-g(\mathbf{x})\geq 0, \\
+\forall i,x_i\in \{0,1\}
+\end{array} 
+\]
+当求出最优节点集合$\mathbf{x}_{opt}$时，有
+\[
+N_{opt}=\{n_i|x_i>0,1\leq i\leq n\}
+\]
+\label{def:N_opt}
+\end{definition}
+
+在上述定义中，存在一个$\bm{x}$与$N$之间的一对一映射。事实上，有$f(\bm{x})=\log(1-P_{N,d})$，其中$f(\bm{x})$与$P_{N,d}$成负相关。由此，$N_{opt}$搜索问题被形式化为最优化问题。
+
 \section{$N_{opt}$搜索问题分析}
 \label{chap3:搜索问题分析}
 
+本节讨论$N_{opt}$问题的计算复杂性，并提出了一种启发式方法，以近似计算最优解。首先证明对于在线算法(online algorithm)，对于算法输入序列中新加入的元素，能够很大程度改变目标函数的值。对于离线算法(offline algorithm)，给出了$\mathcal{NP}$-hard性质证明。最后，本章提出基于禁忌搜索的启发式算法。
+
 \subsection{计算复杂性证明}
+在线算法可以分片处理输入序列。换言之，算法的输入是以一个序列方式随时间交付由算法本身处理的，而不同于离线算法，需要一次接受整个算法输入。对于$N_{opt}$，其在线算法的输入是网络中节点的移动记录，简单表示为$\mathbb{R}_{1},\mathbb{R}_{2},\ldots,\mathbb{R}_{q}$ (其中序列中的每个元素都是一个向量，例如对于在时间槽$t_i$的节点$n_x$可以有$\mathbb{R}_j=\mathbb{R}(x,t_i)$)。假设当前只有序列的前$1--k$个元素被输入算法。剩下的问题即探究当下一个新元素$\mathbb{R}_{k+1}$被加入网络时，会在多大程度上影响目标函数的值, 见定理~\ref{thm:online}
+
+\begin{theorem}
+对于$\forall k\in[1,z)$， 即使序列的前$1$---$k$部分已知，新加入的元素$\mathbb{R}_{k+1}$仍可能将移动模式改变为至少有一个元素不为0的任意向量。
+\label{thm:online}
+\end{theorem}
+\begin{proof}
+将任意向量$R_i$表示为如下
+\[
+R_i=[r^i_1,r^i_2,\ldots,r^i_m]~~~\forall j\in[1,m], r^i_j\geq 0
+\]
+向量$\sum_{i=1}^{i=k}\mathbb{R}_{i}$ 表示为
+\[
+\sum_{i=1}^{i=k}\mathbb{R}_{i}=[S^{k}_1,S^{k}_2,\ldots,S^{k}_m]
+\]
+于是对于$\forall i\in [1,m]$及 $k\in [1,z)$ 有
+\[
+S^{k+1}_i=S^{k}_i+r^{k+1}_i
+\]
+相应地，用 $\mathcal{P'}=\mathbbm{E}(\sum_{i=1}^{i=k+1}\mathbb{R}_{i})$ 和 $\mathcal{P}=\mathbbm{E}(\sum_{i=1}^{i=k+1}\mathbb{R}_{i})$ 分别表示在加入新元素$\mathbb{R}_{k+1}$之前和之后的移动模式向量。 现证明对于任意的$\mathcal{P}$, 都存在一个可能的新元素$\mathbb{R}_{k+1}$，能使向量$\mathcal{P'}$ 变为 $\mathcal{P}$.
+当已知$\mathcal{P}=[\varkappa _1,\varkappa _2,\ldots,\varkappa _m]$时， 显然$\mathbb{R}_{k+1}$存在，当且仅当如下线性不等式组成立
+\begin{displaymath}
+\forall i\in[1,m]~~~~
+\left\{
+\begin{array}{ll}
+S^{k+1}_i\geq\delta\sum_{j=1}^{j=m}\left(\sfrac{S^{k+1}_j}{m}\right)& \varkappa_i=1 \\
+S^{k+1}_i<\delta\sum_{j=1}^{j=m}\left(\sfrac{S^{k+1}_j}{m}\right) & \varkappa_i=0
+\end{array}
+\right.
+\end{displaymath}
+即
+\[
+\left\{
+\begin{array}{ll}
+\sum_{j=1}^{j=m}r_j^{k+1}-\frac{m}{\delta}r_i^{k+1}\leq \frac{m}{\delta}S_i^{k}-\sum_{j=1}^{j=m}S_j^{k} & \varkappa_i=1 \\
+\sum_{j=1}^{j=m}r_j^{k+1}-\frac{m}{\delta}r_i^{k+1}> \frac{m}{\delta}S_i^{k}-\sum_{j=1}^{j=m}S_j^{k} & \varkappa_i=0 \\
+\end{array}\right.
+\]
+
+对于 $\forall i$, 将 $\frac{m}{\delta}S_i^{k}-\sum_{j=1}^{j=m}S_j^{k}$ 表示为 $w_i$, 并将$\varkappa_i=1$ 和 $\varkappa_i=0$ 时的$w_i$分别表示为 $w_{i|\varkappa_i=1}$ 和$w_{i|\varkappa_i=0}$。 同理，用 $r_i^{k+1}$ 表示 $\varkappa_i=1$ 和 $\varkappa_i=0$ 时的对应状态，有
+\begin{equation}
+\sum_{j=1}^{j=m}r_j^{k+1}-\frac{m}{\delta}r_{i|\varkappa_i=0}^{k+1}> w_{i|\varkappa_i=0}  
+\label{eq:varkappa_0}
+\end{equation}
+且有
+\begin{equation}
+\sum_{j=1}^{j=m}r_j^{k+1}-\frac{m}{\delta}r_{i|\varkappa_i=1}^{k+1}\leq w_{i|\varkappa_i=1}
+\label{eq:varkappa_1}
+\end{equation}
+令 $r^{k+1}_{i|\varkappa_i=0}=0$ 及 $\sum_{j=1}^{j=m}r_j^{k+1}=\max\{w_i\}+\epsilon~(\epsilon>0)$, 则等式（\ref{eq:varkappa_0}）对于 $\forall \varkappa_i=0$都成立。
+
+接下来证明可以选择足够大的$\epsilon$值，使得等式\ref{eq:varkappa_1}成立，即只需让 $\sum_{j=1}^{j=m}r_j^{k+1}-\frac{m}{\delta}r_{i|\varkappa_i=1}^{k+1}\leq \min\{w_i\}$ 对于 $\forall \varkappa_i=1$都成立，即
+\[
+\max\{w_i\}+\epsilon-\frac{m}{\delta}r_{i|\varkappa_i=1}^{k+1}\leq \min\{w_i\}
+\]
+从上述讨论, 只需让下述不等式同时成立.
+\begin{equation}
+r_{i|\varkappa_i=1}^{k+1}\geq\frac{\delta}{m}(\max\{w_i\}-\min\{w_i\}+1)~(0<\delta<1)
+\label{eq:q1}
+\end{equation}
+\begin{equation}
+\sum_{j=1}^{j=m}r_{j|\varkappa_j=1}^{k+1}=\max\{w_i\}+\epsilon
+\label{eq:q2}
+\end{equation}
+假设$\mathcal{P}$中 $\varkappa_i=1$ 的数量是 $z$, 由于 $0<z\leq m$, 有
+\[
+z\cdot\frac{\delta}{m}(\max\{w_i\}-\min\{w_i\}+\epsilon) \leq  
+\delta(\max\{w_i\}-\min\{w_i\}+\epsilon) 
+\]
+为使等式（\ref{eq:q1}）和（\ref{eq:q2}）同时成立, 只须有
+\[
+\delta(\max\{w_i\}-\min\{w_i\}+\epsilon) < \max\{w_i\}+\epsilon = \sum_{j=1}^{j=m}r_{j|\varkappa_j=1}^{k+1}
+\]
+即
+\[
+\epsilon>\frac{\delta}{\delta-1}\min\{w_i\}-\max\{w_i\}
+\]
+证毕
+\end{proof}
+
+定理~\ref{thm:npc}~给出$N_{opt}$计算复杂性的证明。
+
+\begin{theorem}
+$N_{opt}$问题属于$\mathcal{NP}$-hard类. 
+\label{thm:npc}
+\end{theorem}
+\begin{proof}
+%We reduce the $N_{opt}$ Search Problem as a Subset Sum Problem (SSP). Assume that we know a solution for a certain SSP instance of which all the elements are denoted by $R={r_1,r_2,\ldots,r_n}$ and the target value is $v$. For clarity, we transform $R$ as follows:
+将子集和问题(Subset Sum Problem, SSP)归约为$N_{opt}$问题。假设已知SSP问题的一个解实例，用 $R={r_1,r_2,\ldots,r_n}$，目标值用$v$表示。为清楚起见，将$R$变为如下形式
+\begin{multline*}
+R=\{\log 2^{r_1},\log 2^{r_2},\ldots,\log 2^{r_n}\}
+=\{\log g_1,\log g_2,\ldots,\log g_n\}
+\end{multline*}
+其中有 $g_i=2^{r_i}~~(i\in[1,n])$.
+将其所有非空子集表示为 $R_1,R_2\ldots, R_{2^{|N|-1}}$。接下来，构造对应的 $N_{opt}$ 实例。 目标值为$P=v$, 节点集合为$N={n_1,n_2,\ldots,n_n}$， 对应上述提到的集合$R$. 对于每一个$N$的非空子集$N_i$, 都存在一个$R$的子集$R_i$与其一一对应 (所有的角标都是一一对应的), 将任意子集$N_j$表示为如下
+\[
+N_j=\{n_{j_1},n_{j_2},\ldots,n_{j_k}\}
+\]
+对于$\forall j$, 令$\lambda_{i,j}=1$, $\tau_{l}=\sqrt{2}$, 对于 $\forall n_i\in N-d$, 令$\lambda_{i,j}=\Lambda_i$. 此外, 令所有的节点都具有相同的移动记录$\mathbb{R}=[0,0,\ldots,0]$.于是，对于网络中所有的节点，都有
+\[
+\mathcal{P}=[1,1,\ldots,1]
+\]
+
+于是有
+\[
+P_{N_j,d}=1-\prod_{n_i\in N}(1-\Lambda_{i}e^{-\Lambda_i -1})^n
+\]
+令 $\kappa_i=\left(1-\Lambda_i e^{-\Lambda_i-1}\right)^{n}$, 则有
+\[
+P_{N_j,d}=1-\kappa_{j_1}\kappa_{j_2}\cdots\kappa_{j_k}
+\]
+
+由此，对于问题SSP的任意一个解实例，一定有一个问题$N_{opt}$ 的解实例与之对应。换言之
+\[
+v=\log (g_{j_1}g_{j_2}\cdots g_{j_k})\Longleftrightarrow P_{N_j,d}=1-\kappa_{j_1}\kappa_{j_2}\cdots\kappa_{j_n}
+\]
+反之, 若SSP问题无解, 则$N_{opt}$问题一定也无解. 因为若 $N_{opt}$ 有解, 则存在一个集合$R_j={r_{j_1},r_{j_2},\ldots,r_{j_n}}$ 使下式成立
+\[
+P=P_{N_j}
+\]
+与题设矛盾。\\
+证毕
+\end{proof}
+
 
 \subsection{局部陷阱}
 
+对于$N_{opt}$，一种直接的解法是局部搜索算法。然而，这有可能会陷入局部最优陷阱。对\figurename~\ref{fig:chap3_example1}中例子而言，假设节点$n_2$产生一条目的节点为$n_4$的消息，则其局部搜索过程如\tablename~\ref{tab:chap3_local_search}所示。
+
+\begin{table}[hbt]
+  \caption{\figurename~\ref{fig:chap3_example1}中的局部搜索过程示例}
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    %empty 
+    & \multicolumn{3}{c|}{current solution}
+    & \multicolumn{3}{c|}{next options}
+    \\    
+    \cline{2-7}
+    
+    %empty 
+    & $\textbf{x}^{now}$ & N & $P_{N,4}$ & $\textbf{x}^{next}$ & N' & $P_{N',4}$ \\
+    \hline
+    
+    %%%%step 1
+    \multicolumn{1}{|c|}{\multirow{3}{*}{\textbf{Step 1}}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[0,1,0]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_2\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.673$}}
+    &$[0,1,\underline{1}]$ &$\{n_2,n_3\}$ & $0.600$ 
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+     &\multicolumn{1}{c|}{}
+    &$[0,\underline{0},0]$ & $\phi$ & $0$
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+        &\multicolumn{1}{c|}{}
+    &$[\underline{1},1,0]$ & $\{n_1,n_2\}$ & $0.670$
+    \\
+    
+    \hline
+        %%%%stop
+    \multicolumn{1}{|c|}{\multirow{3}{*}{\textbf{Stop}}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[0,1,0]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_2\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.673$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{---}} 
+    &\multicolumn{1}{c|}{\multirow{3}{*}{---}}  
+    &\multicolumn{1}{c|}{\multirow{3}{*}{---}}   
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+     &\multicolumn{1}{c|}{}
+    & &  & 
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+        &\multicolumn{1}{c|}{}
+    & &  & 
+    \\
+    \hline    
+  \end{tabular} 
+  \label{tab:chap3_local_search}
+\end{table}
+
+如\figurename~\ref{tab:chap3_local_search}，在开始时只有节点$n_2$持有该消息，对于$N=\{n_2\}$，其预测投递率为$0.673$，高于其周围i任何一个可行解所对应的目标值。算法会误认为当前解$\bm{x}^{now}$即是最优解，然而真正的最优解是$[1,1,1]$，对应预测投递率$0.789$。在本例中，算法掉入了局部最优陷阱，而局部搜索算法无法跳出该陷阱。
+
 \subsection{基于禁忌搜索的求解方法}
+
+本小节基于禁忌搜索，提出解决$N_{opt}$的启发式算法，框架见算法~\ref{alg:chap3_framework}所示。
+
+\begin{algorithm}[!tbp] %算法的开始
+\renewcommand{\algorithmicensure}{\textbf{Step}}
+\caption{Tabu Search Framework.} %算法的标题
+\label{alg:chap3_framework} %给算法一个标签，这样方便在文中对算法的引用
+\begin{algorithmic}[1] %这个1 表示每一行都显示数字
+\REQUIRE ~\\
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{notation} & \textbf{meaning}\\
+\hline
+$p$ & Evaluation function\\
+$\mathcal{N}$ & Neighborhood of a solution\\
+$\mathcal{S}$ & Solution space\\
+$\mathcal{E}$ & Stop rules \\
+$\mathcal{T}$ & tabu table $\left\{\begin{tabular}{c|c} 
+               $\varphi$ & Tabu element \\
+               \hline
+               $\mathcal{L}$ & Tabu length\\
+                \end{tabular}\right.$\\
+$\mathcal{A}$ & Aspiration criteria\\
+\hline
+\end{tabular}
+\end{center}
+\end{algorithmic} %这个1 表示每一行都显示数字
+\begin{algorithmic}[1] %这个1 表示每一行都显示数字
+\ENSURE \textbf{1:}
+\STATE choose an initial feasible solution $\textbf{x}^{now}$ in $\mathcal{S}$
+\STATE set the current best solution $\textbf{x}^{best}\leftarrow\textbf{x}^{now}$
+\STATE set the tabu table $\mathcal{T}\leftarrow\emptyset$
+\end{algorithmic} %这个1 表示每一行都显示数字
+\begin{algorithmic}[1] %这个1 表示每一行都显示数字
+\ENSURE \textbf{2:}
+\IF{$\mathcal{E}(\textbf{x}^{best})=\textbf{true}$}
+    \RETURN $\textbf{x}^{best}$
+\ENDIF
+\STATE get $C$ by filtering $\mathcal{N}(\textbf{x}^{now})$ according to $\mathcal{T}$ and $\mathcal{A}$
+%location 1
+\STATE $\textbf{x}^{now}\leftarrow\mathrel{\mathop{\arg\max}\limits_{\textbf{x}\in C}}p(\textbf{x})$
+\IF{$p(\textbf{x}^{now})<p(\textbf{x}^{best})$}
+    \STATE $\textbf{x}^{best}\leftarrow\textbf{x}^{now}$
+\ENDIF
+\STATE update $\mathcal{T}$
+\STATE \textbf{goto} Step 2
+\end{algorithmic}
+\end{algorithm}
+
+禁忌搜索过程可被分为两步，即Step 1和Step 2，其基本规则和数据结构见算法~\ref{alg:chap3_framework}内的表格。其中数学符号的正式定义将在下文给出。整个搜索过程即是在解空间中一步一步更改当前可行解，同时评估该可行解对应的目标函数值，从而尝试获得最优解。Step 1是禁忌搜索的初始化步骤，其中算法将在解空间$S$中选择一个可行解作为当前解，记为$\bm{x}^{now}$。接着，最优解也被初始化为$\bm{x}^{now}$，在此时，禁忌表$\mathcal{T}$中并无记录，如Step 1中行3所示。
+
+在Step 2中，若停止规则$\mathcal{E}$被满足，则搜索过程终止并返回当前最优解$\bm{x}^{best}$作为最终结果。若不满足停止规则，则从$\bm{x}^{now}$的所有邻居$\mathcal{N}(\bm{x}^{now})$中选择一个可行解更新$\bm{x}^{now}$，该选择过程参照禁忌表$\mathcal{T}$的状态，以及预先定义的特赦准则$\mathcal{A}$。接着，算法将搜索子集$C$，并选择能够使函数$p$取得最大值的$\bm{x}$解向量。在Step 2的每一轮迭代中，都会尝试更新最优解$\bm{x}^{best}$。最终，禁忌表$\mathcal{T}$中对应的禁忌元素$\phi$将会被更新为预先定义的禁忌步长$\mathcal{L}(\phi)$。
+
+下面给出算法\ref{alg:chap3_framework}中所有数学符号的定义。
+
+\begin{definition}评估函数.\\
+禁忌搜索中的评估函数表示为$p(\textbf{x})$, 有
+\[
+p(\textbf{x})=-f(\textbf{x})
+\]
+\label{def:eva_func}
+\end{definition}
+
+在定义~\ref{def:eva_func}中，评估函数设为对定义~\ref{def:N_opt}中函数$f(\bm{x})$的值取反。于是，搜索算法的目标即最大化评估函数的值。对于任一可行解向量$\bm{x}$，规定其邻域如定义~\ref{def:neighborhood}
+
+\begin{definition}邻域.\\
+令 $\textbf{x}=[x_1,x_2,\ldots,x_n]$$(\forall i, x_i\in{0,1})$ 为任一可行解向量, 则在算法中$\textbf{x}$的邻域$\mathcal{N}(\bm{x})$定义如下
+\begin{equation}
+\mathcal{N}(\textbf{x})=\left\{~\textbf{x'}~\middle|~~\sum_{i=1}^{n}\left| x_i- x'_j\right|\leq 1\right\}
+\end{equation}
+\label{def:neighborhood}
+\end{definition}
+
+如定义~\ref{def:neighborhood}，某可行解的领域中的任一元素，与该可行解在向量上只有一个元素的差距。例如，如果当前可行解$\bm{x}$为$[0,1,0,1]$，则其邻域$\mathcal{N}(\textbf{x})=\{[\underline{1},1,0,1],[0,\underline{0},0,1],[0,1,\underline{1},1],[0,1,0,\underline{0}]\}$，其中每一个向量都是$\bm{x}$的相邻解向量，下划线位置即是对原向量对应位置“取反”得到。事实上，整个解空间可被看做一个超立方体，其中每个顶点对应一个可行解向量，且解的邻域对应其在超立方体中的所有邻居节点，如\figurename~\ref{fig:chap3_hypercube}所示。
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=5.0in]{paper-MPAR/hypercube}
+\caption{超立方体解空间}
+\label{fig:chap3_hypercube}
+\end{figure}
+
+停止规则是禁忌搜索中最重要的准则之一，其决定搜索过程停止的条件。在本算法中，停止规则如定义~\ref{}所示。
+
+
 
 \section{最优化路由算法}
 \label{chap3:最优化路由算法}

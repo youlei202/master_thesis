@@ -15,13 +15,14 @@
 
 % \usepackage[sectionbib]{chapterbib}%每章都用参考文献
 
-\usepackage{algorithm2e}
+\usepackage{algorithm}
 \usepackage{graphicx}
 \usepackage{array}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{mathrsfs}
+\usepackage{bm}
 \usepackage{bbm}
 \usepackage{bbold}
 \usepackage{xfrac}
@@ -156,7 +157,11 @@
 %% 个人简历(硕士学位论文没有个人简历要求)
 % \include{body/resume}
 
+\listoftables
+\listoffigures
 
+%\renewcommand{\listalgorithmcfname}{算法索引}
+\listofalgorithms
 
 % 发表文章目录
 \include{body/pub}
