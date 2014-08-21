@@ -17,7 +17,7 @@ A level-1 auxiliary file: body/chapter07_a.aux
 A level-1 auxiliary file: body/chapter08.aux
 A level-1 auxiliary file: body/chapter09.aux
 A level-1 auxiliary file: body/conclusion.aux
-Illegal, another \bibstyle command---line 41 of file diss.aux
+Illegal, another \bibstyle command---line 40 of file diss.aux
  : \bibstyle
  :          {../GBT7714-2005NLang}
 I'm skipping whatever remains of this command

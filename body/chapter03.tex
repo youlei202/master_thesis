@@ -429,10 +429,10 @@ $N_{opt}$问题属于$\mathcal{NP}$-hard类.
 \begin{proof}
 %We reduce the $N_{opt}$ Search Problem as a Subset Sum Problem (SSP). Assume that we know a solution for a certain SSP instance of which all the elements are denoted by $R={r_1,r_2,\ldots,r_n}$ and the target value is $v$. For clarity, we transform $R$ as follows:
 将子集和问题(Subset Sum Problem, SSP)归约为$N_{opt}$问题。假设已知SSP问题的一个解实例，用 $R={r_1,r_2,\ldots,r_n}$，目标值用$v$表示。为清楚起见，将$R$变为如下形式
-\begin{multline*}
+\begin{displaymath}
 R=\{\log 2^{r_1},\log 2^{r_2},\ldots,\log 2^{r_n}\}
 =\{\log g_1,\log g_2,\ldots,\log g_n\}
-\end{multline*}
+\end{displaymath}
 其中有 $g_i=2^{r_i}~~(i\in[1,n])$.
 将其所有非空子集表示为 $R_1,R_2\ldots, R_{2^{|N|-1}}$。接下来，构造对应的 $N_{opt}$ 实例。 目标值为$P=v$, 节点集合为$N={n_1,n_2,\ldots,n_n}$， 对应上述提到的集合$R$. 对于每一个$N$的非空子集$N_i$, 都存在一个$R$的子集$R_i$与其一一对应 (所有的角标都是一一对应的), 将任意子集$N_j$表示为如下
 \[
@@ -612,7 +612,11 @@ p(\textbf{x})=-f(\textbf{x})
 \label{def:neighborhood}
 \end{definition}
 
-如定义~\ref{def:neighborhood}，某可行解的领域中的任一元素，与该可行解在向量上只有一个元素的差距。例如，如果当前可行解$\bm{x}$为$[0,1,0,1]$，则其邻域$\mathcal{N}(\textbf{x})=\{[\underline{1},1,0,1],[0,\underline{0},0,1],[0,1,\underline{1},1],[0,1,0,\underline{0}]\}$，其中每一个向量都是$\bm{x}$的相邻解向量，下划线位置即是对原向量对应位置“取反”得到。事实上，整个解空间可被看做一个超立方体，其中每个顶点对应一个可行解向量，且解的邻域对应其在超立方体中的所有邻居节点，如\figurename~\ref{fig:chap3_hypercube}所示。
+如定义~\ref{def:neighborhood}，某可行解的领域中的任一元素，与该可行解在向量上只有一个元素的差距。例如，如果当前可行解$\bm{x}$为$[0,1,0,1]$，则其邻域
+\[
+\mathcal{N}(\textbf{x})=\{[\underline{1},1,0,1],[0,\underline{0},0,1],[0,1,\underline{1},1],[0,1,0,\underline{0}]\}
+\]
+其中每一个向量都是$\bm{x}$的相邻解向量，下划线位置即是对原向量对应位置“取反”得到。事实上，整个解空间可被看做一个超立方体，其中每个顶点对应一个可行解向量，且解的邻域对应其在超立方体中的所有邻居节点，如\figurename~\ref{fig:chap3_hypercube}所示。
 
 \begin{figure}[!t]
 \centering
@@ -623,10 +627,411 @@ p(\textbf{x})=-f(\textbf{x})
 
 停止规则是禁忌搜索中最重要的准则之一，其决定搜索过程停止的条件。在本算法中，停止规则如定义~\ref{}所示。
 
+\begin{definition}停止规则\\
+停止规则 $\mathcal{E}$ 如下定义
+\[
+\mathcal{E}(\textbf{x}^{best})=\left\{
+\begin{array}{cl}
+true & \textnormal{if $p(\textbf{x}^{best})$ not improved after $\theta$ steps} \\
+false & \textnormal{otherwise}
+\end{array}\right.
+\]
+\label{def:stop_rule}
+\end{definition}
 
+如之前所述，评估函数$p$的值在搜索过程的每一次迭代中都被更新。如果当前解向量$\bm{x}^{now}$对应更好的评估函数值，即若有$p(\bm{x}^{now})>p(\bm{x}^{best})$，则用$\bm{x}^{now}$的值更新$\bm{x}^{best}$。然而，若当前记录的最优解对应的评估函数值$p(\bm{x}^{best})$在一定步数之内都未被更新，则意味着算法可能无法找到更好的解（在算法本身不被修改的前提下）。在这种情况下，搜索过程停止，当前最优解向量将作为返回值从算法返回。
+
+禁忌表$\mathcal{T}$由两个主要元素组成，禁忌对象$\phi$和禁忌长度$\mathcal{L}(\phi)$。禁忌对象是禁忌搜索算法中实施禁忌的目标元素，可以定义为解向量的变化，或评估函数的变化。在本算法中，禁忌对象见定义~\ref{def:tabu_element}。
+
+\begin{definition}禁忌对象\\
+禁忌对象为解向量的变化，形式化定义如下
+\[
+\varphi:\textbf{x}\rightarrow\textbf{x'}
+\]
+有
+\[
+\textbf{x}=(x_1,\ldots,x_{i-1},x_i,x_{i+1},\ldots,x_n)~~(i\in [0,n])
+\]
+且
+\[
+\textbf{x'}=(x_1,\ldots,x_{i-1},y_i,x_{i+1},\ldots,x_n)~~(i\in [0,n], x_i\neq y_i)
+\]
+\label{def:tabu_element}
+\end{definition}
+
+事实上，禁忌对象是当前解向量在超立方体中对应的顶点向邻接顶点的迁移。正如\figurename~\ref{fig:chap3_hypercube}所示，从蓝色顶点（当前解）向红色顶点的迁移，即为禁忌对象。禁忌表中的禁忌长度如定义~\ref{def:tabu_length}。
+
+\begin{definition}禁忌长度\\
+禁忌长度由$\mathcal{L}(\varphi)$表示, 有
+\[
+\mathcal{L}(\varphi)=\lfloor T\rfloor
+\]
+T是服从正态分布的随机变量，有$T\sim N(\mu,\sigma^2)$, 且令
+\[
+\mu=\left\{
+\begin{array}{ll}
+\sqrt{n}[1+p(\textbf{x'})-p(\textbf{x})] & p(\textbf{x'})>p(\textbf{x}) \\
+\sqrt{n} & \textnormal{otherwise}
+\end{array}
+\right.
+\]
+\label{def:tabu_length}
+\end{definition}
+
+在定义~\ref{def:tabu_element}中，禁忌长度设为对服从正态分布的随机变量$T$做下取整，其中正态分布的参数$\mu$保证了对于能让目标函数值变的更好的解向量，在统计意义上具有一个较长的禁忌长度。将禁忌长度设为一个随机数，而非常量，其意义在于向搜索算法中加上一定的随机因素，如同舍伍德算法一样。随机性能够帮助算法跳出一些无休止的循环，且能在算法输入被蓄意设定的情况下表现的更好。对于禁忌长度，值$T$与评估函数的变化程度$|p(\bm{x})-p(\bm{x'})|$具有一定关系。评估函数值发生变化具有两种情况；第一种情况下$p(\bm{x'})<p(\bm{x})$，意味着评估函数值到达了一个新的“山谷”；第二种情况下$p(\bm{x'})>p(\bm{x})$，意味着评估函数值爬上了一个比以往更高的“峰顶”。在第一种情况下，应将禁忌长度设的更大，从而让算法能够跳出当前的局部陷阱；对于第二种情况，应将禁忌长度设的更小，以免解向量移动的太远，再次掉入另一个“山谷”。定义~\ref{def:tabu_element}中的设定正好符合以上几点，此外对于正态分布参数$\mu$，有$\mu\in[\sqrt{n},2\sqrt{n}]$。
+
+从定义~\ref{def:tabu_element}和定义~\ref{def:tabu_length}出发，算法禁忌表见定义~\ref{def:tabu_table}。
+
+\begin{definition}禁忌表\\
+禁忌表的结构如下 \\
+\begin{center}
+$\mathcal{T}$=
+  \begin{tabular}{|c|c|cc|c|c|}
+  \hline
+   $1$ & $2$ & $\cdots$ & $\cdots$ & $n-1$ & $n$\\
+   \hline
+   $t_1$ & $t_2$ & $\cdots$ & $\cdots$ & $t_{n-1}$ & $t_n$ \\
+    \hline
+  \end{tabular} \\
+\end{center}
+假设禁忌对象为 $\varphi:\textbf{x}->\textbf{x'}$, 其更新规则如下
+\[
+\forall i, t_i=\left\{
+\begin{array}{ll}
+\mathcal{L}(\varphi) & \textnormal{if $|x_i-x'_i|=1$} \\
+  0 & \textnormal{if}~t_i=0 \\
+t_i-1 &  \textnormal{otherwise} \\
+\end{array}
+\right.
+\]
+\label{def:tabu_table}
+\end{definition}
+
+禁忌表$\mathcal{T}$设为一个$2\times n$的表，其中第一行代表禁忌对象中解向量的变化位置，第二行代表对于每个位置当前的禁忌步长。例如，设当前解向量发生变化，其对应的禁忌对象为$\phi:[0,1,0]\rightarrow[1,1,0]$，则应当按如下更新当前的禁忌表（其中$t_1,t_2,t_3>0$）
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+1 & 2 & 3 \\
+\hline
+$t_1$ & $t_2$ & $t_3$ \\
+\hline
+\end{tabular} $\longrightarrow$
+\begin{tabular}{|c|c|c|}
+\hline
+1 & 2 & 3 \\
+\hline
+$\mathcal{L}(\varphi)$ & $t_2-1$ & $t_3-1$ \\
+\hline
+\end{tabular}
+\end{center}
+对于算法的每一次更新操作，向量变化所对应的位置，在禁忌表中都会以$\mathcal{L}(\phi)$值更新，其它所有非零的表格元素都会做减1操作。任意位置，若其对应的禁忌步长不为0，则仅当禁忌步长降为0时，当前解向量才可从该位置向对应的相邻解向量迁移。
+
+禁忌搜索中另一个重要的法则，即为特赦准则。特赦准则可以对禁忌表中特定的禁忌对象进行赦免，从而使其能被算法重新选取。特赦准则如定义~\ref{def:aspiration}
+
+\begin{definition} 特赦准则\\
+特赦准则如下定义
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+对于 $\forall\bm{x}$, 若有 $p(\textbf{x})>p(\textbf{x}^{best})$ \\
+则解向量 $\textbf{x}$ 可以作为下一步选择，即使其在禁忌表$\mathcal{T}$中被禁 \\
+\hline
+\end{tabular}
+\end{center}
+\label{def:aspiration}
+\end{definition}
+
+当所有的位置都在表$\mathcal{T}$中被禁时，当前解向量无法迁移到任何一个邻居向量。然而当某一个邻居向量所对应的评估函数值，优于当前所记录的最优值，则该向量会以特赦准则被解禁，即可以被算法选取。
+
+\figurename~\ref{fig:chap3_example1}所示例子所对应的禁忌搜索过程，如\figurename~\ref{tab:chap3_tabu_search}。如同\tablename~\ref{tab:chap3_local_search}所示的局部搜索一样，消息源节点依然被选为$n_2$，且初始解向量为$[0,1,0]$。为了简化表述，在此，禁忌表长$\mathcal{L}$设定为常数$3$，而非定义中所述的随机量。此外，定义~\ref{def:stop_rule}中的$\theta$值设为$3$.
+
+\begin{table*}[hbt]
+  \caption{\figurename~\ref{fig:chap3_example1}例子对应的禁忌搜索过程}
+  \resizebox{\textwidth}{!}{
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    %empty 
+    & \multicolumn{3}{c|}{current solution}
+    & \multicolumn{3}{c|}{current best solution}
+    & \multicolumn{1}{c|}{\multirow{2}{*}{tabu table $\mathcal{T}$}}
+    & \multicolumn{4}{c|}{next options}
+    \\    
+    \cline{2-7}\cline{9-12}
+    
+    %empty 
+    & $\textbf{x}^{now}$ & N & $P_{N,4}$ & $\textbf{x}^{best}$ & $N^{best}$ & $P_{N^{best},4}$ & & $\textbf{x}^{next}$ & N' & $P_{N',4}$ & status \\
+    \hline
+%    
+    %%%%step 1
+    \multicolumn{1}{|c|}{\multirow{3}{*}{\textbf{Step 1}}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[0,1,0]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_2\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.673$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[0,1,0]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_2\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.673$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$
+                                                     \begin{tabular}{|c|c|c|}
+                                                        \hline
+                                                        1 & 2 & 3 \\
+                                                        \hline
+                                                        0 & 0 & 0 \\
+                                                        \hline
+                                                     \end{tabular}$}}
+    &$[\underline{1},1,0]$ &$\{n_1,n_2\}$ & $0.670$ & choosable
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &$[0,\underline{0},0]$ & $\phi$ & $0$ & choosable
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &$[0,1,\underline{1}]$ & $\{n_2,n_3\}$ & $0.600$ & choosable
+    \\
+    \hline
+    
+    %%%%step 2
+    \multicolumn{1}{|c|}{\multirow{3}{*}{\textbf{Step 2}}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[1,1,0]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_1,n_2\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.670$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[0,1,0]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_2\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.673$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$
+                                                     \begin{tabular}{|c|c|c|}
+                                                        \hline
+                                                        1 & 2 & 3 \\
+                                                        \hline
+                                                        3 & 0 & 0 \\
+                                                        \hline
+                                                     \end{tabular}$}}
+    &$[\underline{0},1,0]$ &$\{n_2\}$ & $0.673$ & tabu
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &$[0,\underline{0},0]$ & $\phi$ & $0$ & choosable
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &$[1,1,\underline{1}]$ & $\{n_1,n_2,n_3\}$ & $0.789$ & choosable
+    \\
+
+    \hline
+    %%%%step 3
+    \multicolumn{1}{|c|}{\multirow{3}{*}{\textbf{Step 3}}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[1,1,1]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_1,n_2,n_3\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.789$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[1,1,1]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_1,n_2,n_3\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.789$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$
+                                                     \begin{tabular}{|c|c|c|}
+                                                        \hline
+                                                        1 & 2 & 3 \\
+                                                        \hline
+                                                        2 & 0 & 3 \\
+                                                        \hline
+                                                     \end{tabular}$}}
+    &$[\underline{0},1,1]$ &$\{n_2,n_3\}$ & $0.600$ & tabu
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &$[1,\underline{0},1]$ & $\{n_1,n_3\}$ & $0.626$ & choosable
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &$[1,1,\underline{0}]$ & $\{n_1,n_2\}$ & $0.670$ & tabu
+    \\
+
+    \hline
+    %%%%step 4
+    \multicolumn{1}{|c|}{\multirow{3}{*}{\textbf{Step 4}}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[1,0,1]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_1,n_3\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.626$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[1,1,1]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_1,n_2,n_3\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.789$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$
+                                                     \begin{tabular}{|c|c|c|}
+                                                        \hline
+                                                        1 & 2 & 3 \\
+                                                        \hline
+                                                        1 & 3 & 2 \\
+                                                        \hline
+                                                     \end{tabular}$}}
+    &$[\underline{0},0,1]$ &$\{n_3\}$ & $0.291$ & tabu
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &$[1,\underline{1},1]$ & $\{n_1,n_2,n_3\}$ & $0.789$ & tabu
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &$[1,0,\underline{0}]$ & $\{n_1\}$ & $0.430$ & tabu
+    \\
+    
+    \hline
+    %%%%step 5
+    \multicolumn{1}{|c|}{\multirow{3}{*}{\textbf{Step 5}}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[1,0,1]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_1,n_3\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.626$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[1,1,1]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_1,n_2,n_3\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.789$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$
+                                                     \begin{tabular}{|c|c|c|}
+                                                        \hline
+                                                        1 & 2 & 3 \\
+                                                        \hline
+                                                        0 & 2 & 1 \\
+                                                        \hline
+                                                     \end{tabular}$}}
+    &$[\underline{0},0,1]$ &$\{n_3\}$ & $0.291$ & choosable
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &$[1,\underline{1},1]$ & $\{n_1,n_2,n_3\}$ & $0.789$ & tabu
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &$[1,0,\underline{0}]$ & $\{n_1\}$ & $0.430$ & tabu
+    \\
+    
+    \hline
+    %%%%stop
+    \multicolumn{1}{|c|}{\multirow{3}{*}{\textbf{Stop}}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$[1,1,1]$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$\{n_1,n_2,n_3\}$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{$0.789$}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{---}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{---}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{---}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{---}}
+    &\multicolumn{1}{c|}{\multirow{3}{*}{---}} 
+    &\multicolumn{1}{c|}{\multirow{3}{*}{---}} 
+    &\multicolumn{1}{c|}{\multirow{3}{*}{---}}  
+    &\multicolumn{1}{c|}{\multirow{3}{*}{---}}
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    & &  &  &
+    \\
+    
+    \multicolumn{1}{|c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    &\multicolumn{1}{c|}{}
+    & &  &  &
+    \\    
+    \hline    
+  \end{tabular}}
+  \label{tab:chap3_tabu_search}
+\end{table*}
+
+在Step 1中，禁忌表$\mathcal{T}$初始化为空，对于当前解向量，其所有的邻居解向量都可选。依算法\ref{alg:chap3_framework}第5行，选择能使评估函数取最大值的解向量$[1,1,0]$。在Step 2中，解向量第一个位置在表中被禁，故下一个解向量只能在$[0,0,0]$及$[1,1,1]$中选择。搜索过程一直进行到Step 5，其中最优解在$\theta=3$步之后还未更新，触发停止规则，算法终止。纵览整个过程，与\tablename~\ref{tab:chap3_local_search}所述局部搜索过程相比，算法可以成功跳出局部最优陷阱。
 
 \section{最优化路由算法}
 \label{chap3:最优化路由算法}
+
+本节给出有关路由过程的细节。在本节中，提出两个路由算法，基于局部搜索的Local-MPAR和基于禁忌搜索的Tabu-MPAR。在Local-MPAR中，对任一节点而言，其它节点的$\lambda$值仅当该节点与其接触时获取；在Tabu-MPAR中，假设每个节点都知道其它所有节点对应的$\lambda$值。
+
+在本章中，算法过程的解释是针对单一消息而言的（该消息在网络中可以具有一份或者多份拷贝）。为了进一步解释路由算法，本章参照文献\cite{Vahdat2000}所提出的传染病路由算法的概念——将消息看做传播的病毒。由此，节点间一次成功的消息传输（复制）可被看做一次感染。上述讨论中，不包括消息的投递过程，即假设当$n_a$感染$n_b$时，$n_b$不为消息的目的节点。以此出发，可以将网络中的节点状态划分为三类（皆只针对某一消息而言）。
+
+\begin{itemize}
+\item \textbf{被感染节点}\\
+被感染节点持有一条或者几条该消息的拷贝，然而被感染节点不具备传染性，即无法传染其他纯净节点。
+
+\item \textbf{纯净节点}\\
+纯净节点不持有消息的任意拷贝，可以被任意传染节点感染。
+
+\item \textbf{}
+\end{itemize}
+
 
 \subsection{Local-MPAR:基于局部搜索的路由算法}
 
