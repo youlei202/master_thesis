@@ -1397,88 +1397,149 @@ $N=N_{opt}$当且仅当网络中不存在传染节点时发生，即所有属于
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=3.5in]{paper-MPAR/Manhattan}
+\includegraphics[width=2.7in]{paper-MPAR/Manhattan}
 \caption{Working day movement模型，结合Manhattan blocks.}
 \label{fig:chap3_manhattan}
 \end{figure}
 
-网络场景设定如下。行人数量分别设为200, 400, 600, 800。公交车，办公室及活动场所的数量分别设为总节点数目的2\%, 20\%, 2.5\%。在模拟器时间内，每人每天工作时间设为8小时。每人晚上参加夜晚活动的概率为0.5。此外，每个人有车的概率为0.2，若有车，则晚上参加活动将会开车，否则将乘巴士。行人的行走速度设为0.8--1.4m/s。如\figurename~\ref{fig:chap3_manhattan}所示，网络中设有三类地点，家（home），办公室（office）及聚会地点（meeting spot）。在街区中心设有一个环绕中心的公交路线，可以用于搭载行人。在每一个家，办公室及聚会地点，都设有一个throw-box，用以接管和传递消息。所有节点都以蓝牙接口通信，传输半径设为10 m，数据率设为250 KB/s。由于每一类地点（家，办公室或聚会地点）都设为地图上的一个点，仿真中确保每个节点到达这些地点后一定与throwbox发生接触。
+网络场景设定如下。行人数量分别设为200, 400, 600, 800。公交车，办公室及活动场所的数量分别设为总节点数目的2\%, 20\%, 2.5\%。在模拟器时间内，每人每天工作时间设为8小时。每人晚上参加夜晚活动的概率为0.5。此外，每个人有车的概率为0.2，若有车，则晚上参加活动将会开车，否则将乘巴士。行人的行走速度设为0.8--1.4m/s。如\figurename~\ref{fig:chap3_manhattan}所示，网络中设有三类地点，家（home），办公室（office）及聚会地点（meeting spot）。在街区中心设有一个环绕中心的公交路线，可以用于搭载行人。在每一个家，办公室及聚会地点，都设有一个throw-box，用以接管和传递消息。所有节点都以蓝牙接口通信，传输半径设为10 m，数据率设为250 KB/s。由于每一类地点（家，办公室或聚会地点）都设为地图上的一个点，仿真中确保每个节点到达这些地点后一定与throwbox发生接触。在仿真中，共产生30,000条消息，对于每条消息，其源节点和目的节点从所有行人节点中随机选择。每条消息的大小设为500 K 至 1 M 之间。仿真区域的大小根据节点数目的多少按同比例设定。对于整个仿真过程，其仿真器时间设为12天。
 
-在仿真中，共产生30,000条消息，对于每条消息，其源节点和目的节点从所有行人节点中随机选择。每条消息的大小设为500 K 至 1 M 之间。仿真区域的大小根据节点数目的多少按同比例设定。对于整个仿真过程，其仿真器时间设为12天。
-
-本节将MPAR算法与两个经典算法相比较：Delegation Forwarding (DF) \cite{Erramilli2008}与Simbet \cite{Daly2007}。采用四项评估指标：投递率(delivery ratio)，平均时延(average latency)，网络开销（overhead ratio）及平均每跳数（average hop count）。仿真结果表明，MPAR算法可以较大程度上提升路由性能表现，尤其在于消息投递率。
+本节将MPAR算法与两个经典算法相比较：Delegation Forwarding (DF) \cite{Erramilli2008}与Simbet \cite{Daly2007}。采用四项评估指标：投递率(delivery ratio)，平均时延(average latency)，网络开销（overhead ratio）及平均每跳数（average hop count）。
 
 
 
 \subsection{自变量：消息生存时间}
 
-在将消息生存时间设为自变量时，节点缓存大小固定在200M。消息的生存时间从10小时到30小时变化，仿真结果如\figurename~\ref{fig:chap3_delivery_ttl}，\figurename~\ref{fig:chap3_latency_ttl}，\figurename~\ref{fig:chap3_overhead_ttl}，\figurename~\ref{fig:chap3_hop_ttl}。
+节点缓存大小固定在200M。消息的生存时间在10小时到30小时变化，仿真结果如\figurename~\ref{fig:chap3_delivery_ttl}，\figurename~\ref{fig:chap3_latency_ttl}，\figurename~\ref{fig:chap3_overhead_ttl}，\figurename~\ref{fig:chap3_hop_ttl}。
+
+仿真结果表明，两种MPAR算法，Local-MPAR及Tabu-MPAR，其性能表现都要优于DF及SimBet。与DF算法相比，Tabu-MPAR和Local-MPAR分别可以增加约71.1\%及37.8\%的消息投递率，且能降低约83.8\%及57.8\%的平均时延。与SimBet算法相比，Tabu-MPAR和Local-MPAR分别可以增加95.2\%和55.3\%的投递率，且能降低大概79.2\%及60.1\%的平均时延。从\figurename~\ref{fig:chap3_overhead_ttl}可以看出，Tabu-MPAR和Local-MPAR具有比DF及SimBet更低的网络开销。对于三中社会属性相关的路由算法，Tabu-MPAR, Local-MPAR及SimBet而言，网络开销要比DF低很多，特别是在消息生存时间设为比较长时。当网络中节点数目更小时，这种提升就越明显。由于MPAR路由算法限制了消息的最大副本数量，且利用throwbox辅助投递消息，中继传输操作非常少。此外，随着节点数目的增加，对于每个节点而言，其开销也会相应减小，导致整个网络的开销减小。\figurename~\ref{fig:chap3_hop_ttl}显示了消息平均跳数的性能表现。可以看出，两种MPAR算法具有比DF和SimBet更低的平均跳数。当节点数目增加时，平均跳数也增加；其原因是仿真区域按同比例增加后，需要节点间更多的合作，用以投递消息。
+
+
+
+\subsection{自变量：节点缓存}
+
+消息生存时间固定为仿真器中的16小时。节点缓存大小在50 MB 到 300 MB 之间变换。仿真结果如\figurename~\ref{fig:chap3_delivery_buffer}，\figurename~\ref{fig:chap3_latency_buffer}，\figurename~\ref{fig:chap3_overhead_buffer}，\figurename~\ref{fig:chap3_hop_buffer}。
+
+仿真结果表明，两种MPAR算法，Local-MPAR及Tabu-MPAR，其性能表现皆优于DF及SimBet。与DF算法相比，Tabu-MPAR和Local-MPAR分别可以增加约83.8\%及40.3\%的消息投递率，且能降低约83.8\%及57.8\%的平均时延。与SimBet算法相比，Tabu-MPAR和Local-MPAR分别可以增加3倍和2.5的投递率，且能降低大概80\%及60\%的平均时延。从\figurename~\ref{fig:chap3_overhead_buffer}可以看出，Tabu-MPAR和Local-MPAR具有几乎相同的网络开销；当缓存大小设为120 MB 时，MPAR算法的网络开销比SimBet略低一点，比DF低很多。当网络中节点数目更小时，性能提升越明显，如\figurename~\ref{fig:chap3_overhead_buffer}所示。与消息生存时间作为变量时相同，从\figurename~\ref{fig:chap3_hop_buffer}可以看出，两种MPAR算法具有比DF和SimBet更低的消息平均跳数，且当节点数目增加时，平均跳数也随之增加。
+
+\section{本章总结}
+\label{chap3:本章总结}
+在本章中，建立了周期相关的一动记录模型，并从移动记录中提取出节点（群组）移动模式。对于成组的节点，其被看做一个整体，并评估整体的预测投递率。本章研究了两个相关路由的关键属性，并将路由问题建模为组合最优化问题，且证明了该问题的$\mathcal{NP}$难解性。为求解该路由问题，基于局部搜索及禁忌搜索，分别提出了两种路由算法Local-MPAR及Tabu-MPAR。此外，本章证明了Tabu-MPAR过程可以使得持有消息的节点集合最终达到预测投递概率最优的集合。仿真实验表明，两种MPAR算法，在机会网络中的综合移动模型WDM上优于DF算法及SimBet算法。
+
+
+
 
 \begin{figure*}[!t]
 \centering
 \subfigure[Number of nodes: $|\overline{N}|=200$\label{200_delivery_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/200_delivery_ttl}}
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/200_delivery_ttl}}\quad\quad
 \subfigure[Number of nodes: $|\overline{N}|=400$\label{400_delivery_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/400_delivery_ttl}} \\
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/400_delivery_ttl}} \\
 \subfigure[Number of nodes: $|\overline{N}|=600$\label{600_delivery_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/600_delivery_ttl}}
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/600_delivery_ttl}}\quad\quad
 \subfigure[Number of nodes: $|\overline{N}|=800$\label{800_delivery_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/800_delivery_ttl}}
-\caption{Performance comparisons of delivery probability vs. time-to-live}
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/800_delivery_ttl}}
+\caption{消息投递率 vs. 消息生存时间}
 \label{fig:chap3_delivery_ttl}
 \end{figure*}
 
 \begin{figure*}[!t]
 \centering
 \subfigure[Number of nodes: $|\overline{N}|=200$\label{200_avgLatency_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/200_avgLatency_ttl}}
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/200_avgLatency_ttl}}\quad\quad
 \subfigure[Number of nodes: $|\overline{N}|=400$\label{400_avgLatency_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/400_avgLatency_ttl}} \\
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/400_avgLatency_ttl}} \\
 \subfigure[Number of nodes: $|\overline{N}|=600$\label{600_avgLatency_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/600_avgLatency_ttl}}
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/600_avgLatency_ttl}}\quad\quad
 \subfigure[Number of nodes: $|\overline{N}|=800$\label{800_avgLatency_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/800_avgLatency_ttl}}
-\caption{Performance comparisons of average end-to-end latency vs. time-to-live}
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/800_avgLatency_ttl}}
+\caption{端到端平均时延 latency vs. 消息生存时间}
 \label{fig:chap3_latency_ttl}
 \end{figure*}
 
 \begin{figure*}[!t]
 \centering
 \subfigure[Number of nodes: $|\overline{N}|=200$\label{200_overhead_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/200_overhead_ttl}}
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/200_overhead_ttl}}\quad\quad
 \subfigure[Number of nodes: $|\overline{N}|=400$\label{400_overhead_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/400_overhead_ttl}} \\
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/400_overhead_ttl}} \\
 \subfigure[Number of nodes: $|\overline{N}|=600$\label{600_overhead_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/600_overhead_ttl}}
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/600_overhead_ttl}}\quad\quad
 \subfigure[Number of nodes: $|\overline{N}|=800$\label{800_overhead_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/800_overhead_ttl}}
-\caption{Performance comparisons of overhead ratio vs. time-to-live}
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/800_overhead_ttl}}
+\caption{网络开销 vs. 消息生存时间}
 \label{fig:chap3_overhead_ttl}
 \end{figure*}
 
 \begin{figure*}[!t]
 \centering
 \subfigure[Number of nodes: $|\overline{N}|=200$\label{200_avgHop_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/200_avgHop_ttl}}
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/200_avgHop_ttl}}\quad\quad
 \subfigure[Number of nodes: $|\overline{N}|=400$\label{400_avgHop_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/400_avgHop_ttl}} \\
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/400_avgHop_ttl}} \\
 \subfigure[Number of nodes: $|\overline{N}|=600$\label{600_avgHop_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/600_avgHop_ttl}}
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/600_avgHop_ttl}}\quad\quad
 \subfigure[Number of nodes: $|\overline{N}|=800$\label{800_avgHop_ttl}]
-{\includegraphics[width=0.45\textwidth]{paper-MPAR/800_avgHop_ttl}}
-\caption{Performance comparisons of average hop count vs. time-to-live}
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/800_avgHop_ttl}}
+\caption{平均跳数 vs. 消息生存时间}
 \label{fig:chap3_hop_ttl}
 \end{figure*}
 
+\begin{figure*}[!t]
+\centering
+\subfigure[Number of nodes: $|\overline{N}|=200$\label{200_delivery_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/200_delivery_buffer}}\quad\quad
+\subfigure[Number of nodes: $|\overline{N}|=400$\label{400_delivery_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/400_delivery_buffer}} \\
+\subfigure[Number of nodes: $|\overline{N}|=600$\label{600_delivery_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/600_delivery_buffer}}\quad\quad
+\subfigure[Number of nodes: $|\overline{N}|=800$\label{800_delivery_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/800_delivery_buffer}}
+\caption{消息投递率 vs. 节点缓存}
+\label{fig:chap3_delivery_buffer}
+\end{figure*}
 
+\begin{figure*}[!t]
+\centering
+\subfigure[Number of nodes: $|\overline{N}|=200$\label{200_avgLatency_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/200_avgLatency_buffer}}\quad\quad
+\subfigure[Number of nodes: $|\overline{N}|=400$\label{400_avgLatency_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/400_avgLatency_buffer}} \\
+\subfigure[Number of nodes: $|\overline{N}|=600$\label{600_avgLatency_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/600_avgLatency_buffer}}\quad\quad
+\subfigure[Number of nodes: $|\overline{N}|=800$\label{800_avgLatency_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/800_avgLatency_buffer}}
+\caption{端到端平均时延 vs. 节点缓存}
+\label{fig:chap3_latency_buffer}
+\end{figure*}
 
+\begin{figure*}[!t]
+\centering
+\subfigure[Number of nodes: $|\overline{N}|=200$\label{200_overhead_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/200_overhead_buffer}}\quad\quad
+\subfigure[Number of nodes: $|\overline{N}|=400$\label{400_overhead_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/400_overhead_buffer}} \\
+\subfigure[Number of nodes: $|\overline{N}|=600$\label{600_overhead_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/600_overhead_buffer}}\quad\quad
+\subfigure[Number of nodes: $|\overline{N}|=800$\label{800_overhead_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/800_overhead_buffer}}
+\caption{网络开销 vs. 节点缓存}
+\label{fig:chap3_overhead_buffer}
+\end{figure*}
 
-
-\subsection{自变量：节点缓存}
-
-\section{本章总结}
-\label{chap3:本章总结}
-
+\begin{figure*}[!t]
+\centering
+\subfigure[Number of nodes: $|\overline{N}|=200$\label{200_avgHop_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/200_avgHop_buffer}}\quad\quad
+\subfigure[Number of nodes: $|\overline{N}|=400$\label{400_avgHop_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/400_avgHop_buffer}} \\
+\subfigure[Number of nodes: $|\overline{N}|=600$\label{600_avgHop_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/600_avgHop_buffer}}\quad\quad
+\subfigure[Number of nodes: $|\overline{N}|=800$\label{800_avgHop_buffer}]
+{\includegraphics[width=0.37\textwidth]{paper-MPAR/800_avgHop_buffer}}
+\caption{平均跳数 vs. 节点缓存}
+\label{fig:chap3_hop_buffer}
+\end{figure*}
 
 
 

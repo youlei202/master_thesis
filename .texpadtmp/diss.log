@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  23 AUG 2014 20:25
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  23 AUG 2014 21:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2205,7 +2205,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [36]
 File: paper-MPAR/Manhattan.pdf Graphic file (type QTm)
  <use  "paper-MPAR/Manhattan.pdf" >
-Underfull \vbox (badness 1824) has occurred while \output is active []
+Underfull \vbox (badness 2486) has occurred while \output is active []
 
 
 
@@ -2215,6 +2215,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [37]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38]
 File: paper-MPAR/200_delivery_ttl.pdf Graphic file (type QTm)
  <use  "paper-MPAR/200_delivery_ttl.pdf" >
 File: paper-MPAR/400_delivery_ttl.pdf Graphic file (type QTm)
@@ -2246,14 +2253,39 @@ File: paper-MPAR/400_avgHop_ttl.pdf Graphic file (type QTm)
 File: paper-MPAR/600_avgHop_ttl.pdf Graphic file (type QTm)
  <use  "paper-MPAR/600_avgHop_ttl.pdf" >
 File: paper-MPAR/800_avgHop_ttl.pdf Graphic file (type QTm)
- <use  "paper-MPAR/800_avgHop_ttl.pdf" >)
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.9099pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[38]
+ <use  "paper-MPAR/800_avgHop_ttl.pdf" >
+File: paper-MPAR/200_delivery_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/200_delivery_buffer.pdf" >
+File: paper-MPAR/400_delivery_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/400_delivery_buffer.pdf" >
+File: paper-MPAR/600_delivery_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/600_delivery_buffer.pdf" >
+File: paper-MPAR/800_delivery_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/800_delivery_buffer.pdf" >
+File: paper-MPAR/200_avgLatency_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/200_avgLatency_buffer.pdf" >
+File: paper-MPAR/400_avgLatency_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/400_avgLatency_buffer.pdf" >
+File: paper-MPAR/600_avgLatency_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/600_avgLatency_buffer.pdf" >
+File: paper-MPAR/800_avgLatency_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/800_avgLatency_buffer.pdf" >
+File: paper-MPAR/200_overhead_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/200_overhead_buffer.pdf" >
+File: paper-MPAR/400_overhead_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/400_overhead_buffer.pdf" >
+File: paper-MPAR/600_overhead_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/600_overhead_buffer.pdf" >
+File: paper-MPAR/800_overhead_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/800_overhead_buffer.pdf" >
+File: paper-MPAR/200_avgHop_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/200_avgHop_buffer.pdf" >
+File: paper-MPAR/400_avgHop_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/400_avgHop_buffer.pdf" >
+File: paper-MPAR/600_avgHop_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/600_avgHop_buffer.pdf" >
+File: paper-MPAR/800_avgHop_buffer.pdf Graphic file (type QTm)
+ <use  "paper-MPAR/800_avgHop_buffer.pdf" >)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.84666pt.
@@ -2275,9 +2307,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.84666pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43]
 \openout2 = `body/chapter04.aux'.
 
- (./body/chapter04.tex [42
+ (./body/chapter04.tex [44
 
 
 
@@ -2290,10 +2336,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43]
+[45]
 \openout2 = `body/chapter05.aux'.
 
- (./body/chapter05.tex [44
+ (./body/chapter05.tex [46
 
 
 
@@ -2306,7 +2352,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45] [46
+[47] [48
 
 
 ]
@@ -2316,7 +2362,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47] [48]
+[49] [50]
 \openout2 = `body/chapter05_a.aux'.
 
  (./body/chapter05_a.tex
@@ -2328,13 +2374,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49
+[51
 
 
 ]
 \openout2 = `body/chapter06.aux'.
 
- (./body/chapter06.tex [50
+ (./body/chapter06.tex [52
 
 
 
@@ -2347,10 +2393,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51]
+[53]
 \openout2 = `body/chapter07.aux'.
 
- (./body/chapter07.tex [52
+ (./body/chapter07.tex [54
 
 
 
@@ -2363,7 +2409,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53] [54
+[55] [56
 
 
 ]
@@ -2373,7 +2419,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55] [56]
+[57] [58]
 \openout2 = `body/chapter07_a.aux'.
 
  (./body/chapter07_a.tex
@@ -2385,13 +2431,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57
+[59
 
 
 ]
 \openout2 = `body/chapter08.aux'.
 
- (./body/chapter08.tex [58
+ (./body/chapter08.tex [60
 
 
 
@@ -2404,10 +2450,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59]
+[61]
 \openout2 = `body/chapter09.aux'.
 
- (./body/chapter09.tex [60
+ (./body/chapter09.tex [62
 
 
 
@@ -2420,10 +2466,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61]
+[63]
 \openout2 = `body/conclusion.aux'.
 
- (./body/conclusion.tex [62
+ (./body/conclusion.tex [64
 
 
 
@@ -2434,7 +2480,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63] [64
+[65] [66
 
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.bbl
@@ -2532,7 +2578,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65
+[67
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 83--93
@@ -2551,7 +2597,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[66] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lot)
+[68] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lot)
 \tf@lot=\write5
 \openout5 = `diss.lot'.
 
@@ -2562,9 +2608,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[67
+[69
 
-] [68
+] [70
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lof)
 \tf@lof=\write6
@@ -2577,7 +2623,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[69] [70
+[71] [72
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.loa)
 \tf@loa=\write7
@@ -2590,10 +2636,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[71]
+[73]
 \openout2 = `body/pub.aux'.
 
- (./body/pub.tex [72
+ (./body/pub.tex [74
 
 
 ])
@@ -2603,10 +2649,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[73]
+[75]
 \openout2 = `body/ack.aux'.
 
- (./body/ack.tex [74
+ (./body/ack.tex [76
 
 
 
@@ -2628,7 +2674,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[75] [76
+[77] [78
 
 
 ]
@@ -2662,7 +2708,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[77] [78
+[79] [80
 
 
 ]
@@ -2678,12 +2724,12 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 28285 strings out of 494004
- 546782 string characters out of 3150891
- 628830 words of memory out of 3000000
- 30793 multiletter control sequences out of 15000+200000
+ 28353 strings out of 494004
+ 548532 string characters out of 3150891
+ 630621 words of memory out of 3000000
+ 30845 multiletter control sequences out of 15000+200000
  69426 words of font info for 359 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  61i,26n,47p,881b,807s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (86 pages).
+Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (88 pages).

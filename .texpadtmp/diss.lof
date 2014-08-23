@@ -21,26 +21,46 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Time $t_3$}}}{36}{figure.4.8}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Time $t_4$}}}{36}{figure.4.8}
 \contentsline {figure}{\numberline {4--9}{\ignorespaces Working day movement模型，结合Manhattan blocks.}}{37}{figure.4.9}
-\contentsline {figure}{\numberline {4--10}{\ignorespaces Performance comparisons of delivery probability vs. time-to-live}}{38}{figure.4.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{38}{figure.4.10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{38}{figure.4.10}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{38}{figure.4.10}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{38}{figure.4.10}
-\contentsline {figure}{\numberline {4--11}{\ignorespaces Performance comparisons of average end-to-end latency vs. time-to-live}}{39}{figure.4.11}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{39}{figure.4.11}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{39}{figure.4.11}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{39}{figure.4.11}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{39}{figure.4.11}
-\contentsline {figure}{\numberline {4--12}{\ignorespaces Performance comparisons of overhead ratio vs. time-to-live}}{40}{figure.4.12}
+\contentsline {figure}{\numberline {4--10}{\ignorespaces 消息投递率 vs. 消息生存时间}}{39}{figure.4.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{39}{figure.4.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{39}{figure.4.10}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{39}{figure.4.10}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{39}{figure.4.10}
+\contentsline {figure}{\numberline {4--11}{\ignorespaces 端到端平均时延 latency vs. 消息生存时间}}{40}{figure.4.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{40}{figure.4.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{40}{figure.4.11}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{40}{figure.4.11}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{40}{figure.4.11}
+\contentsline {figure}{\numberline {4--12}{\ignorespaces 网络开销 vs. 消息生存时间}}{40}{figure.4.12}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{40}{figure.4.12}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{40}{figure.4.12}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{40}{figure.4.12}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{40}{figure.4.12}
-\contentsline {figure}{\numberline {4--13}{\ignorespaces Performance comparisons of average hop count vs. time-to-live}}{41}{figure.4.13}
+\contentsline {figure}{\numberline {4--13}{\ignorespaces 平均跳数 vs. 消息生存时间}}{41}{figure.4.13}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{41}{figure.4.13}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{41}{figure.4.13}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{41}{figure.4.13}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{41}{figure.4.13}
+\contentsline {figure}{\numberline {4--14}{\ignorespaces 消息投递率 vs. 节点缓存}}{41}{figure.4.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{41}{figure.4.14}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{41}{figure.4.14}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{41}{figure.4.14}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{41}{figure.4.14}
+\contentsline {figure}{\numberline {4--15}{\ignorespaces 端到端平均时延 vs. 节点缓存}}{42}{figure.4.15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{42}{figure.4.15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{42}{figure.4.15}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{42}{figure.4.15}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{42}{figure.4.15}
+\contentsline {figure}{\numberline {4--16}{\ignorespaces 网络开销 vs. 节点缓存}}{42}{figure.4.16}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{42}{figure.4.16}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{42}{figure.4.16}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{42}{figure.4.16}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{42}{figure.4.16}
+\contentsline {figure}{\numberline {4--17}{\ignorespaces 平均跳数 vs. 节点缓存}}{43}{figure.4.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{43}{figure.4.17}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{43}{figure.4.17}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{43}{figure.4.17}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{43}{figure.4.17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
