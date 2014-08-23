@@ -620,12 +620,12 @@ p(\textbf{x})=-f(\textbf{x})
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=5.0in]{paper-MPAR/hypercube}
+\includegraphics[width=4.0in]{paper-MPAR/hypercube}
 \caption{超立方体解空间}
 \label{fig:chap3_hypercube}
 \end{figure}
 
-停止规则是禁忌搜索中最重要的准则之一，其决定搜索过程停止的条件。在本算法中，停止规则如定义~\ref{}所示。
+停止规则是禁忌搜索中最重要的准则之一，其决定搜索过程停止的条件。在本算法中，停止规则如定义~\ref{def:stop_rule}所示。
 
 \begin{definition}停止规则\\
 停止规则 $\mathcal{E}$ 如下定义
@@ -1029,18 +1029,450 @@ $\mathcal{L}(\varphi)$ & $t_2-1$ & $t_3-1$ \\
 \item \textbf{纯净节点}\\
 纯净节点不持有消息的任意拷贝，可以被任意传染节点感染。
 
-\item \textbf{}
+\item \textbf{传染节点}\\
+传染节点是一类特殊的被感染节点，其可以传染其它纯净节点。
 \end{itemize}
+
+从传染状态可以迁移到被感染状态；换言之，节点将仍然持有该条消息，然而无法将该消息复制给其它节点。纯净状态也可以迁移到被感染状态或传染状态；当此类状态迁移发生，则说明该节点接受了消息。为了进一步解释这类状态迁移，下面将参照Epidemic算法\cite{Vahdat2000}及SprayAndWait算法\cite{Spyropoulos2005}进行说明。
+
+在Epidemic路由算法中，有两类状态节点，纯净节点和传染节点。消息副本的分发过程在所有纯净节点都被感染，都迁移至传染状态时结束。SprayAndWait路由算法中，节点可以处于以上三种状态中的任意一种。在Source SprayAndWait中，网络中只有一个传染节点，在Binary SprayAndWait中，传染节点允许有多个，但是其最大数量被限制为一个固定数目。当网络中不在有传染节点时，消息分发过程结束。
+
+事实上，这几类节点几乎存在于所有的机会网络路由算法中。特别地，Epidemic及SprayAndWait是两类具有代表性的零知识依赖路由算法。对于其它路由算法，其消息副本分发过程亦可按照此类节点状态划分方法进行分类，从而可视作Epidemic及SprayAndWait算法的改进。在介绍Local-MPAR及Tabu-MPAR之前，先提出本章关于路由的三个公设。
+
+\begin{postulation}
+\label{post:replication}
+对任意节点$n_a$而言，$n_a$从$n_b$接受某条消息，当且仅当其不持有该消息的任意拷贝。
+\end{postulation}
+
+\begin{postulation}
+\label{post:deletion}
+当消息的time-to-live到期时，从缓存中清除该消息的行为叫做丢弃；因节点状态迁移而清除缓存消息的行为，叫做删除。
+\end{postulation}
+
+\begin{postulation}
+持有某条消息或该条消息任意拷贝的某一组节点，记为$N$，由所有传染节点及被感染节点组成。
+\end{postulation}
+
+Local-MPAR及Tabu-MPAR中的状态迁移图，如\figurename~\ref{fig:chap3_states2}及\figurename~\ref{fig:chap3_states3}所示，有如下定理。
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3in]{paper-MPAR/states2}
+\caption{Local-MPAR节点状态迁移图.}
+\label{fig:chap3_states2}
+\end{figure}
+
+\begin{figure}[!tb]
+\centering
+\includegraphics[width=3in]{paper-MPAR/states3}
+\caption{Tabu-MPAR节点状态迁移图.}
+\label{fig:chap3_states3}
+\end{figure}
+
+
+\begin{table*}[hbt]
+\centering
+  \caption{Local-MPAR中的节点状态迁移}
+  \label{tab:chap3_Local-MPAR}
+  \resizebox{\textwidth}{!}{
+  \begin{tabular}{|c|c|c|c|c|}
+  \hline
+
+   &\multicolumn{4}{c|}{\textbf{state of $n_{b}$}}
+   \\
+   \hline
+    \multicolumn{1}{|c|}{\multirow{9}{*}{\textbf{state of $n_{a}$}}}
+   &
+   & \textbf{B}
+   & \textbf{G}
+   & \textbf{W}
+   \\
+   \cline{2-5}
+   & \textbf{B}
+   & \multicolumn{1}{c:}{---}
+   & \multicolumn{1}{c:}{B
+     $\rightarrow\left\{
+     \begin{array}{ll} 
+      \textnormal{G} & \textnormal{if}~\textnormal{G}\rightarrow\textnormal{B happens in }n_b\\
+      \textnormal{B} & \textnormal{else}
+     \end{array}\right.
+     $}
+   & B
+   \\
+   \cline{2-2}\cdashline{3-5}
+   & \textbf{G}
+   & \multicolumn{1}{c:}{G
+     $\rightarrow\left\{
+     \begin{array}{ll}
+      \textnormal{W} & \textnormal{if}~P_{N-\{n_a\},d}>P_{N,d} \\
+      \textnormal{B} & \textnormal{if}~P_{N-\{n_a\}}\leq P_{N,d}~\textnormal{and}~E[D_a]<E[D_b] \\
+      \textnormal{G} & \textnormal{else}
+     \end{array}\right.
+     $}
+   & \multicolumn{1}{c:}{G}
+   & G
+   \\
+   \cline{2-2}\cdashline{3-5}
+   & \textbf{W}
+   & \multicolumn{1}{c:}{W
+     $\rightarrow\left\{
+     \begin{array}{ll}
+      \textnormal{G} & \textnormal{if}~P_{N\bigcup\{n_b\},d}>P_{N,d} \\
+      \textnormal{W} & \textnormal{else}
+     \end{array}\right.
+     $}
+   & \multicolumn{1}{c:}{W}
+   & W
+   \\
+  \hline
+  \end{tabular}}
+\end{table*}
+
+\begin{table*}[hbt]
+\centering
+  \caption{Tabu-MPAR中的节点状态迁移}
+  \label{tab:chap3_Tabu-MPAR}
+  \resizebox{\textwidth}{!}{
+  \begin{tabular}{|c|c|c|c|c|}
+  \hline
+
+   &\multicolumn{4}{c|}{\textbf{state of $n_{b}$}}
+   \\
+   \hline
+    \multicolumn{1}{|c|}{\multirow{9}{*}{\textbf{state of $n_{a}$}}}
+   &
+   & \textbf{B}
+   & \textbf{G}
+   & \textbf{W}
+   \\
+   \cline{2-5}
+   & \textbf{B}
+   & \multicolumn{1}{c:}{B}
+   & \multicolumn{1}{c:}{
+       \begin{tabular}{c}
+     $B\rightarrow B|G$\\
+     \textit{(depends on the tickets left in $n_a$} \\
+     \textit{after allocating to $n_b$)} \\
+     \end{tabular}
+   }
+   & 
+    \begin{tabular}{c}
+     $B\rightarrow B|G$\\
+     \textit{(depends on the} \\
+     \textit{tickets left in $n_a$} \\
+     \textit{after allocating to $n_b$)} \\
+     \end{tabular}
+   \\
+   \cline{2-2}\cdashline{3-5}
+   & \textbf{G}
+   & \multicolumn{1}{c:}{
+   \begin{tabular}{c}
+     $G\rightarrow B|G$\\
+     \textit{(depends on the} \\
+     \textit{tickets left in $n_a$} \\
+     \textit{after allocating to $n_b$)} \\
+     \end{tabular}
+   }
+   & \multicolumn{1}{c:}{G}
+   & G
+    $\rightarrow\left\{
+     \begin{array}{ll}
+      W & \textnormal{if}~n_a\notin N_{opt}~\textnormal{and}~n_b\in N_{opt}\\
+      G & \textnormal{else}
+     \end{array}\right.
+    $
+   \\
+   \cline{2-2}\cdashline{3-5}
+   & \textbf{W}
+   & \multicolumn{1}{c:}{
+     \begin{tabular}{c}
+     $W\rightarrow B|G$\\
+     \textit{(depends on the} \\
+     \textit{tickets left in $n_a$} \\
+     \textit{after allocating to $n_b$)} \\
+     \end{tabular}
+     }
+   & \multicolumn{1}{c:}{W
+    $\rightarrow\left\{
+    \begin{array}{ll}
+     \textnormal{G} & \textnormal{if}~n_a\in N_{opt}~\textnormal{and}~n_b\notin N_{opt}\\
+     \textnormal{W} & \textnormal{else}
+    \end{array}\right.
+    $
+   }
+   & W
+   \\
+  \hline
+  \end{tabular}}
+\end{table*}
+
+\begin{theorem}
+\label{theorem:replication_deletion}
+%The replication operation is corresponding to the transition from W to G and deletion operation to the transition from G to W.
+对应\tablename~\ref{tab:chap3_Tabu-MPAR}中的状态迁移，复制操作对应于$W\rightarrow G$，删除操作对应于$G\rightarrow W$。
+\end{theorem}
+\begin{proof}
+从三种状态的定义可知，持有消息的节点，位于状态$B$或$G$，未持有消息的节点，对应于状态$W$。由于$B$与$W$之间无直接迁移路径，状态$B$只能经过状态$G$迁移至$W$，反之亦然。从公设~\ref{post:replication}可知，复制操作对应于状态迁移$W\rightarrow B$，其中包含迁移$W\rightarrow G$。从公设~\ref{post:deletion}可知，删除操作对应于$B\rightarrow W$，即有$G\rightarrow W$。\\
+证毕
+\end{proof}
 
 
 \subsection{Local-MPAR:基于局部搜索的路由算法}
 
+在Local-MPAR算法中，节点可以处于三种状态中的任一状态。然而，对于每一条从源节点产生的消息而言，只允许网络中存在不超过一个传染节点。Local-MPAR的基本思想，即是动态调整集合$N$，从而最大化预测投递概率$P_{N,d}$。
+
+算法~\ref{alg:chap3_Local-MPAR}~阐述了Local-MPAR算法的过程。在Local-MPAR中共有三种状态，在初始状态时，源节点$n_s$产生了消息$M$，于是其状态被设为传染状态。相应地，集合$N$被初始化为只包含源节点$n_s$。对于集合$N$，有如下公设。
+
+\begin{postulation}
+\label{post:N}
+在Local-MPAR中, 节点集合$N$总是被传染节点维护。
+\end{postulation}
+
+算法~\ref{alg:chap3_Local-MPAR}~中整个路由过程可以被视作动态调整集合$N$的过程，如Routing Stage所示。该Stage的关键操作，即是让每一个节点完成\tablename~\ref{tab:chap3_Local-MPAR}中的状态转换。为简单起见，称表中行B列G的位置为BG。从\tablename~\ref{tab:chap3_Local-MPAR}可以看出，对于任意两个相遇节点$n_a$及$n_b$，状态迁移仅发生在$n_a$和$n_b$至少有一个处于B状态时。BB中无行为发生，其原因是在Local-MPAR中，对于某一条消息而言，不可能有两个节点同时处于B状态。
+
+
+\begin{algorithm}[tbp] %算法的开始
+\renewcommand{\algorithmicensure}{\textbf{Initial Stage:}}
+\caption{Local-MPAR Algorithm.} %算法的标题
+\label{alg:chap3_Local-MPAR} %给算法一个标签，这样方便在文中对算法的引用
+\begin{algorithmic}[1] %这个1 表示每一行都显示数字
+\ENSURE
+\STATE $n_s$ generates message $M$
+\STATE $n_s.state\leftarrow$\textbf{B}
+\STATE $N\leftarrow\{n_s\}$
+\end{algorithmic} %这个1 表示每一行都显示数字
+\begin{algorithmic}[1] %这个1 表示每一行都显示数字
+\renewcommand{\algorithmicensure}{\textbf{Routing Stage:}}
+\ENSURE
+\FOR{any pair of $n_a$ and $n_b$}
+    \IF{$n_a$ and $n_b$ encounter}
+        \STATE finish the state transition according to \tablename~\ref{tab:chap3_Local-MPAR}
+        \STATE update $N$
+    \ENDIF
+\ENDFOR
+\end{algorithmic}
+\begin{algorithmic}[1]
+\renewcommand{\algorithmicensure}{\textbf{End Stage:}}
+\ENSURE
+\STATE $M$ is delivered
+\end{algorithmic}
+\end{algorithm}
+
+\begin{lemma}
+\label{lemma:infectious}
+%The replication or deletion of message happens only if one of the encountered two nodes is in infectious state.
+消息的复制过程或删除过程，仅当相遇的两个节点中其中一个为传染节点时，才会发生。
+\end{lemma}
+\begin{proof}
+直接由 \tablename~\ref{tab:chap3_Local-MPAR}得出。\\
+证毕
+\end{proof}
+
+\begin{theorem} 
+%The routing stage of Local-MPAR is a local search process in the solution space $\mathcal{S}$.
+Local-MPAR的路由阶段，即在解空间$\mathcal{S}$中做局部搜索。
+\end{theorem}
+\begin{proof}
+%From postulation~4, we know that the node set $N$ is updated only in infectious node. Lemma~1 directly shows that any happened replication or deletion operation can be informed to the infectious node immediately, so that $N$ would be updated in time. Either a replication or deletion operation just causes 1 replicas difference in the network, thus only adding or removing one element in the set $N$, which indeed transfers the correspondent solution vector to one of its neighborhoods $\mathcal{N}(N)$. We can see from \tablename~4 that N would not vary if and only if $\forall N'\in\mathcal{N}(N), P_{N',d}\leq P_{N,d}$, i.e.,  if and only if the solution reaches the local optimum.
+从公设~\ref{post:N}可知，节点集合$N$只会在传染节点中被更新。引理~\ref{lemma:infectious}直接可得，任何复制或删除操作可以立即被传染节点所知，即集合$N$可被及时更新。复制操作或删除操作，其只会引起网络中一份拷贝的数量差异，因此仅仅会从集合$N$中删除或增加一个元素，其本质即是将当前解向量迁移至其某一邻居解向量。从\tablename~\ref{tab:chap3_Local-MPAR}可知，$N$当且仅当$\forall N'\in\mathcal{N}(N), P_{N',d}\leq P_{N,d}$才不会再改变；即当且仅当解向量到达局部最优时，算法停止。\\
+证毕
+\end{proof}
+
+另一个需要解释的问题是，既然Local-MPAR中只存在一个传染节点，那么该节点应当如何选取？其选取的基本准则，即是基于公式~(\ref{eq:delay})中对节点移动到下一个位置的延迟时间的预测。在\tablename~\ref{tab:chap3_Local-MPAR}中GB位置，当无需将$n_a$从状态G迁移至状态W时，应当考虑是否改变$n_a$为传染节点。若$E[D_a]$的值小于$E[D_b]$，则认为$n_a$更适合担当消息复制者，因为它具有更低的移动到下一位置的期望时延，意味着更多的传输机会。反之，若将消息复制权交给$n_b$，$n_b$将发生G$\rightarrow$B迁移，对称地，$n_a$将发生B$\rightarrow$G迁移。这样网络中仍然只保持有仅一个传染节点。
+
+\figurename~\ref{fig:chap3_example1}中例子所示的Local-MPAR路由过程，如\figurename~\ref{fig:chap3_local_rt}所示。在时间$t_1$，节点$n_2$产生目的节点为$n_4$的消息。从时间$t_2$到$t_3$，由于集合$\{n_1,n_2\}$及集合$\{n_2,n_3\}$所对应的投递率都要小于集合$\{n_2\}$，$n_2$不会向$n_1$及$n_3$复制消息。最优集合$N_{opt}=\{n_1,n_2,n_3\}$所对应的投递概率，要比$\{n_2\}$所对应的投递概率大，然而，由于Local-MPAR算法无法跳出局部最优，故$N$无法变为$N_{opt}$。
+
+\begin{figure*}
+\centering
+\subfigure[Time $t_1$\label{local_rt1}]
+{\includegraphics[width=0.45\linewidth]{paper-MPAR/local_rt1}}
+\subfigure[Time $t_2$\label{local_rt2}]
+{\includegraphics[width=0.45\linewidth]{paper-MPAR/local_rt2}} \\
+\subfigure[Time $t_3$\label{local_rt3}]
+{\includegraphics[width=0.45\linewidth]{paper-MPAR/local_rt3}}
+\subfigure[Time $t_4$\label{local_rt4}]
+{\includegraphics[width=0.45\linewidth]{paper-MPAR/local_rt4}}
+\caption{Local-MPAR路由过程.}
+\label{fig:chap3_local_rt}
+\end{figure*}
+
 \subsection{Tabu-MPAR:基于禁忌搜索的路由算法}
+
+在Tabu-MPAR算法中，与Local-MPAR相同，每个节点都有三个状态。如同SprayAndWait算法，允许网络中存在多于一个但有最大数目限制的传染节点。
+
+Tabu-MPAR路由算法如算法~\ref{alg:chap3_Tabu-MPAR}所示。如同Local-MPAR, Tabu-MPAR算法亦分为三个阶段。在初始节点，当源节点$n_s$产生消息$M$时，节点$n_s$的状态被设为B，如行1--2所示。节点集合$N_{opt}$在源节点中计算，此外，对于每一条产生的消息，都对应有一个网络中该消息的最大副本数量，该值设为$|N_{opt}|$。每个节点对于每条消息，维护有一个计数变量，用以指明当前该节点持有该消息的拷贝数目。节点处于状态B，当且仅当其消息计数变量大于1\footnote{严格来讲，该节点是针对该条消息处于状态B，对于其它消息而言，该节点的状态也可能为W或者G。}.持有消息的计数变量为1的节点，处于状态G，不持有该消息的节点，皆处于状态P。
+
+算法~\ref{alg:chap3_Tabu-MPAR}的第二阶段即是Tabu-MPAR的路由过程。与Local-MPAR相比，有两个不同点。首先，无需在路由过程中更新$N_{opt}$，因为其已在源节点$n_s$中被计算出来，并写入消息的头部。其次，当任意两个节点$n_a$及$n_b$相遇时，将在状态转换之前重新分配对应的消息计数变量。分配策略基于$E[D_a]$及$E[D_b]$的值，如行3及行4所示。具有更小$E[D]$值的节点，将被分配更多数目的消息拷贝。行5--10保证了变量$a$和$b$都是位于$1$和$L-1$之间的整数。由此可定义Tabu-MPAR的状态转换规则，如\tablename~\ref{tab:chap3_Tabu-MPAR}。除了表中对角线位置以外，其它表位置中都可能发生对应的状态迁移。事实上，当节点$n_a$发生GB位置的状态迁移时，节点$n_b$也同时发生BG位置的状态迁移，反之亦然。该规则也适用于WB，BW及WG，GW。故表\tablename~\ref{tab:chap3_Tabu-MPAR}可以看做一个$3\times 3$的对称矩阵。Tabu-MPAR路由过程如\figurename~\ref{fig:chap3_tabu_rt}所示。
+
+\begin{algorithm}[tbp] %算法的开始
+\renewcommand{\algorithmicensure}{\textbf{Initial Stage:}}
+\caption{Tabu-MPAR Algorithm.} %算法的标题
+\label{alg:chap3_Tabu-MPAR} %给算法一个标签，这样方便在文中对算法的引用
+\begin{algorithmic}[1] %这个1 表示每一行都显示数字
+\ENSURE
+\STATE $n_s$ generates message $M$
+\STATE $n_s.state\leftarrow$\textbf{B}
+\STATE $n_s$ computes $N_{opt}$ by tabu search and saves it in $M$
+\STATE $n_s.tickets\leftarrow |N_{opt}|$
+\end{algorithmic} %这个1 表示每一行都显示数字
+\begin{algorithmic}[1] %这个1 表示每一行都显示数字
+\renewcommand{\algorithmicensure}{\textbf{Routing Stage:}}
+\ENSURE
+\FOR{any pair of $n_a$ and $n_b$}
+    \IF{$n_a$ and $n_b$ encounter}
+        \STATE $a=\frac{E[D_b]}{E[D_a]+E[D_b]}\cdot |N_{opt}|$
+        \STATE $b=\frac{E[D_a]}{E[D_a]+E[D_b]}\cdot |N_{opt}|$
+        \IF{$a<1$}
+            \STATE $n_a.tickets=\lceil a \rceil$
+            \STATE $n_b.tickets=\lfloor b \rfloor$
+        \ELSE
+            \STATE $n_a.tickets=\lfloor a \rfloor$
+            \STATE $n_b.tickets=\lceil b \rceil$
+        \ENDIF
+        \STATE finish the state transition according to \tablename~\ref{tab:chap3_Tabu-MPAR}
+    \ENDIF
+\ENDFOR
+\end{algorithmic}
+\begin{algorithmic}[1]
+\renewcommand{\algorithmicensure}{\textbf{End Stage:}}
+\ENSURE
+\STATE $M$ is delivered
+\end{algorithmic}
+\end{algorithm}
+
+\begin{figure*}
+\centering
+\subfigure[Time $t_1$\label{tabu_rt1}]
+{\includegraphics[width=0.45\linewidth]{paper-MPAR/tabu_rt1}}
+\subfigure[Time $t_2$\label{tabu_rt2}]
+{\includegraphics[width=0.45\linewidth]{paper-MPAR/tabu_rt2}} \\
+\subfigure[Time $t_3$\label{tabu_rt3}]
+{\includegraphics[width=0.45\linewidth]{paper-MPAR/tabu_rt3}}
+\subfigure[Time $t_4$\label{tabu_rt4}]
+{\includegraphics[width=0.45\linewidth]{paper-MPAR/tabu_rt4}}
+\caption{Tabu-MPAR路由过程.}
+\label{fig:chap3_tabu_rt}
+\end{figure*}
+
+下面证明Tabu-MPAR的路由过程即对应$N$变为最优集合$N_{opt}$的过程。
+
+\begin{lemma}
+%$N=N_{opt}$ happens if and only if there is no infectious nodes in the network, i.e. all nodes in $N=N_{opt}$ are in state G.
+$N=N_{opt}$当且仅当网络中不存在传染节点时发生，即所有属于集合$N$中的节点，都处于状态G。
+\label{lemma:no_infectious}
+\end{lemma}
+\begin{proof}
+%Since that the number of all tickets in the network is $|N_{opt}|$, if there exist an infectious node $n_a$, then its tickets must be at least 2 and the tickets in all other nodes are less than $|N_{opt}|-2$. So the number of nodes holding the message is at most $|N_{opt}|-1$, and in this case $n_a$ has 2 tickets for the message, and all the other nodes with replicas only have 1 ticket. So the ``only if'' condition works. 
+%The node set holding the message accords with $N_{opt}$ means that the number of nodes holding the message is $|N_{opt}|$, which is the maximal number of replicas for this message in the network. So the number of tickets in each of these nodes is equal to 1. According to the definition of node state in Tabu-MPAR, all of these nodes are in infected state, and all other nodes are in pure state, which indicates that currently there is no infectious node in the network. So the ``if'' condition works.
+由于网络中某条消息最大副本数量为$|N_{opt}|$，若存在传染节点$n_a$，则其对应的拷贝数量至少为2，故其它节点一共所具有的拷贝数量不会超过$|N_{opt}|-2$。因此，持有该消息的所有节点的数目，至多为$|N_{opt}|-1$个，故其必要性成立。若持有该消息的节点集合为$|N_{opt}|$，则该条消息在网络中已达到其最大可能副本数量$|N_{opt}|$。在此情形下，每个节点所持有该消息的拷贝数目为1份。根据Tabu-MPAR节点状态的定义，集合$|N_{opt}|$中所有节点此时都处于被感染状态，即状态G；其它所有节点都为纯净节点，即处于状态W。此时，网络中无传染节点，故充分性成立。\\
+证毕
+\end{proof}
+
+
+
+\begin{lemma}
+%If the set $N$ evolves to $N_{opt}$, then it would not change any more.
+若集合$N$变为$N_{opt}$，则不会再改变。
+\label{lemma:change}
+\end{lemma}
+\begin{proof}
+从引理~\ref{lemma:no_infectious}可知，若$N$变为$N_{opt}$，则所有$N$中的节点都处于状态G，且网络中所有的纯净节点都不在$N$中。由于网络中没有位于B状态的节点，状态迁移$B\rightarrow G$不会发生。对于状态迁移$G\rightarrow B$，若其发生，则一定伴随状态迁移$G\rightarrow W$发生；然而其只可能在处于$G$状态的节点不属于$|N_{opt}|$时发生，与题设矛盾。故集合$N$中所有节点的状态不会发生改变。\\
+证毕
+\end{proof}
+
+\begin{theorem}
+依\tablename~\ref{tab:chap3_Tabu-MPAR}中状态转移规则能够使集合$N$变为$N_{opt}$.
+\end{theorem}
+\begin{proof}
+%The state transition between B and G does not modify the set $N$. However, from line 4--10 in algorithm~3, it is guaranteed that the distributed tickets are no less than 1, which means that any node in state B would transfer to state G if there are enough encounter opportunities during the routing process. So we just need to focus on the transitions between W and G, as shown in grid WG and GW, where the rule is to transfer the node belonging to $N_{opt}$ to G. Consequently our theorem comes directly from lemma~2 and 3.
+状态迁移B$\rightarrow$G不会使集合$N$发生改变。从算法~\ref{alg:chap3_Tabu-MPAR}4--10行可知，所有节点重新分配后的副本数目至少为1，即若有足够多的节点接触机会，则网络中所有处于B状态的节点最终都会变为状态G。考虑状态迁移W$\rightarrow$G及G$\rightarrow$W，其转换规则即符合$N_{opt}$。结合引理~\ref{lemma:no_infectious}及引理~\ref{lemma:change}即可证得本定理。\\
+证毕
+\end{proof}
+
 
 \section{仿真实验}
 \label{chap3:仿真实验}
 
+在本节中，基于机会网络仿真器（Opportunistic Network Environment, ONE）\cite{Keranen2009}，对MPAR算法进行仿真，并进行性能评估比较。节点移动模型采用\cite{Ekman:2008fp}提出的Working Day Movement (WDM)模型，地图设为Manhattan Blocks。WDM模型分层结合了许多子节点移动模型。此外，一些常见的移动模型相关元素，如家，办公室，夜晚活动及不同的交通工具（如电车，私家车等）也在WDM中设定，用以捕捉人类社会相关属性。办公室模型（office sub-model）产生一种围绕办公桌的星形移动轨迹，相关的办公室人员按此轨迹进行移动。家模型（home sub-model）即是使人员在某个定点固定下自身位置，不做移动。夜晚活动模型(evening activity sub-model)反映了具有朋友关系的人群在工作后的活动，其使节点在街道上服从随机走方式移动。Manhattan Community模型将节点路径限制在街道上。Manhattan Community模型包含一组呈矩阵状的小格，如\figurename~\ref{fig:chap3_manhattan}。
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.5in]{paper-MPAR/Manhattan}
+\caption{Working day movement模型，结合Manhattan blocks.}
+\label{fig:chap3_manhattan}
+\end{figure}
+
+网络场景设定如下。行人数量分别设为200, 400, 600, 800。公交车，办公室及活动场所的数量分别设为总节点数目的2\%, 20\%, 2.5\%。在模拟器时间内，每人每天工作时间设为8小时。每人晚上参加夜晚活动的概率为0.5。此外，每个人有车的概率为0.2，若有车，则晚上参加活动将会开车，否则将乘巴士。行人的行走速度设为0.8--1.4m/s。如\figurename~\ref{fig:chap3_manhattan}所示，网络中设有三类地点，家（home），办公室（office）及聚会地点（meeting spot）。在街区中心设有一个环绕中心的公交路线，可以用于搭载行人。在每一个家，办公室及聚会地点，都设有一个throw-box，用以接管和传递消息。所有节点都以蓝牙接口通信，传输半径设为10 m，数据率设为250 KB/s。由于每一类地点（家，办公室或聚会地点）都设为地图上的一个点，仿真中确保每个节点到达这些地点后一定与throwbox发生接触。
+
+在仿真中，共产生30,000条消息，对于每条消息，其源节点和目的节点从所有行人节点中随机选择。每条消息的大小设为500 K 至 1 M 之间。仿真区域的大小根据节点数目的多少按同比例设定。对于整个仿真过程，其仿真器时间设为12天。
+
+本节将MPAR算法与两个经典算法相比较：Delegation Forwarding (DF) \cite{Erramilli2008}与Simbet \cite{Daly2007}。采用四项评估指标：投递率(delivery ratio)，平均时延(average latency)，网络开销（overhead ratio）及平均每跳数（average hop count）。仿真结果表明，MPAR算法可以较大程度上提升路由性能表现，尤其在于消息投递率。
+
+
+
 \subsection{自变量：消息生存时间}
+
+在将消息生存时间设为自变量时，节点缓存大小固定在200M。消息的生存时间从10小时到30小时变化，仿真结果如\figurename~\ref{fig:chap3_delivery_ttl}，\figurename~\ref{fig:chap3_latency_ttl}，\figurename~\ref{fig:chap3_overhead_ttl}，\figurename~\ref{fig:chap3_hop_ttl}。
+
+\begin{figure*}[!t]
+\centering
+\subfigure[Number of nodes: $|\overline{N}|=200$\label{200_delivery_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/200_delivery_ttl}}
+\subfigure[Number of nodes: $|\overline{N}|=400$\label{400_delivery_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/400_delivery_ttl}} \\
+\subfigure[Number of nodes: $|\overline{N}|=600$\label{600_delivery_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/600_delivery_ttl}}
+\subfigure[Number of nodes: $|\overline{N}|=800$\label{800_delivery_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/800_delivery_ttl}}
+\caption{Performance comparisons of delivery probability vs. time-to-live}
+\label{fig:chap3_delivery_ttl}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\subfigure[Number of nodes: $|\overline{N}|=200$\label{200_avgLatency_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/200_avgLatency_ttl}}
+\subfigure[Number of nodes: $|\overline{N}|=400$\label{400_avgLatency_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/400_avgLatency_ttl}} \\
+\subfigure[Number of nodes: $|\overline{N}|=600$\label{600_avgLatency_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/600_avgLatency_ttl}}
+\subfigure[Number of nodes: $|\overline{N}|=800$\label{800_avgLatency_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/800_avgLatency_ttl}}
+\caption{Performance comparisons of average end-to-end latency vs. time-to-live}
+\label{fig:chap3_latency_ttl}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\subfigure[Number of nodes: $|\overline{N}|=200$\label{200_overhead_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/200_overhead_ttl}}
+\subfigure[Number of nodes: $|\overline{N}|=400$\label{400_overhead_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/400_overhead_ttl}} \\
+\subfigure[Number of nodes: $|\overline{N}|=600$\label{600_overhead_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/600_overhead_ttl}}
+\subfigure[Number of nodes: $|\overline{N}|=800$\label{800_overhead_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/800_overhead_ttl}}
+\caption{Performance comparisons of overhead ratio vs. time-to-live}
+\label{fig:chap3_overhead_ttl}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\subfigure[Number of nodes: $|\overline{N}|=200$\label{200_avgHop_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/200_avgHop_ttl}}
+\subfigure[Number of nodes: $|\overline{N}|=400$\label{400_avgHop_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/400_avgHop_ttl}} \\
+\subfigure[Number of nodes: $|\overline{N}|=600$\label{600_avgHop_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/600_avgHop_ttl}}
+\subfigure[Number of nodes: $|\overline{N}|=800$\label{800_avgHop_ttl}]
+{\includegraphics[width=0.45\textwidth]{paper-MPAR/800_avgHop_ttl}}
+\caption{Performance comparisons of average hop count vs. time-to-live}
+\label{fig:chap3_hop_ttl}
+\end{figure*}
+
+
+
+
 
 \subsection{自变量：节点缓存}
 

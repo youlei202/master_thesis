@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -29,5 +29,66 @@
   Social Networks}[J].
 \newblock arXiv.org, 2013.
 \newblock \url{http://arxiv.org/abs/1311.0347}.
+
+\bibitem[Vahdat and Becker(2000)]{Vahdat2000}
+\textsc{Vahdat A, Becker D}.
+\newblock {Epidemic Routing for Partially Connected ad hoc Networks}[J].
+\newblock Acta Electronica Sinica, 2000, Cs-2000-06(Tech. Rep.).
+\newblock
+  \url{http://scholar.google.com/scholar?q=related:6bSunIRK3e0J:scholar.google.com/\&hl=en\&num=30\&as\_sdt=0,5
+  papers2://publication/livfe/id/65938}.
+
+\bibitem[Spyropoulos et al.(2005)]{Spyropoulos2005}
+\textsc{Spyropoulos T, Psounis K, Raghavendra C~S}.
+\newblock
+\newblock {Spray and wait}[C]//Proceeding of the 2005 ACM SIGCOMM workshop on
+  Delay-tolerant networking - WDTN '05.
+\newblock New York, New York, USA: ACM Press, 2005:252--259.
+\newblock \url{http://dl.acm.org/citation.cfm?id=1080143
+  papers2://publication/livfe/id/67848
+  http://portal.acm.org/citation.cfm?doid=1080139.1080143}.
+
+\bibitem[Ker~a nen et al.(2009)]{Keranen2009}
+\textsc{Ker~a nen A, Ott J~o~r, K~a rkk~a inen T}.
+\newblock
+\newblock
+\newblock {The ONE simulator for DTN protocol evaluation}[C]//Proceedings of
+  the Second International ICST Conference on Simulation Tools and
+  Techniques.[S.l.]: ICST, 2009:1--10.
+\newblock \url{http://dl.acm.org/citation.cfm?id=1537683
+  file:///Users/lei/Library/Application
+  Support/Papers2/Articles/2009/Ker%C3%A4nen/2009 Ker%C3%A4nen.pdf
+  papers2://publication/doi/10.1109/WD.2011.6098142
+  http://eudl.eu/doi/10.4108/ICST.SIMUTOOLS2009.5674}.
+
+\bibitem[Ekman et al.(2008)]{Ekman:2008fp}
+\textsc{Ekman F, Ker{\"a}nen A, Karvo J}, et al.
+\newblock {Working day movement model}[J].
+\newblock MobilityModels '08: Proceeding of the 1st ACM SIGMOBILE workshop on
+  Mobility models, 2008:1--8.
+\newblock
+  \url{http://www.netlab.tkk.fi/~jo/papers/2008-mobmod-working-day-model.pdf}.
+
+\bibitem[Erramilli et al.(2008)]{Erramilli2008}
+\textsc{Erramilli V, Chaintreau A, Crovella M}, et al.
+\newblock
+\newblock {Delegation forwarding}[C]//Proceedings of the 9th ACM international
+  symposium on Mobile ad hoc networking and computing - MobiHoc '08.
+\newblock New York, New York, USA: ACM Press, 2008:251.
+\newblock \url{http://dl.acm.org/citation.cfm?id=1374653
+  papers2://publication/livfe/id/67810
+  http://portal.acm.org/citation.cfm?doid=1374618.1374653}.
+
+\bibitem[Daly and Haahr(2007)]{Daly2007}
+\textsc{Daly E~M, Haahr M}.
+\newblock
+\newblock {Social network analysis for routing in disconnected delay-tolerant
+  MANETs}[C]//Proceedings of the 8th ACM international symposium on Mobile ad
+  hoc networking and computing - MobiHoc '07.
+\newblock New York, New York, USA: ACM Press, 2007:32--40.
+\newblock
+  \url{http://portal.acm.org/citation.cfm?id=1288107.1288115\&coll=DL\&dl=GUIDE\&CFID=105151204\&CFTOKEN=34046091
+  papers2://publication/livfe/id/65951
+  http://portal.acm.org/citation.cfm?doid=1288107.1288115}.
 
 \end{thebibliography}

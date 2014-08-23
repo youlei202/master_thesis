@@ -8,6 +8,39 @@
 \contentsline {figure}{\numberline {4--2}{\ignorespaces 周期$T$划分为$h$个时间槽}}{13}{figure.4.2}
 \contentsline {figure}{\numberline {4--3}{\ignorespaces 网络场景举例}}{14}{figure.4.3}
 \contentsline {figure}{\numberline {4--4}{\ignorespaces 超立方体解空间}}{26}{figure.4.4}
+\contentsline {figure}{\numberline {4--5}{\ignorespaces Local-MPAR节点状态迁移图.}}{30}{figure.4.5}
+\contentsline {figure}{\numberline {4--6}{\ignorespaces Tabu-MPAR节点状态迁移图.}}{31}{figure.4.6}
+\contentsline {figure}{\numberline {4--7}{\ignorespaces Local-MPAR路由过程.}}{34}{figure.4.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Time $t_1$}}}{34}{figure.4.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Time $t_2$}}}{34}{figure.4.7}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Time $t_3$}}}{34}{figure.4.7}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Time $t_4$}}}{34}{figure.4.7}
+\contentsline {figure}{\numberline {4--8}{\ignorespaces Tabu-MPAR路由过程.}}{36}{figure.4.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Time $t_1$}}}{36}{figure.4.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Time $t_2$}}}{36}{figure.4.8}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Time $t_3$}}}{36}{figure.4.8}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Time $t_4$}}}{36}{figure.4.8}
+\contentsline {figure}{\numberline {4--9}{\ignorespaces Working day movement模型，结合Manhattan blocks.}}{37}{figure.4.9}
+\contentsline {figure}{\numberline {4--10}{\ignorespaces Performance comparisons of delivery probability vs. time-to-live}}{38}{figure.4.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{38}{figure.4.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{38}{figure.4.10}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{38}{figure.4.10}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{38}{figure.4.10}
+\contentsline {figure}{\numberline {4--11}{\ignorespaces Performance comparisons of average end-to-end latency vs. time-to-live}}{39}{figure.4.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{39}{figure.4.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{39}{figure.4.11}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{39}{figure.4.11}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{39}{figure.4.11}
+\contentsline {figure}{\numberline {4--12}{\ignorespaces Performance comparisons of overhead ratio vs. time-to-live}}{40}{figure.4.12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{40}{figure.4.12}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{40}{figure.4.12}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{40}{figure.4.12}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{40}{figure.4.12}
+\contentsline {figure}{\numberline {4--13}{\ignorespaces Performance comparisons of average hop count vs. time-to-live}}{41}{figure.4.13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of nodes: $|\overline {N}|=200$}}}{41}{figure.4.13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of nodes: $|\overline {N}|=400$}}}{41}{figure.4.13}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{41}{figure.4.13}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{41}{figure.4.13}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
