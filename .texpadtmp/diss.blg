@@ -65,45 +65,47 @@ You can't pop an empty literal stack for entry Daly2007
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
 You can't pop an empty literal stack for entry Daly2007
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
-You've used 10 entries,
+You can't pop an empty literal stack for entry AndersLindgren2004
+while executing---line 3617 of file ../GBT7714-2005NLang.bst
+You've used 11 entries,
             6888 wiz_defined-function locations,
-            1311 strings with 11873 characters,
-and the built_in function-call counts, 6099 in all, are:
-= -- 605
-> -- 122
+            1320 strings with 12353 characters,
+and the built_in function-call counts, 6747 in all, are:
+= -- 671
+> -- 135
 < -- 4
-+ -- 66
-- -- 28
-* -- 548
-:= -- 809
-add.period$ -- 43
-call.type$ -- 10
-change.case$ -- 10
-chr.to.int$ -- 10
-cite$ -- 11
-duplicate$ -- 426
-empty$ -- 702
-format.name$ -- 56
-if$ -- 1393
++ -- 73
+- -- 31
+* -- 609
+:= -- 894
+add.period$ -- 47
+call.type$ -- 11
+change.case$ -- 11
+chr.to.int$ -- 11
+cite$ -- 12
+duplicate$ -- 471
+empty$ -- 775
+format.name$ -- 61
+if$ -- 1540
 int.to.chr$ -- 1
-int.to.str$ -- 11
-missing$ -- 10
-newline$ -- 71
-num.names$ -- 20
-pop$ -- 74
+int.to.str$ -- 12
+missing$ -- 11
+newline$ -- 77
+num.names$ -- 22
+pop$ -- 82
 preamble$ -- 1
-purify$ -- 10
+purify$ -- 11
 quote$ -- 0
-skip$ -- 122
+skip$ -- 133
 stack$ -- 0
-substring$ -- 656
-swap$ -- 20
+substring$ -- 733
+swap$ -- 22
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
+type$ -- 44
 warning$ -- 1
-while$ -- 51
+while$ -- 57
 width$ -- 0
-write$ -- 168
-(There were 20 error messages)
+write$ -- 184
+(There were 21 error messages)

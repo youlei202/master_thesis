@@ -1,1 +1,195 @@
 \chapter{基于消息传输收益的最优队列调度算法}
+
+本章尝试改进经典的基于概率预测的路由算法PRoPHET \cite{AndersLindgren2004}。定义了“传输收益”概念，基于此，提出了传输收益最优化，吞吐量相关的概率路由问题（Optimal Throughput-Aware Probabilistic Routing）。该问题被建模为最优决策问题，并在本章中采用动态规划方法解决。在该模型下，提出了一种数据项选择机制，其具有如下特点：
+\begin{enumerate}
+\item 每一对节点所对应的潜在连接，其平均数据吞吐量可能比缓存中的消息大小要小。
+\item 每次传输的能量消耗不可忽略，换言之，消息传输不成功会带来无收益的能量损耗。
+\end{enumerate}
+
+例如，针对某条消息的一次传输操作而言，若当前连接所允许的总数据量比消息的大小小很多，则该次传输终止时，消息并未被成功传输。针对该问题的一个解决办法，即是总是传输不超过该连接平均吞吐量大小的消息，从而避免浪费传输机会。退一步而言，即使连接的吞吐量完全足够传输每一条消息，传输不同消息所带来的收益也并不相同（比如投递率收益，及投递时延收益等），然而传输的机会是有限的，故针对每一次传输机会而言，传输不同的消息对路由的整体性能表现具有较大的影响。从这个角度而言，在机会网络中，为了提高路由性能表现，应当设计有效的数据项选择机制。
+
+本章组织如下：第\ref{chap4:系统模型}节中介绍了系统模型及路由模型；第\ref{chap4:问题形式化}节中形式化定义了关键问题；第\ref{chap4:基于数据项选择的改进路由}节中利用设计的数据项选择机制对PRoPHET进行改进；第\ref{chap4:仿真实验}节为仿真实验；第\ref{chap4:本章小结}节概括了本章内容。
+
+\section{系统模型}
+\label{chap4:系统模型}
+
+\begin{table*}
+\centering
+  \caption{数学符号}
+    \label{tab:chap4_notations}
+  \begin{tabular}{p{0.23\linewidth}<{\centering}p{0.7\linewidth}<{\centering}}
+  \hline
+    \textbf{Notation} & \textbf{Meaning}  \\
+    \hline
+   $\mathcal{N}$ & 网络节点集合 \\
+   $n_i$ &  第 $i$ 号节点  \\
+   $m_i$ &  第 $i$ 号消息 \\
+   $TTL(i)$ & 消息 $m_i$ 的生存时间\\
+   $S(i)$   & 消息 $m_i$ 的大小\\
+    $\zeta(i)$ & 消息 $m_i$ 的传输收益\\
+    $B_{(a,b)}$ & 节点 $n_a$ 与 $n_b$ 之间的带宽\\
+   $t_{s_{(a,b)}}/t_{e_{(a,b)}}$   &  节点 $n_a$ and $n_b$ 最近一次连接的开始/结束时间\\
+   $\tau_{a,b}$ & 节点 $n_a$ 与 $n_b$ 预测接触时间\\
+  $P_{(a,b)}$ & $n_a$'s 节点 $n_a$ 与 $n_b$ 的预测接触概率 \\
+  $ETH_{(a,b)}$ & 节点 $n_a$ 与 $n_b$ 连接的预测吞吐量\\
+$P^{\{a,b\}}$ & 节点 $n_a$ 与 $n_b$ 的共同投递率\\
+   \hline
+  \end{tabular}
+\end{table*}
+
+数学符号如\tablename~\ref{tab:chap4_notations}所示。本模型的时间线设为离散时间，时间轴被划分为多个小的时间槽，每个时间槽的长度定义为一个单位时间。整个节点集合用符号$\mathcal{N}=\{n_i|n_i\in\mathcal{N},1\leq i<|\mathcal{N}|\}$。对于任意一条消息$m_k$，其消息生存时间表示为$TTL(k)$。当消息$m_k$被某节点产生时，$TTL(k)$的值即被指定。若某条消息的$TTL$到期，则消息会被当前节点丢弃。消息$m_k$的大小用符号$S(k)$表示。模型假设任一节点$n_i$知道其自身接口的带宽$B(i)$。该假设的合理性建立在网络中的每个节点往往在通信时都采用统一标准的某种接口，如蓝牙，wifi等。退一步讲，即使接口状态不稳定，也可以利用滑动窗口法对其平均值进行预测。对于任意一对相遇节点$n_i$及$n_j$，令节点$n_i$记录两个值$t_{s_{(i,j)}}$及$t_{e_{(i,j)}}$，分别用于记录两节点间最近一次连接的开始时间及结束时间。于是$t_{e_{(i,j)}}-t_{s_{(i,j)}}$即代表该次连接的持续时间；为简单起见，符号$t_{s_{(i,j)}}$及$t_{e_{(i,j)}}$在无歧义的上下文中，简记为$t_s$和$t_e$。
+
+PRoPHET路由算法\cite{AndersLindgren2004}记录了节点的相遇历史，用于预测节点间的相遇概率，并且考虑到了相遇概率具有传递性的特点。在PRoPHET中，$P_{(a,b)}$即用于衡量节点$n_a$及$n_b$之间投递概率的效用函数，存于节点$n_a$内。$P_{(a,b)}$的计算及更新方法如下式所示。
+
+\begin{equation}
+P_{(a,b)}=P_{(a,b)_{old}}+(1-P_{(a,b)_{old}})\times P_{init}
+\label{eq:prophet1}
+\end{equation}
+\begin{equation}
+P_{(a,b)}=P_{(a,b)_{old}}\times\gamma^{k}
+\label{eq:prophet2}
+\end{equation}
+\begin{equation}
+P_{(a,c)}=P_{(a,c)_{old}}+(1-P_{(a,c)_{old}})\\
+\times P_{(a,b)}\times P_{(b,c)}\times \beta
+\label{eq:prophet3}
+\end{equation}
+
+其中，$P_{init}$, $\beta$及$\gamma$是位于$[0,1]$范围内的常数。每个节点维护一个$1\times|\mathcal{N}|$的向量，该向量中第$i$个元素记录了节点$n_a$对节点$n_i$的投递率。
+
+\section{问题形式化}
+\label{chap4:问题形式化}
+
+本节给出问题的形式化定义。
+
+\subsection{问题目标}
+问题目标即是最大化每条消息的投递概率。在机会网络中，每个节点以“存储-携带-转发”的方式对消息进行路由。在机会路由中，一种策略是总是让节点选择对目的节点投递率高的消息进行投递。吞吐量与节点间的接触时间及通信接口带宽具有很强的相关性，因此对消息是否能投递成功具有较大的影响。然而在该种方法中，节点之间连接的吞吐量因素并未考虑进去。由于节点的带宽，接触时间及接触机会非常有限，缓存消息队列的调度策略对路由性能表现具有很大的影响。假设节点$n_a$持有三条消息$m_i$, $m_j$及$m_k$，其目的节点都为$n_b$，大小分别为150 K, 200 K 与100 K。然而当前连接最多只能传输120 K 的数据量。在此情况下，由于连接吞吐量的限制，消息$m_i$和$m_j$都无法被成功传递。一种做法是让$n_a$按消息大小从小到大传递，然而这种方法虽然能保证部分消息成功传输，但并未设定任何优化目标，由此可能使得某些虽然大小稍大，但也能成功传递，且对投递率具有较大改进的消息无法充分利用该次机会传输。为解决此问题，需要对消息的调度设定一个可行的评估指标。在本章中，主要集中研究如何有效的数据项选择机制提高消息的投递率。下面将给出最优化消息传输投递率收益的分析过程。
+
+若消息被节点$n_a$转发给$n_b$，则该消息宣告传输失败，仅当$n_a$及$n_b$都未成功传输该消息，其投递率可以用公式(\ref{eq:probability})计算。
+
+\begin{equation}
+P^{\{a,b\}}=1-(1-P_{(a,d_i)})(1-P_{(b,d_i)})
+\label{eq:probability}
+\end{equation}
+
+于是对于传输收益有如下定义。
+
+\begin{definition}传输收益.\\
+传输收益函数$\zeta(i)$用于衡量消息$m_i$在本次传输过程中能够改善的投递率, 有
+\begin{equation}
+\zeta(i)=P^{\{a,b\}}-P^{\{a\}}\\
+=1-(1-P_{(a,d_i)})(1-P_{(b,d_i)})-P_{(a,d_i)}
+\label{eq:improve}
+\end{equation}
+\end{definition}
+
+函数$\zeta(i)$的值代表将消息$m_i$从节点$n_a$传输给节点$n_b$所带来的投递率收益。从这点出发，可以如下定义“吞吐量相关最优机会路由”概念。
+
+\begin{definition} 吞吐量相关最优机会路由. \\
+最优机会路由总是尝试最大化消息投递概率，且考虑带宽及接触时间两个因素。节点$n_i$将依照$\zeta$函数值选择消息传输给节点$n_j$，利用预测的吞吐量最大化$\zeta$值总和。
+\label{def:throughput-routing}
+\end{definition}
+
+例如，在\tablename~\ref{tab:chap4_zeta} 所示例子中，节点$n_a$缓存中总共有5条消息，记为$m_1$, $m_2$, $m_3$, $m_4$, $m_5$。消息$m_i$的目的节点记为$d_i$。对于其中任意一条消息$m_i~(1\leq i\leq 5)$，有$P_{(b,d_i)}>P_{(a,d_i)}$。在这种情形下，当节点$n_a$与$n_b$相遇时，所有这5条消息都应由$n_a$转发给$n_b$。由公式~(\ref{eq:improve})可以得到每条消息对应的$\zeta$值。在下一小节中，将给出吞吐量的预测方法，然后给出问题的形式化定义。
+
+\begin{table}
+\centering
+  \caption{Five messages in $n_a$'s buffer}
+  \label{tab:chap4_zeta}
+  \begin{tabular}{cccccc}
+  \hline
+    data item  & $m_1$ & $m_2$ & $m_3$ & $m_4$ & $m_5$ \\
+    \hline
+    $P_{(a,d_i)}$ & 0 & 0.2 & 0.1 & 0.12 & 0.2 \\
+    $P_{(b,d_i)}$ & 0.1  & 0.75  & 0.2 & 0.25 & 0.35  \\
+    value of $\zeta$ & 0.1 & 0.6 & 0.18 & 0.22 & 0.28 \\
+    message size & 1K  & 2K  & 5K   & 6K   & 7K   \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{吞吐量预测}
+
+\begin{definition}连接吞吐量. \\
+给定任意两个节点的接触时间 $t$，以及带宽 $B$ (KB/unit) , 该次连接的吞吐量，记为 $TH$ ，有
+\[
+TH=B\cdot t
+\]
+\label{def:throughput}
+\end{definition}
+
+在此假设带宽$B$为已知，要预测吞吐量，则只需预测出连接的持续时间$t$。采用公式~(\ref{eq:estimate})~预测下一次$n_a$与$n_b$之间连接的持续时间。
+\begin{equation}
+\tau_{(a,b)_{new}}=(1-\alpha)\tau_{(a,b)_{old}}+\alpha(t_e-t_s)
+\label{eq:estimate}
+\end{equation}
+其中$\alpha\in[0,1]$是常数参数，$t_e-t_s$是节点$n_a$与$n_b$之间最近一次连接的持续时间，该部分加权为$\alpha$。当$\alpha$值设的较大时，公式~(\ref{eq:estimate})后半部分的影响较大，反之亦然。
+
+当节点$n_a$一段时间内没有再与节点$n_b$接触时，则用公式~(\ref{eq:estimate2})更新$\tau_{(a,b)}$。
+\begin{equation}
+\tau_{(a,b)_{new}}=\tau_{(a,b)_{old}}\gamma^{k}
+\label{eq:estimate2}
+\end{equation}
+其中$\gamma\in[0,1)$是衰减常数，如公式~(\ref{eq:prophet2})一样；$k$是离上一次更新公式流逝的单位时间数目（即经过的时间槽数目）。
+
+在每个时间槽内，对于任意一对节点$n_a$和$n_b$，在每一个时间槽，节点都会检查$n_a$及$n_b$的连接状态。对$\tau$的更新过程如算法~\ref{alg:chap4_estimate}所示。根据定义~\ref{def:throughput}~所示关于$n_a$与$n_b$之间吞吐量的定义，吞吐量可以由公式~(\ref{eq:eth})预测。
+
+\begin{algorithm}[tbp] %算法的开始
+\renewcommand{\algorithmicrequire}{\textbf{For}}
+\caption{Updating the $\tau$ value} %算法的标题
+\label{alg:chap4_estimate} %给算法一个标签，这样方便在文中对算法的引用
+\begin{algorithmic}[1] %这个1 表示每一行都显示数字
+\REQUIRE the current time unit
+\IF{connection is up}
+    \STATE $t_s\leftarrow current\_time$
+    \STATE $\tau_{(a,b)_{new}}=\tau_{(a,b)_{old}}\gamma^{k}$
+    \STATE $k\leftarrow k+1$
+\ELSIF{connection is down}
+    \STATE $t_e\leftarrow current\_time$
+    \STATE $\tau_{(a,b)_{new}}=(1-\alpha)\tau_{(a,b)_{old}}+\alpha(t_e-t_s)$
+    \STATE $k\leftarrow 1$
+\ELSE
+    \STATE $\tau_{(a,b)_{new}}=\tau_{(a,b)_{old}}\gamma^{k}$
+    \STATE $k\leftarrow k+1$
+\ENDIF    
+\end{algorithmic}
+\end{algorithm}
+
+\begin{equation}
+ETH_{(a,b)}=B_{(a,b)}\cdot\tau_{(a,b)}
+\label{eq:eth}
+\end{equation}
+
+\subsection{问题定义}
+
+首先证明数据项选择问题可以建模为0-1背包问题，然后给出问题的形式化定义。
+
+\begin{theorem}
+\label{thm:knapsack}
+定义~\ref{def:throughput-routing}中路由所对应的数据项选择问题，即为0-1背包问题。
+\end{theorem}
+\begin{proof}
+将预测吞吐量$ETH_{(a,b)}$看做背包的最大承重，收益函数值$\zeta(i)$看做第$i$项物品的价值，消息的大小$S(i)$看做第$i$项物品的重量，则数据项选择过程等同于0-1背包问题填装物品的过程，其中决策目标即是让每个物品所对应的收益的总和，即总收益最大。
+\end{proof}
+
+由定理~\ref{thm:knapsack}~可知，数据项选择问题是一个$\mathcal{NP}$完全的最优决策问题。该问题形式化定义如下。
+
+\begin{definition} 数据项选择问题.\\
+吞吐量相关最优机会路由中的数据项选择问题是一个最优决策问题，即
+\[
+Max~~~\sum_{i=1}^{n}\zeta(i)x_i
+\]\[
+s.t.~~~\sum_{i=1}^{n}S(i)x_i\leq ETH_{(a,b)}
+\]\[
+x_i\in \{0,1\},~~~i=1,\ldots,n
+\]
+\end{definition}
+
+\section{基于数据项选择的改进路由}
+\label{chap4:基于数据项选择的改进路由}
+
+\section{仿真实验}
+\label{chap4:仿真实验}
+
+\section{本章小结}
+\label{chap4:本章小结}

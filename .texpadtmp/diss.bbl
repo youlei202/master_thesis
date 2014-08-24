@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -90,5 +90,15 @@
   \url{http://portal.acm.org/citation.cfm?id=1288107.1288115\&coll=DL\&dl=GUIDE\&CFID=105151204\&CFTOKEN=34046091
   papers2://publication/livfe/id/65951
   http://portal.acm.org/citation.cfm?doid=1288107.1288115}.
+
+\bibitem[Lindgren et al.(2003)]{AndersLindgren2004}
+\textsc{Lindgren A, Doria A, Schel~e n O}.
+\newblock {Probabilistic routing in intermittently connected networks}[J].
+\newblock ACM SIGMOBILE Mobile Computing and Communications Review, 2003,
+  7(3):19--20.
+\newblock
+  \url{http://download.springer.com/static/pdf/410/chp%3A10.1007%2F978-3-540-27767-5\_24.pdf?auth66=1354693724\_8a4222e585bb8b3a99efd48511d18650\&ext=.pdf
+  papers2://publication/uuid/5B1B05F2-4EF0-4071-A037-8F19CA620A96
+  http://portal.acm.org/citation.cfm?doid=961268.961272}.
 
 \end{thebibliography}
