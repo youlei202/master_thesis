@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  24 AUG 2014 17:43
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  1 SEP 2014 10:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2419,13 +2419,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [47]
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 180.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 181.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 180.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 181.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 180.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 181.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2435,24 +2435,50 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [48]
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 182.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 183.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 182.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 183.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 182.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 183.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 184.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 185.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 184.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 185.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 184.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 185.
 
-)
+
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 210.
+
+
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 210.
+
+
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 210.
+
+
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 211.
+
+
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 211.
+
+
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 211.
+
+
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 216.
+
+
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 216.
+
+
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 216.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.84666pt.
@@ -2460,9 +2486,40 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [49]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[50]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.84666pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[51])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[52]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.84666pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[53]
 \openout2 = `body/chapter05.aux'.
 
- (./body/chapter05.tex [50
+ (./body/chapter05.tex [54
 
 
 
@@ -2475,7 +2532,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51] [52
+[55] [56
 
 
 ]
@@ -2485,7 +2542,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53] [54]
+[57] [58]
 \openout2 = `body/chapter05_a.aux'.
 
  (./body/chapter05_a.tex
@@ -2497,13 +2554,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55
+[59
 
 
 ]
 \openout2 = `body/chapter06.aux'.
 
- (./body/chapter06.tex [56
+ (./body/chapter06.tex [60
 
 
 
@@ -2516,10 +2573,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57]
+[61]
 \openout2 = `body/chapter07.aux'.
 
- (./body/chapter07.tex [58
+ (./body/chapter07.tex [62
 
 
 
@@ -2532,7 +2589,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59] [60
+[63] [64
 
 
 ]
@@ -2542,7 +2599,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61] [62]
+[65] [66]
 \openout2 = `body/chapter07_a.aux'.
 
  (./body/chapter07_a.tex
@@ -2554,13 +2611,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63
+[67
 
 
 ]
 \openout2 = `body/chapter08.aux'.
 
- (./body/chapter08.tex [64
+ (./body/chapter08.tex [68
 
 
 
@@ -2573,10 +2630,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65]
+[69]
 \openout2 = `body/chapter09.aux'.
 
- (./body/chapter09.tex [66
+ (./body/chapter09.tex [70
 
 
 
@@ -2589,10 +2646,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[67]
+[71]
 \openout2 = `body/conclusion.aux'.
 
- (./body/conclusion.tex [68
+ (./body/conclusion.tex [72
 
 
 
@@ -2603,7 +2660,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[69] [70
+[73] [74
 
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.bbl
@@ -2701,7 +2758,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[71
+[75
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 83--93
@@ -2750,7 +2807,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[72] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lot)
+[76] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lot)
 \tf@lot=\write5
 \openout5 = `diss.lot'.
 
@@ -2761,9 +2818,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[73
+[77
 
-] [74
+] [78
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lof)
 \tf@lof=\write6
@@ -2776,7 +2833,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[75] [76
+[79] [80
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.loa)
 \tf@loa=\write7
@@ -2789,10 +2846,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[77]
+[81]
 \openout2 = `body/pub.aux'.
 
- (./body/pub.tex [78
+ (./body/pub.tex [82
 
 
 ])
@@ -2802,10 +2859,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[79]
+[83]
 \openout2 = `body/ack.aux'.
 
- (./body/ack.tex [80
+ (./body/ack.tex [84
 
 
 
@@ -2827,7 +2884,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[81] [82
+[85] [86
 
 
 ]
@@ -2861,7 +2918,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[83] [84
+[87] [88
 
 
 ]
@@ -2880,12 +2937,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 28392 strings out of 494004
- 549245 string characters out of 3150891
- 631356 words of memory out of 3000000
- 30880 multiletter control sequences out of 15000+200000
+ 28398 strings out of 494004
+ 549399 string characters out of 3150891
+ 631573 words of memory out of 3000000
+ 30886 multiletter control sequences out of 15000+200000
  69706 words of font info for 363 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  61i,26n,47p,881b,805s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (94 pages).
+Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (98 pages).

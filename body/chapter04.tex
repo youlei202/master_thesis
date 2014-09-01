@@ -94,7 +94,7 @@ P^{\{a,b\}}=1-(1-P_{(a,d_i)})(1-P_{(b,d_i)})
 
 \begin{table}
 \centering
-  \caption{Five messages in $n_a$'s buffer}
+  \caption{节点$n_a$缓存中的5条消息}
   \label{tab:chap4_zeta}
   \begin{tabular}{cccccc}
   \hline
@@ -109,6 +109,7 @@ P^{\{a,b\}}=1-(1-P_{(a,d_i)})(1-P_{(b,d_i)})
 \end{table}
 
 \subsection{吞吐量预测}
+\label{sec:吞吐量预测}
 
 \begin{definition}连接吞吐量. \\
 给定任意两个节点的接触时间 $t$，以及带宽 $B$ (KB/unit) , 该次连接的吞吐量，记为 $TH$ ，有
@@ -192,7 +193,139 @@ x_i\in \{0,1\},~~~i=1,\ldots,n
 
 \subsection{动态规划求解}
 
+解决该最优决策问题的方法，如算法~\ref{alg:chap4_dynamic_programming}所示。整个动态规划求解过程如1--5行所示，解的构造过程如6--19行所示。
+
+这里给出一个贯穿本文的实例，如\tablename~\ref{tab:chap4_zeta}所示，其中给出了每条消息对应的大小及其传输收益值$\zeta$。在\ref{sec:吞吐量预测}小节中，已讨论如何对于任意一对节点$n_a$及$n_b$预测吞吐量的值$ETH_{(a,b)}$。基于此，\tablename~\ref{tab:chap4_dynamic_programming}给出本例的计算过程。
+
+\begin{algorithm}[!tbp] %算法的开始
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand\algorithmicensure {\textbf{Output:} }
+\caption{Get the solution by dynamic programming} %算法的标题
+\label{alg:chap4_dynamic_programming} %给算法一个标签，这样方便在文中对算法的引用
+\begin{algorithmic}[1] %这个1 表示每一行都显示数字
+\REQUIRE $MessageList=[m_1,m_2,\ldots,m_n]$,\\
+$\zeta=[\zeta(1),\zeta(2),\ldots,\zeta(n)]$,
+$S=[S(1),S(2),\ldots,S(n)]$
+\ENSURE $ForwardList$
+\FOR{$i\leftarrow~1~to~n$}
+    \FOR{$j\leftarrow~0~to~ETH$}
+        \STATE $\mathcal{V}[i,j]=\max\{\mathcal{V}[i-1,j],\mathcal{V}[i-1,j-S(i)]+\zeta(i)\}$
+    \ENDFOR
+\ENDFOR
+\STATE $c\leftarrow ETH$
+\FOR{$i\leftarrow~1~to~n-1$}
+    \IF{$\mathcal{V}[i,c]\neq\mathcal{V}[i+1,c]$}
+        \STATE $ForwardList.add(m_i)$
+        \STATE $c\leftarrow c-S(i)$
+    \ENDIF
+\ENDFOR
+\IF{$\mathcal{V}[n][c]>0$}
+    \STATE $ForwardList.add(m_n)$
+\ENDIF
+
+\RETURN $ForwardList$
+\end{algorithmic}
+\end{algorithm}
+
+
+\begin{table}
+\centering
+\caption{动态规划计算过程}
+\label{tab:chap4_dynamic_programming}
+\begin{tabular}{c|ccccc}
+\hline
+ $i$        & 1 & 2 & 3 & 4 & 5 \\
+ $S(i)$     & 1K & 2K & 5K & 6K & 7K \\
+ $\zeta(i)$ & 0.10 & 0.60 & 0.18 & 0.22 & 0.28\\
+\hline
+0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 1 & 1 & 1 & 1\\
+2 & 1 & 6 & 6 & 6 & 6\\
+3 & 1 & 7 & 7 & 7 & 7\\
+4 & 1 & 7 & 7 & 7 & 7\\
+5 & 1 & 7 & 18 & 18 & 18 \\
+6 & 1 & 7 & 19 & 22 & 22 \\
+7 & 1 & 7 & 24 & 24 & 28 \\
+8 & 1 & 7 & 25 & 28 & 29 \\
+9 & 1 & 7 & 25 & 29 & 34 \\
+10 & 1 & 7 & 25 & 29 & 35 \\
+11 & 1 & 7 & 25 & 40 & 40 \\
+\hline
+\end{tabular}
+
+\end{table}
+
 \subsection{路由协议描述}
+本小节给出路由协议描述。如PRoPHET协议一样，首先需要每个节点维护一张表用以记录节点间预测出的接触概率。此外，由于链接吞吐量的预测是基于连接的持续时间的，因此需要让每个节点维护两个变量$t_s$和$t_e$，以及预测值$\tau$，该三个变量都用于描述最近一次发生的连接。最后，需要维护一个变量$k$，用以记录流逝的单位时间数目。路由信息表用符号$TABLE[a]$表示，该表结构如\tablename~\ref{tab:chap4_records}所示，其空间复杂度为$O(|\mathcal{N}|)$。
+
+\begin{table}
+\centering
+  \caption{The routing information table}
+  \label{tab:chap4_records}
+  \begin{tabular}{ccccc}
+  \hline
+    $1$  & $2$ & $3$ & $\cdots$ & $|\mathcal{N}|$  \\
+    \hline
+    $P_{(a,n_1)}$ & $P_{(a,n_2)}$ & $P_{(a,n_3)}$ & $\cdots$ & $P_{(a,n_{|\mathcal{N}|})}$  \\
+    $k_1$ & $k_2$ & $k_3$ & $\cdots$ & $k_{|\mathcal{N}|}$   \\
+    $\tau_{(a,n_1)}$ & $\tau_{(a,n_2)}$ & $\tau_{(a,n_3)}$ & $\cdots$ & $\tau_{(a,n_{|\mathcal{N}|})}$  \\
+    $t_{s_{(a,n_1)}}$ & $t_{s_{(a,n_2)}}$ & $t_{s_{(a,n_3)}}$  & $\cdots$  & $t_{s_{(a,n_{|\mathcal{N}|})}}$     \\
+    $t_{e_{(a,n_1)}}$ & $t_{e_{(a,n_2)}}$  & $t_{e_{(a,n_3)}}$ & $\cdots$ & $t_{e_{(a,n_{|\mathcal{N}|})}}$  \\
+    \hline
+  \end{tabular}
+\end{table}
+
+整个路由协议分为两部分，即算法~\ref{alg:chap4_protocol_exchange}所示的信息交换协议及算法~\ref{alg:chap4_protocol_transmission}所示的数据传输协议。
+
+\begin{algorithm}[!tbp] %算法的开始
+\renewcommand\algorithmicrequire{\textbf{Triggering Condition:}}
+\renewcommand\algorithmicensure {\textbf{$\mathbf{n_a}$ Executes:} }
+\caption{Information exchange protocol} %算法的标题
+\label{alg:chap4_protocol_exchange} %给算法一个标签，这样方便在文中对算法的引用
+\begin{algorithmic}[1] %这个1 表示每一行都显示数字
+\REQUIRE ~~\\ %算法的输入参数：Input
+In each time unit
+\ENSURE ~~\\ %算法的输出：Output
+\FOR{each column record $i$ of $n_a$ in \tablename~\ref{tab:chap4_records}}
+    \STATE update $P(a,b_i)$ by equation (\ref{eq:prophet1})--(\ref{eq:prophet3}).
+    \STATE call \textbf{Algorithm \ref{alg:chap4_estimate}} to update $\tau_{(a,b_i)}$.
+\ENDFOR
+\STATE broadcast the request for $TABLE$ to $n_a.neighbors$
+\IF{received request for $TABLE$ from any node $n_b$}
+    \STATE forward $TABLE[a]$ to $n_b$
+\ENDIF
+\IF{received $TABLE[b]$ from any node $n_b$}
+    \STATE call \textbf{Algorithm \ref{alg:chap4_protocol_transmission}}
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
+
+在算法~\ref{alg:chap4_protocol_exchange}中，主要解决的问题即是更新路由协议需要的信息，并且保证信息在节点之间交换。更新过程如1--4行所示，其中用到PRoPHET中的公式对接触概率进行预测，此外也用到本章提出用于更新$\tau$值的算法。在第5行，将信息表$TABLE$向网络中$n_a$的所有邻居节点进行广播。在6--8行，若当前节点$n_a$收到其它节点的请求，$TABLE[a]$将会被传输给发出该请求的节点。如9-11行所示，当节点$n_a$从任意其它节点$n_b$收到$TABLE[b]$时，将会调用数据传输协议。换言之，此为数据传输协议的触发条件。
+
+\begin{algorithm}[!tbp]
+\renewcommand\algorithmicrequire{\textbf{Triggering Condition:}}
+\renewcommand\algorithmicensure {\textbf{$\mathbf{n_a}$ Executes:} }
+\caption{Data transmission protocol}
+\label{alg:chap4_protocol_transmission}
+\begin{algorithmic}[1]
+\REQUIRE ~~\\ %算法的输入参数：Input
+$n_a$ and $n_b$ are in contact
+\ENSURE ~~\\ %算法的输出：Output
+\FOR{$\forall M_i$ in the buffer of $n_a$}
+    \STATE $d_i\leftarrow$ the destination node of $m_i$.
+     \IF{$TABLE[a].P_{(a,d_i)}>TABLE[b].P_{(b,d_i)}$}
+         \STATE $MessageList(n_a).add(M_i)$
+    \ENDIF
+\ENDFOR
+\STATE estimate $ETH_{(a,b)}$ by \textbf{equation (\ref{eq:eth}}).
+\FOR{$\forall M_i\in MessageList(n_a)$}
+    \STATE calculate $\zeta(i)$ by \textbf{equation \ref{eq:improve}}
+    \STATE get $ForwardList(n_a)$ by \textbf{Algorithm \ref{alg:chap4_dynamic_programming}}
+\ENDFOR
+\STATE $Sort(ForwardList,ascend,TTL)$
+\STATE $ForwardList(n_a).transmitTo(n_b)$
+\end{algorithmic}
+\end{algorithm}
 
 
 \section{仿真实验}

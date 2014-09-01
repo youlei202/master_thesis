@@ -2,3 +2,6 @@
 \contentsline {algorithm}{\numberline {2}{\ignorespaces Local-MPAR Algorithm.}}{32}{algorithm.2}
 \contentsline {algorithm}{\numberline {3}{\ignorespaces Tabu-MPAR Algorithm.}}{35}{algorithm.3}
 \contentsline {algorithm}{\numberline {4}{\ignorespaces Updating the $\tau $ value}}{49}{algorithm.4}
+\contentsline {algorithm}{\numberline {5}{\ignorespaces Get the solution by dynamic programming}}{50}{algorithm.5}
+\contentsline {algorithm}{\numberline {6}{\ignorespaces Information exchange protocol}}{52}{algorithm.6}
+\contentsline {algorithm}{\numberline {7}{\ignorespaces Data transmission protocol}}{52}{algorithm.7}
