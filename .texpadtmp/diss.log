@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  3 SEP 2014 10:36
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  3 SEP 2014 20:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2665,24 +2665,77 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 第六章
-)
+File: paper-HCH/matrix.pdf Graphic file (type QTm)
+<use  "paper-HCH/matrix.pdf" >
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.84666pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61] [62
+[61]
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 66.
 
 
-]
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 66.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 72.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 72.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 87.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 87.
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 104.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 104.
+
+File: paper-HCH/heuristic.pdf Graphic file (type QTm)
+<use  "paper-HCH/heuristic.pdf" >
+Overfull \hbox (1.52097pt too wide) in paragraph at lines 157--180
+ [][] 
+ []
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[62]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.84666pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[63]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[64]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63] [64]
+[65
+
+
+] [66]
 \openout2 = `body/chapter05_a.aux'.
 
  (./body/chapter05_a.tex
@@ -2694,13 +2747,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65
+[67
 
 
 ]
 \openout2 = `body/chapter06.aux'.
 
- (./body/chapter06.tex [66
+ (./body/chapter06.tex [68
 
 
 
@@ -2713,10 +2766,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[67]
+[69]
 \openout2 = `body/chapter07.aux'.
 
- (./body/chapter07.tex [68
+ (./body/chapter07.tex [70
 
 
 
@@ -2729,7 +2782,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[69] [70
+[71] [72
 
 
 ]
@@ -2739,7 +2792,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[71] [72]
+[73] [74]
 \openout2 = `body/chapter07_a.aux'.
 
  (./body/chapter07_a.tex
@@ -2751,13 +2804,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[73
+[75
 
 
 ]
 \openout2 = `body/chapter08.aux'.
 
- (./body/chapter08.tex [74
+ (./body/chapter08.tex [76
 
 
 
@@ -2770,10 +2823,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[75]
+[77]
 \openout2 = `body/chapter09.aux'.
 
- (./body/chapter09.tex [76
+ (./body/chapter09.tex [78
 
 
 
@@ -2786,10 +2839,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[77]
+[79]
 \openout2 = `body/conclusion.aux'.
 
- (./body/conclusion.tex [78
+ (./body/conclusion.tex [80
 
 
 
@@ -2800,7 +2853,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[79] [80
+[81] [82
 
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.bbl
@@ -2898,7 +2951,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[81
+[83
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 83--93
@@ -2957,7 +3010,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[82] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lot)
+[84] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lot)
 \tf@lot=\write5
 \openout5 = `diss.lot'.
 
@@ -2968,9 +3021,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[83
+[85
 
-] [84
+] [86
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lof)
 \tf@lof=\write6
@@ -2983,9 +3036,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[85] [86
+[87] [88
 
-] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.loa)
+] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.loa
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 8.
+
+)
 \tf@loa=\write7
 \openout7 = `diss.loa'.
 
@@ -2996,10 +3053,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[87]
+[89]
 \openout2 = `body/pub.aux'.
 
- (./body/pub.tex [88
+ (./body/pub.tex [90
 
 
 ])
@@ -3009,10 +3066,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[89]
+[91]
 \openout2 = `body/ack.aux'.
 
- (./body/ack.tex [90
+ (./body/ack.tex [92
 
 
 
@@ -3034,7 +3091,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[91] [92
+[93] [94
 
 
 ]
@@ -3068,7 +3125,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[93] [94
+[95] [96
 
 
 ]
@@ -3087,12 +3144,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 28594 strings out of 494004
- 554531 string characters out of 3150891
- 636547 words of memory out of 3000000
- 31025 multiletter control sequences out of 15000+200000
+ 28622 strings out of 494004
+ 554992 string characters out of 3150891
+ 637107 words of memory out of 3000000
+ 31045 multiletter control sequences out of 15000+200000
  69706 words of font info for 363 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  61i,26n,47p,881b,805s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (104 pages).
+Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (106 pages).

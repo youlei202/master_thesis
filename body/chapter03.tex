@@ -1403,7 +1403,7 @@ $N=N_{opt}$当且仅当网络中不存在传染节点时发生，即所有属于
 
 
 
-\subsection{自变量：消息生存时间}
+\subsection{改变消息生存时间}
 
 节点缓存大小固定在200M。消息的生存时间在10小时到30小时变化，仿真结果如\figurename~\ref{fig:chap3_delivery_ttl}，\figurename~\ref{fig:chap3_latency_ttl}，\figurename~\ref{fig:chap3_overhead_ttl}，\figurename~\ref{fig:chap3_hop_ttl}。
 
@@ -1411,7 +1411,7 @@ $N=N_{opt}$当且仅当网络中不存在传染节点时发生，即所有属于
 
 
 
-\subsection{自变量：节点缓存}
+\subsection{改变节点缓存大小}
 
 消息生存时间固定为仿真器中的16小时。节点缓存大小在50 MB 到 300 MB 之间变换。仿真结果如\figurename~\ref{fig:chap3_delivery_buffer}，\figurename~\ref{fig:chap3_latency_buffer}，\figurename~\ref{fig:chap3_overhead_buffer}，\figurename~\ref{fig:chap3_hop_buffer}。
 
@@ -1532,7 +1532,7 @@ $N=N_{opt}$当且仅当网络中不存在传染节点时发生，即所有属于
 
 
 
-\section{本章总结}
+\section{本章小结}
 \label{chap3:本章总结}
 在本章中，建立了周期相关的移动记录模型，并从移动记录中提取出节点（群组）移动模式。对于成组的节点，其被看做一个整体，并评估整体的预测投递率。本章研究了两个相关路由的关键属性，并将路由问题建模为组合最优化问题，且证明了该问题的$\mathcal{NP}$难解性。为求解该路由问题，基于局部搜索及禁忌搜索，分别提出了两种路由算法Local-MPAR及Tabu-MPAR。此外，本章证明了Tabu-MPAR过程可以使得持有消息的节点集合最终达到预测投递概率最优的集合。仿真实验表明，两种MPAR算法，在机会网络中的综合移动模型WDM上优于DF算法及SimBet算法。
 

@@ -32,9 +32,9 @@
 \contentsline {subsection}{\numberline {4.4.1}Local-MPAR:基于局部搜索的路由算法}{31}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Tabu-MPAR:基于禁忌搜索的路由算法}{33}{subsection.4.4.2}
 \contentsline {section}{\numberline {4.5}仿真实验}{37}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}自变量：消息生存时间}{38}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}自变量：节点缓存}{38}{subsection.4.5.2}
-\contentsline {section}{\numberline {4.6}本章总结}{43}{section.4.6}
+\contentsline {subsection}{\numberline {4.5.1}改变消息生存时间}{38}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}改变节点缓存大小}{38}{subsection.4.5.2}
+\contentsline {section}{\numberline {4.6}本章小结}{43}{section.4.6}
 \contentsline {chapter}{\numberline {第五章\hspace {0.3em}}基于消息传输收益的最优队列调度算法}{45}{chapter.5}
 \contentsline {section}{\numberline {5.1}系统模型}{45}{section.5.1}
 \contentsline {section}{\numberline {5.2}问题形式化}{46}{section.5.2}
@@ -49,16 +49,23 @@
 \contentsline {subsection}{\numberline {5.4.2}Helsinki City Scenario仿真}{57}{subsection.5.4.2}
 \contentsline {section}{\numberline {5.5}本章小结}{59}{section.5.5}
 \contentsline {chapter}{\numberline {第六章\hspace {0.3em}}基于跳数的启发式距离向量算法}{61}{chapter.6}
-\contentsline {part}{第二部分\hspace {1em}机会网数据分发协议研究}{63}{part.2}
-\contentsline {chapter}{\numberline {第七章\hspace {0.3em}}机会网数据分发概述}{65}{chapter.7}
-\contentsline {chapter}{\numberline {第八章\hspace {0.3em}}基于一跳邻居位置的消息分发协议}{67}{chapter.8}
-\contentsline {chapter}{\numberline {第九章\hspace {0.3em}}基于非对称喷洒与授权转发的消息分发协议}{69}{chapter.9}
-\contentsline {part}{第三部分\hspace {1em}蜂窝网能耗优化研究}{71}{part.3}
-\contentsline {chapter}{\numberline {第十章\hspace {0.3em}}蜂窝网能耗优化概述}{73}{chapter.10}
-\contentsline {chapter}{\numberline {第十一章\hspace {0.3em}}交织多址及连续多址的能耗最优化}{75}{chapter.11}
-\contentsline {chapter}{\numberline {第十二章\hspace {0.3em}}异构网负载耦合模型下基于范围分配的能耗最优化}{77}{chapter.12}
-\contentsline {chapter}{全文总结}{79}{chapter*.12}
-\contentsline {chapter}{参考文献}{81}{chapter*.13}
-\contentsline {chapter}{攻读学位期间发表的学术论文目录}{89}{chapter*.17}
-\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{91}{appendix*.18}
-\contentsline {chapter}{学位论文独创性声明、学位论文知识产权权属声明}{93}{appendix*.19}
+\contentsline {section}{\numberline {6.1}系统模型}{61}{section.6.1}
+\contentsline {section}{\numberline {6.2}消息投递跳数预测}{62}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}消息收集}{62}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}启发函数}{62}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}路由协议}{62}{section.6.3}
+\contentsline {section}{\numberline {6.4}仿真实验}{62}{section.6.4}
+\contentsline {section}{\numberline {6.5}本章小结}{62}{section.6.5}
+\contentsline {part}{第二部分\hspace {1em}机会网数据分发协议研究}{65}{part.2}
+\contentsline {chapter}{\numberline {第七章\hspace {0.3em}}机会网数据分发概述}{67}{chapter.7}
+\contentsline {chapter}{\numberline {第八章\hspace {0.3em}}基于一跳邻居位置的消息分发协议}{69}{chapter.8}
+\contentsline {chapter}{\numberline {第九章\hspace {0.3em}}基于非对称喷洒与授权转发的消息分发协议}{71}{chapter.9}
+\contentsline {part}{第三部分\hspace {1em}蜂窝网能耗优化研究}{73}{part.3}
+\contentsline {chapter}{\numberline {第十章\hspace {0.3em}}蜂窝网能耗优化概述}{75}{chapter.10}
+\contentsline {chapter}{\numberline {第十一章\hspace {0.3em}}交织多址及连续多址的能耗最优化}{77}{chapter.11}
+\contentsline {chapter}{\numberline {第十二章\hspace {0.3em}}异构网负载耦合模型下基于范围分配的能耗最优化}{79}{chapter.12}
+\contentsline {chapter}{全文总结}{81}{chapter*.12}
+\contentsline {chapter}{参考文献}{83}{chapter*.13}
+\contentsline {chapter}{攻读学位期间发表的学术论文目录}{91}{chapter*.17}
+\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{93}{appendix*.18}
+\contentsline {chapter}{学位论文独创性声明、学位论文知识产权权属声明}{95}{appendix*.19}
