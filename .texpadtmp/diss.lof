@@ -62,6 +62,53 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Number of nodes: $|\overline {N}|=600$}}}{42}{figure.4.17}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Number of nodes: $|\overline {N}|=800$}}}{42}{figure.4.17}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5--1}{\ignorespaces 带宽预测过程}}{48}{figure.5.1}
+\contentsline {figure}{\numberline {5--2}{\ignorespaces [\emph {Cambridge-iMote}] 不同仿真时间，改变节点缓存大小}}{54}{figure.5.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {simulation time = 25\%}}}{54}{figure.5.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {simulation time = 25\%}}}{54}{figure.5.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {simulation time = 25\%}}}{54}{figure.5.2}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {simulation time = 50\%}}}{54}{figure.5.2}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {simulation time = 50\%}}}{54}{figure.5.2}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {simulation time = 50\%}}}{54}{figure.5.2}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {simulation time = 75\%}}}{54}{figure.5.2}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {simulation time = 75\%}}}{54}{figure.5.2}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {simulation time = 75\%}}}{54}{figure.5.2}
+\contentsline {subfigure}{\numberline {(j)}{\ignorespaces {simulation time = 100\%}}}{54}{figure.5.2}
+\contentsline {subfigure}{\numberline {(k)}{\ignorespaces {simulation time = 100\%}}}{54}{figure.5.2}
+\contentsline {subfigure}{\numberline {(l)}{\ignorespaces {simulation time = 100\%}}}{54}{figure.5.2}
+\contentsline {figure}{\numberline {5--3}{\ignorespaces [\emph {Cambridge-iMote}] 不同仿真时间，改变消息TTL}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {simulation time = 25\%}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {simulation time = 25\%}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {simulation time = 25\%}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {simulation time = 50\%}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {simulation time = 50\%}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {simulation time = 50\%}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {simulation time = 75\%}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {simulation time = 75\%}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {simulation time = 75\%}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(j)}{\ignorespaces {simulation time = 100\%}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(k)}{\ignorespaces {simulation time = 100\%}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(l)}{\ignorespaces {simulation time = 100\%}}}{55}{figure.5.3}
+\contentsline {figure}{\numberline {5--4}{\ignorespaces [\emph {Helsinki City Scenario}] 不同节点数目，改变节点缓存大小}}{57}{figure.5.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {number of pedestrians/cars = 30}}}{57}{figure.5.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {number of pedestrians/cars = 30}}}{57}{figure.5.4}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {number of pedestrians/cars = 30}}}{57}{figure.5.4}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {number of pedestrians/cars = 60}}}{57}{figure.5.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {number of pedestrians/cars = 60}}}{57}{figure.5.4}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {number of pedestrians/cars = 60}}}{57}{figure.5.4}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {number of pedestrians/cars = 90}}}{57}{figure.5.4}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {number of pedestrians/cars = 90}}}{57}{figure.5.4}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {number of pedestrians/cars = 90}}}{57}{figure.5.4}
+\contentsline {figure}{\numberline {5--5}{\ignorespaces [\emph {Helsinki City Scenario}] 不同节点数目，改变消息TTL}}{58}{figure.5.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {number of pedestrians = 30}}}{58}{figure.5.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {number of pedestrians = 30}}}{58}{figure.5.5}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {number of pedestrians = 30}}}{58}{figure.5.5}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {number of pedestrians = 60}}}{58}{figure.5.5}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {number of pedestrians = 60}}}{58}{figure.5.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {number of pedestrians = 60}}}{58}{figure.5.5}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {number of pedestrians = 90}}}{58}{figure.5.5}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {number of pedestrians = 90}}}{58}{figure.5.5}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {number of pedestrians = 90}}}{58}{figure.5.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

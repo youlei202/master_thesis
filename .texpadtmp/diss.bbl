@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -100,5 +100,12 @@
   \url{http://download.springer.com/static/pdf/410/chp%3A10.1007%2F978-3-540-27767-5\_24.pdf?auth66=1354693724\_8a4222e585bb8b3a99efd48511d18650\&ext=.pdf
   papers2://publication/uuid/5B1B05F2-4EF0-4071-A037-8F19CA620A96
   http://portal.acm.org/citation.cfm?doid=961268.961272}.
+
+\bibitem[Ker{\"a}nen et al.(2010)]{Keranen2010}
+\textsc{Ker{\"a}nen A, K{\"a}rkk{\"a}inen T, Ott J}.
+\newblock {Simulating Mobility and DTNs with the ONE}[J].
+\newblock Journal of Communications, 2010, 5(2):92--105.
+\newblock
+  \url{http://www.ojs.academypublisher.com/index.php/jcm/article/viewArticle/050292105}.
 
 \end{thebibliography}

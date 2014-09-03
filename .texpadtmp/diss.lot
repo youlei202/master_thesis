@@ -11,7 +11,9 @@
 \contentsline {table}{\numberline {5--1}{\ignorespaces 数学符号}}{46}{table.5.1}
 \contentsline {table}{\numberline {5--2}{\ignorespaces 节点$n_a$缓存中的5条消息}}{48}{table.5.2}
 \contentsline {table}{\numberline {5--3}{\ignorespaces 动态规划计算过程}}{51}{table.5.3}
-\contentsline {table}{\numberline {5--4}{\ignorespaces The routing information table}}{51}{table.5.4}
+\contentsline {table}{\numberline {5--4}{\ignorespaces 路由信息表}}{51}{table.5.4}
+\contentsline {table}{\numberline {5--5}{\ignorespaces Simulation settings of Cambridge-iMote trace}}{56}{table.5.5}
+\contentsline {table}{\numberline {5--6}{\ignorespaces Simulation settings of Helsinki City Scenario}}{56}{table.5.6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

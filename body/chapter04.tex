@@ -119,6 +119,13 @@ TH=B\cdot t
 \label{def:throughput}
 \end{definition}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{paper-data/example2}
+  \caption{带宽预测过程}
+  \label{fig:chap4_example2}
+\end{figure}
+
 在此假设带宽$B$为已知，要预测吞吐量，则只需预测出连接的持续时间$t$。采用公式~(\ref{eq:estimate})~预测下一次$n_a$与$n_b$之间连接的持续时间。
 \begin{equation}
 \tau_{(a,b)_{new}}=(1-\alpha)\tau_{(a,b)_{old}}+\alpha(t_e-t_s)
@@ -260,7 +267,7 @@ $S=[S(1),S(2),\ldots,S(n)]$
 
 \begin{table}
 \centering
-  \caption{The routing information table}
+  \caption{路由信息表}
   \label{tab:chap4_records}
   \begin{tabular}{ccccc}
   \hline
@@ -327,9 +334,204 @@ $n_a$ and $n_b$ are in contact
 \end{algorithmic}
 \end{algorithm}
 
+在算法~\ref{alg:chap4_protocol_transmission}中，当前节点$n_a$首先扫描其缓存，将满足条件$P(b,d_i)>P(a,d_i)$的任意消息加入消息传输列表。消息传输策略与PRoPHET算法相同，即仅当节点$n_b$对该消息的投递率高于$n_a$时，$n_a$才将该消息转复制给$n_b$。此外，每条连接的吞吐率也被纳入考虑，如算法~\ref{alg:chap4_protocol_transmission}余下部分所示。在第7行中，预测了节点$n_a$及$n_b$之间连接的吞吐率。随之，对每条消息$m_i$，依照公式~(\ref{eq:improve})计算传输效用函数值$\zeta(i)$。最终，利用算法~\ref{alg:chap4_dynamic_programming}，从消息列表$MessageList$中获取整个转发列表$ForwardList$。在$ForwardList$中，消息按照$TTL$的值增序排序，此为确保即将到期的消息具有较高的传输优先级，从而一定程度上降低丢包（如前所述，到期消息将被节点从缓存中删除）。在算法第13行，所有位于$ForwardList$中的消息将以队列顺序依次由节点$n_a$转发给$n_b$。
+
 
 \section{仿真实验}
 \label{chap4:仿真实验}
+
+仿真实验结果从仿真器ONE~\cite{Keranen2009}中获得。首先，采用被广泛运用的真实数据集Cambridge-iMote对协议进行仿真；该数据集记录了几组持有手持蓝牙设备的小组成员两个月的接触记录信息。在本实验中，移动的节点主要为Cambridge University的学生组成；在整个实验过程中，这些学生一直携带有iMote移动端。另一个实验场景是基于Helsinki City Scenario的，该仿真基于综合移动模型。仿真分为如下几组：（1）Cambridge-iMote场景改变缓存大小；（2）Cambridge-iMote场景改变消息TTL；（3）Helsinki City Model场景改变改变缓存大小；（4）Helsinki City Model场景改变消息TTL。本节将基于消息投递率，网络开销以及平均时延三个指标，对五种路由协议进行评估比较。
+
+\subsection{Cambridge-iMote场景仿真}
+
+在该仿真中，随机产生3300条消息，每条消息对应唯一的源节点和目的节点，源节点与目的节点从所有节点中随机选取。对应投递率，网络开销以及投递时延三个指标，仿真时间分别设为整个数据集对应时间的25\%，50\%，75\%以及100\%。\figurename~\ref{fig:chap4_trace_buffer}为改变节点缓存大小的仿真结果，消息的$TTL$固定在300分钟。在\figurename~\ref{fig:chap4_trace_ttl}改变消息$TTL$的仿真中，缓存大小固定在50M。其它的仿真设定如\tablename~\ref{tab:chap4_simulation}所示。
+
+
+\begin{table}
+\centering
+\caption{Simulation settings of Cambridge-iMote trace}
+\label{tab:chap4_simulation}
+\begin{tabular}{
+p{0.45\linewidth}<{\centering}
+p{0.5\linewidth}<{\centering}
+}
+\hline
+\textbf{parameter name} & \textbf{range} \\
+\hline
+number of nodes & 36  \\
+entire sim\_time(days) & 11.5 \\
+message size(KB) & 500--1024 \\
+bandwidth(KBps) & 250 \\
+$P_{init}$ & 0.75 \\
+$\alpha$ & 0.5 \\
+$\beta$ & 0.25 \\
+$\gamma$ & 0.98 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{figure*}[tbp]
+\centering
+\subfigure[simulation time = 25\%\label{25_delivery_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/25_delivery_buffer}}
+\subfigure[simulation time = 25\%\label{25_avgLatency_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/25_avgLatency_buffer}}
+\subfigure[simulation time = 25\%\label{25_overhead_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/25_overhead_buffer}}
+\\
+\subfigure[simulation time = 50\%\label{50_delivery_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/50_delivery_buffer}}
+\subfigure[simulation time = 50\%\label{50_avgLatency_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/50_avgLatency_buffer}}
+\subfigure[simulation time = 50\%\label{50_overhead_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/50_overhead_buffer}}
+\\
+\subfigure[simulation time = 75\%\label{75_delivery_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/75_delivery_buffer}}
+\subfigure[simulation time = 75\%\label{75_avgLatency_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/75_avgLatency_buffer}}
+\subfigure[simulation time = 75\%\label{75_overhead_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/75_overhead_buffer}}
+\\
+\subfigure[simulation time = 100\%\label{100_delivery_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/100_delivery_buffer}}
+\subfigure[simulation time = 100\%\label{100_avgLatency_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/100_avgLatency_buffer}}
+\subfigure[simulation time = 100\%\label{100_overhead_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/100_overhead_buffer}}
+\caption{[\emph{Cambridge-iMote}] 不同仿真时间，改变节点缓存大小}
+\label{fig:chap4_trace_buffer}
+\end{figure*}
+
+如\figurename~\ref{fig:chap4_trace_buffer}所示，结果表明本章中改进PRoPHET后的协议Throughput，在投递率及投递时延方面的性能表现强于PRoPHET以及Epidemic协议，且能够一定程度上降低网络开销。尽管与MaxProp算法相比，本章算法Throughput在投递率方面优势不大，然而Throughput协议在其余两方面性能表现，即投递时延和网络开销，要强于MaxProp协议。从\figurename~\ref{fig:chap4_trace_buffer}(a), \ref{fig:chap4_trace_buffer}(d), \ref{fig:chap4_trace_buffer}(g)和\ref{fig:chap4_trace_buffer}(j)可以看出，随着仿真时间的增加，Throughput算法改善投递率的效果亦增加。如\figurename~\ref{fig:chap4_trace_buffer}第二列所示，Throughput协议具有比PRoPHET更低的平均时延。参照\figurename~\ref{fig:chap4_trace_buffer}第三列的结果，随着仿真时间加长，Throughput协议能够很大程度上改善网络开销的性能表现。
+
+\begin{figure*}[tbp]
+\centering
+\subfigure[simulation time = 25\%\label{25_delivery_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/25_delivery_ttl}}
+\subfigure[simulation time = 25\%\label{25_avgLatency_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/25_avgLatency_ttl}}
+\subfigure[simulation time = 25\%\label{25_overhead_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/25_overhead_ttl}}
+\\
+\subfigure[simulation time = 50\%\label{50_delivery_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/50_delivery_ttl}}
+\subfigure[simulation time = 50\%\label{50_avgLatency_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/50_avgLatency_ttl}}
+\subfigure[simulation time = 50\%\label{50_overhead_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/50_overhead_ttl}}
+\\
+\subfigure[simulation time = 75\%\label{75_delivery_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/75_delivery_ttl}}
+\subfigure[simulation time = 75\%\label{75_avgLatency_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/75_avgLatency_ttl}}
+\subfigure[simulation time = 75\%\label{75_overhead_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/75_overhead_ttl}}
+\\
+\subfigure[simulation time = 100\%\label{100_delivery_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/100_delivery_ttl}}
+\subfigure[simulation time = 100\%\label{100_avgLatency_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/100_avgLatency_ttl}}
+\subfigure[simulation time = 100\%\label{100_overhead_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/100_overhead_ttl}}
+\caption{[\emph{Cambridge-iMote}] 不同仿真时间，改变消息TTL}
+\label{fig:chap4_trace_ttl}
+\end{figure*}
+
+\figurename~\ref{fig:chap4_trace_ttl}的结果表明，Throughput协议在投递率以及网络开销方面的表现优于其余四种算法；在平均时延方面有微小改进。与Epidemic, PRoPHET以及EncounterBased协议相比，Throughput具有更优的性能表现。与MaxProp相比，Throughput算法在仿真时间较短时，性能表现明显好于MaxProp。该结果表明Throughput能够更快的达到算法最佳表现。
+
+
+
+\subsection{Helsinki City Scenario仿真}
+
+\begin{table}
+\centering
+\caption{Simulation settings of Helsinki City Scenario}
+\label{tab:chap4_simulation_helsinki}
+\begin{tabular}{
+p{0.45\linewidth}<{\centering}
+p{0.5\linewidth}<{\centering}
+}
+\hline
+\textbf{parameter name} & \textbf{range(default value)} \\
+\hline
+pedestrians/cars & 30-90  \\
+world size($m\times m$) & 4500$\times$3000  \\
+initial tickets number & 6 \\
+message TTL(min) & 180--425 (300) \\
+simulation time(hours) & 12 \\
+message size(KB) & 500--1024 \\
+pedestrian buffer(MB) & 5--55 (25) \\
+tram buffer(MB) & 500 \\
+bluetooth range(m) & 10 \\
+highspeed range(m) & 1000 \\ 
+bluetooth (KBps) & 250 \\
+highspeed (MBps) & 10 \\ 
+pedestrian speed(m/s) & 0.5--1.5  \\
+message interval(s) & 35--40 \\
+\hline
+\end{tabular}
+\end{table}
+
+在Helsinki City Scenario\cite{Keranen2010}中，节点持有移动设备，并利用蓝牙接口进行通信，数据率设为250 KBps，传输范围直径设为10 m。在该场景中，每个节点的初始缓存大小设为较小的值，在5 M到55 M之间变动。地图中设有六辆电车沿着指定路径移动，并且配有额外的高速通信接口，数据率为10 MBps，传输直径为1000 m 电车之间可以使用该接口进行通信。其余仿真设置如\tablename~\ref{tab:chap4_simulation}
+
+\begin{figure}[htbp]
+\centering
+\subfigure[number of pedestrians/cars = 30\label{helsinki/30_delivery_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/30_delivery_buffer}}
+\subfigure[number of pedestrians/cars = 30\label{helsinki/30_avgLatency_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/30_avgLatency_buffer}}
+\subfigure[number of pedestrians/cars = 30\label{helsinki/30_overhead_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/30_overhead_buffer}}
+\\
+\subfigure[number of pedestrians/cars = 60\label{helsinki/60_delivery_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/60_delivery_buffer}}
+\subfigure[number of pedestrians/cars = 60\label{helsinki/60_avgLatency_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/60_avgLatency_buffer}}
+\subfigure[number of pedestrians/cars = 60\label{helsinki/60_overhead_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/60_overhead_buffer}}
+\\
+\subfigure[number of pedestrians/cars = 90\label{helsinki/90_delivery_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/90_delivery_buffer}}
+\subfigure[number of pedestrians/cars = 90\label{helsinki/90_avgLatency_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/90_avgLatency_buffer}}
+\subfigure[number of pedestrians/cars = 90\label{helsinki/90_overhead_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/90_overhead_buffer}}
+\caption{[\emph{Helsinki City Scenario}] 不同节点数目，改变节点缓存大小}
+\label{fig:chap4_helsinki_buffer}
+\end{figure}
+
+如\figurename~\ref{fig:chap4_helsinki_buffer}结果所示，Throughput路由算法在投递率上较大程度优于EncounterBased，PRoPHET以及Epidemic三种路由。随着仿真场景中行人数目以及汽车数目增加，MaxProp路由协议的性能表现逐渐好转，最终在三个指标上优于其余算法。然而当网络中不具备足够多的行人及车辆节点时，MaxProp的性能表现几乎与PRoPHET一样。在这种情况下，Throughput在三项指标上的表现全面优于MaxProp。从\figurename~\ref{fig:chap4_helsinki_buffer}(a), \figurename~\ref{fig:chap4_helsinki_buffer}(d)以及\figurename~\ref{fig:chap4_helsinki_buffer}(g)中，可以看出投递率的性能表现随着行人/汽车节点数目的增加而上升。如\figurename~\ref{fig:chap4_helsinki_buffer}第二列所示，Throughput算法与PRoPHET有几乎相同的投递时延。从\figurename~\ref{fig:chap4_helsinki_buffer}第三列可以看出，Throughput在网络开销上的改善效果较为明显。综合\figurename~\ref{fig:chap4_helsinki_buffer}所有结果来看，当节点数目较少时，Throughput具有综合最优的性能表现。
+
+\begin{figure}[htbp]
+\centering
+\subfigure[number of pedestrians = 30\label{helsinki/30_delivery_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/30_delivery_ttl}}
+\subfigure[number of pedestrians = 30\label{helsinki/30_avgLatency_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/30_avgLatency_ttl}}
+\subfigure[number of pedestrians = 30\label{helsinki/30_overhead_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/30_overhead_ttl}}
+\\
+\subfigure[number of pedestrians = 60\label{helsinki/60_delivery_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/60_delivery_ttl}}
+\subfigure[number of pedestrians = 60\label{helsinki/60_avgLatency_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/60_avgLatency_ttl}}
+\subfigure[number of pedestrians = 60\label{helsinki/60_overhead_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/60_overhead_ttl}}
+\\
+\subfigure[number of pedestrians = 90\label{helsinki/90_delivery_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/90_delivery_ttl}}
+\subfigure[number of pedestrians = 90\label{helsinki/90_avgLatency_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/90_avgLatency_ttl}}
+\subfigure[number of pedestrians = 90\label{helsinki/90_overhead_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-data/helsinki/90_overhead_ttl}}
+\caption{[\emph{Helsinki City Scenario}] 不同节点数目，改变消息TTL}
+\label{fig:chap4_helsinki_ttl}
+\end{figure}
+
+\figurename~\ref{fig:chap4_helsinki_ttl}展示的结果与\figurename~\ref{fig:chap4_helsinki_buffer}类似，即当节点数目较小时，Throughput算法在投递率和网络开销两个指标上优于其它四种路由算法；在投递时延上有微小优势。总而言之，若是在节点数目相对丰富，网络中的节点密度较大时，应采用MaxProp算法。当网络中节点较为稀疏时，采用Throughput算法能获得更好的性能表现。
+
 
 \section{本章小结}
 \label{chap4:本章小结}
