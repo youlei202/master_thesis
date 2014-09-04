@@ -20,7 +20,7 @@
 \item 节点的移动方式多变难以预测，即难以对某个节点预测其下一时间或下一时间段的路径及地点。
 \end{itemize}
 
-数学符号如\tablename~\ref{tab:chap5_math_table}所示。节点集合以$V={v|1\leq v\leq n}$表示。为便于分析，描述路由的过程只针对某一条消息而言，并以$s$代表其源节点，$d$代表其目的节点，该消息用符号$M_k(s,d)$表示，其索引号为$k$。符号$hop(k)$为一个整数，表述消息$M_k$所经过的跳数值。符号$\overline{hop}(i,j)$表示消息从节点$i$到达节点$j$之间的平均跳数。
+数学符号如\tablename~\ref{tab:chap5_math_table}所示。节点集合以$V=\{v|1\leq v\leq n\}$表示。为便于分析，描述路由的过程只针对某一条消息而言，并以$s$代表其源节点，$d$代表其目的节点，该消息用符号$M_k(s,d)$表示，其索引号为$k$。符号$hop(k)$为一个整数，表述消息$M_k$所经过的跳数值。符号$\overline{hop}(i,j)$表示消息从节点$i$到达节点$j$之间的平均跳数。
 
 在此模型下，本章解决如下问题：
 \begin{itemize}
@@ -53,8 +53,14 @@
 \section{消息投递跳数预测}
 \label{chap5:消息投递跳数预测}
 
+在本节中，定义了用于路由决策的效用函数，即投递消息所需跳数的预测值。首先讨论如何从网络中收集所需信息。然后基于收集到的信息提出启发函数。路由协议的转发决策将由该函数决定。
+
 \subsection{消息收集}
 \label{chap5:消息收集}
+
+在提出的算法中，利用了消息跳数指标来做出路由决策。跳数信息有很多方式获取，本章中的方法，即是令网络中的消息数据包头部携带有该消息所进过的节点的记录。当某消息数据包到达一个节点时，该节点将获得该消息所经过的节点到该节点所经过的条数值。例如，若消息$M_k$产生于节点$s$，并沿路径$s\rightarrow p\rightarrow q\rightarrow r$转发，则从该消息的头部，节点$r$可以获知:节点$s$与节点$r$之间为3跳，$p$与$r$之间为2跳，$q$与$r$之间为1跳。这些记录是针对消息$M_k$而言的，若对节点$r$所收到的所有消息的对应记录求平均值，则得到这些节点到$r$的平均跳数；在本章中，利用滑动窗口方法实现该目的。每个节点维护一个矩阵，记为$\bm{A}$，用于记录其它所有节点到该节点的跳数值。每个矩阵元素将对应一个滑动窗口。
+
+\figurename~\ref{fig:chap5_matrix}为矩阵$\bm{A}$及其每个元素所对应的滑动窗口工作方式。对于矩阵$\bm{A}$中的每个元素，都有一个对应的滑动窗口记录了之前收到的消息对应的跳数信息。滑动窗口越长，则对网络状态的变化越不敏感，反之则越敏感。通过对滑动窗口中记录的跳数值，即从$t-r+1$到$t$位置取平均，则得到该矩阵元素对应节点到当前节点的平均跳数。由此得到跳数预测值，记为$a(t+1)$。
 
 \begin{figure}[bt]
   \centering\includegraphics[width=0.7\textwidth]{paper-HCH/matrix}
@@ -88,13 +94,40 @@ When packet $M_k$ comes\\
 \end{algorithmic}
 \end{algorithm}
 
+维护矩阵$\bm{A}$以及滑动窗口的过程如算法~\ref{alg:chap5_matrix}所示。算法需要的信息如下：消息$M_k$，其头部记录着消息所经过的跳数信息。每当数据包到达时，算法即运行一次。在第1行，从消息$M_k$中获得其源节点的ID。在第2行，$M_k$所经过的所有节点按顺序存在$Sequence$数组中。在算法~\ref{alg:chap5_matrix}中有两个循环，分别用于更新滑动窗口以及矩阵$\bm{A}$的信息。通过运行第一个循环，如4--7行所示，跳数信息存于滑动窗口对应的$t$位置。8--11行为算法第二个循环，通过对滑动窗口所有记录求平均的方式，计算出矩阵$\bm{A}$对应位置的新的元素值。由此，矩阵$\bm{A}$的每一个元素，反映了某一对节点之间的平均跳数。在\ref{chap5:启发函数}小节中，基于矩阵$\bm{A}$维护的跳数信息，设计了用于路由决策的启发函数。
+
 \subsection{启发函数}
 \label{chap5:启发函数}
+
+公式(\ref{eq:H})为启发函数，其参数为当前节点索引号$i$及消息$M_k$；其中$hop(k)$表示了$M_k$经过的跳数值，$h(i,d)$表示从当前节点$i$到消息$M_k$目的节点$d$的估计跳数。公式(\ref{eq:H})所示的函数$\mathcal{H}(i,k)$由两部分组成。第一部分即反应了该消息经过的实际跳数，第二部分估计了该消息在到达目的节点之前还需经过的跳数。
 
 \begin{equation}
 \label{eq:H}
 \mathcal{H}(i,k) = hop(k) + h(i, d)
 \end{equation}
+
+公式(\ref{eq:H})定义了启发函数$h(i,d)$。其中符号$path_c[i\rightarrow d]$代表了从节点$i$到节点$d$的路径，符号$m$代表从节点$i$到节点$d$的总的可能路径数。由此，$h(i,d)$即为从节点$i$到节点$d$的平均跳数。
+
+\begin{equation}
+\label{eq:h}
+h(i, d) = \frac{\sum_{c=1}^{c=m}path_c[i\longrightarrow d]}{m}
+\end{equation}
+
+接下来给出$h(i,d)$的计算过程，将引入自定义的矩阵运算$\bigodot$，如下。
+
+\begin{definition}
+\label{def:bigodot}
+假设$\bm{M}$和$\bm{N}$都是$n\times n$的方阵，$\bm{O}=\bm{M}\bigodot \bm{N}$，则对于矩阵$\bm{O}$的任意元素$o_{i,j}$，有
+\begin{displaymath}
+o_{i,j}=\left.\sum_{k=1}^{k=n}(m_{i,k}+n_{k,j})\right/w
+\end{displaymath}
+其中有
+\begin{displaymath}
+w=\left|\{c|c=m_{i,k}+n_{k,j}~and~c>0\}\right|
+\end{displaymath}
+\end{definition}
+
+算法~\ref{alg:chap5_heuristic}用于计算函数值$h(i,d)$。算法的输入为任意节点$i$所维护的矩阵$\bm{A}$。通过调用该算法，最终可对节点$i$所持有的任意一条消息获知其对应的$h(i,*)$的值（$*$为该消息的目的节点）。算法的外层循环遍历节点$i$缓存中的所有消息，如第1行所示。第2--4行初始化三个变量$h,c$和$\bm{M}$，其中$\bm{M}$为矩阵变量。该三个变量将在内层循环的每次迭代中更新。变量$c$为局部变量，用于在每次循环迭代中累加总的路径数。矩阵变量$\bm{M}$初始化为单位矩阵$\bm{\Lambda}$
 
 \begin{algorithm}[tbp] %算法的开始
 \caption{Heuristic value calculation} %算法的标题
@@ -142,7 +175,7 @@ $h(i,*)$\\
     \hline
     节点v和节点u & 向网络中增加一个新的消息副本\\
     节点v & 节点u不如节点v优\\
-    u & 节点u比节点v优\\
+    节点u & 节点u比节点v优\\
     \hline
   \end{tabular}
 \end{table}
@@ -150,10 +183,12 @@ $h(i,*)$\\
 \section{仿真实验}
 \label{chap5:仿真实验}
 
+\subsection{Helsinki City场景}
+
 \begin{table}
 \centering
 \caption{Helsinki City场景仿真设置}
-\label{tab:simulation_helsinki}
+\label{tab:chap5_simulation_helsinki}
 \begin{tabular}{
 p{0.45\linewidth}<{\centering}
 p{0.5\linewidth}<{\centering}
@@ -178,6 +213,83 @@ message interval(s) & 35--40 \\
 \hline
 \end{tabular}
 \end{table}
+
+\begin{figure*}[tbp]
+\centering
+\subfigure[buffer size vs delivery\label{helsinki_delivery_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-HCH/helsinki_delivery_buffer}}
+\subfigure[buffer size vs latency\label{helsinki_latency_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-HCH/helsinki_latency_buffer}}
+\subfigure[buffer size vs overhead\label{helsinki_overhead_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-HCH/helsinki_overhead_buffer}}
+\caption{[\emph{Helsinki City Scenario}] 改变节点缓存大小的仿真结果}
+\label{fig:chap5_helsinki_buffer}
+\end{figure*}
+
+\begin{figure*}[tbp]
+\centering
+\subfigure[message TTL vs delivery\label{helsinki_delivery_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-HCH/helsinki_delivery_ttl}}
+\subfigure[message TTL vs latency\label{helsinki_latency_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-HCH/helsinki_latency_ttl}}
+\subfigure[message TTL vs overhead\label{helsinki_overhead_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-HCH/helsinki_overhead_ttl}}
+\caption{[\emph{Helsinki City Scenario}] 改变消息TTL的仿真结果}
+\label{fig:chap5_helsinki_ttl}
+\end{figure*}
+
+
+
+\subsection{Cambridge-iMote场景}
+
+\begin{table}[tbp]
+\centering
+\caption{Simulation settings of Cambridge-iMote trace}
+\label{tab:chap5_simulation_trace}
+\begin{tabular}{
+p{0.45\linewidth}<{\centering}
+p{0.5\linewidth}<{\centering}
+}
+\hline
+\textbf{parameter name} & \textbf{range} \\
+\hline
+number of nodes & 36  \\
+tickets for S \& W & 5  \\
+message TTL(min) & 600--2000(1200) \\
+simulation time(days) & 11.5 \\
+message size(KB) & 500--1024 \\
+device buffer(MB) & 50--150(100) \\
+interface bandwidth(KBps) & 250 \\
+message interval(s) & 35--40 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{figure*}[tbp]
+\centering
+\subfigure[buffer size vs delivery\label{realtrace_delivery_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-HCH/realtrace_delivery_buffer}}
+\subfigure[buffer size vs latency\label{realtrace_latency_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-HCH/realtrace_latency_buffer}}
+\subfigure[buffer size vs overhead\label{realtrace_overhead_buffer}]
+{\includegraphics[width=0.32\linewidth]{paper-HCH/realtrace_overhead_buffer}}
+\caption{[\emph{Cambridge-iMote}] Buffer size vs delivery ratio, average latency and overhead ratio.}
+\label{fig:chap5_trace_buffer}
+\end{figure*}
+
+\begin{figure*}[tbp]
+\centering
+\subfigure[message TTL vs delivery\label{realtrace_delivery_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-HCH/realtrace_delivery_ttl}}
+\subfigure[message TTL vs latency
+\label{realtrace_latency_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-HCH/realtrace_latency_ttl}}
+\subfigure[message TTL vs overhead\label{realtrace_overhead_ttl}]
+{\includegraphics[width=0.32\linewidth]{paper-HCH/realtrace_overhead_ttl}}
+\caption{[\emph{Cambridge-iMote}] Message TTL vs delivery ratio, average latency and overhead ratio.}
+\label{fig:chap5_realtrace_ttl}
+\end{figure*}
 
 \section{本章小结}
 \label{chap5:本章小结}

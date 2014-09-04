@@ -5,5 +5,5 @@
 \contentsline {algorithm}{\numberline {5}{\ignorespaces Get the solution by dynamic programming}}{50}{algorithm.5}
 \contentsline {algorithm}{\numberline {6}{\ignorespaces Information exchange protocol}}{52}{algorithm.6}
 \contentsline {algorithm}{\numberline {7}{\ignorespaces Data transmission protocol}}{52}{algorithm.7}
-\contentsline {algorithm}{\numberline {8}{\ignorespaces Maintaining the matrix $\relax \mathversion {bold}{A}$ and its slide-windows}}{63}{algorithm.8}
-\contentsline {algorithm}{\numberline {9}{\ignorespaces Heuristic value calculation}}{64}{algorithm.9}
+\contentsline {algorithm}{\numberline {8}{\ignorespaces Maintaining the matrix $\relax \mathversion {bold}{A}$ and its slide-windows}}{64}{algorithm.8}
+\contentsline {algorithm}{\numberline {9}{\ignorespaces Heuristic value calculation}}{65}{algorithm.9}
