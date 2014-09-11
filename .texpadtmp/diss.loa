@@ -1,9 +1,10 @@
-\contentsline {algorithm}{\numberline {1}{\ignorespaces Tabu Search Framework.}}{24}{algorithm.1}
-\contentsline {algorithm}{\numberline {2}{\ignorespaces Local-MPAR Algorithm.}}{32}{algorithm.2}
-\contentsline {algorithm}{\numberline {3}{\ignorespaces Tabu-MPAR Algorithm.}}{35}{algorithm.3}
-\contentsline {algorithm}{\numberline {4}{\ignorespaces Updating the $\tau $ value}}{49}{algorithm.4}
-\contentsline {algorithm}{\numberline {5}{\ignorespaces Get the solution by dynamic programming}}{50}{algorithm.5}
-\contentsline {algorithm}{\numberline {6}{\ignorespaces Information exchange protocol}}{52}{algorithm.6}
-\contentsline {algorithm}{\numberline {7}{\ignorespaces Data transmission protocol}}{52}{algorithm.7}
-\contentsline {algorithm}{\numberline {8}{\ignorespaces Maintaining the matrix $\relax \mathversion {bold}{A}$ and its slide-windows}}{64}{algorithm.8}
-\contentsline {algorithm}{\numberline {9}{\ignorespaces Heuristic value calculation}}{65}{algorithm.9}
+\contentsline {algorithm}{\numberline {1}{\ignorespaces Tabu Search Framework.}}{20}{algorithm.1}
+\contentsline {algorithm}{\numberline {2}{\ignorespaces Local-MPAR Algorithm.}}{28}{algorithm.2}
+\contentsline {algorithm}{\numberline {3}{\ignorespaces Tabu-MPAR Algorithm.}}{31}{algorithm.3}
+\contentsline {algorithm}{\numberline {4}{\ignorespaces Updating the $\tau $ value}}{45}{algorithm.4}
+\contentsline {algorithm}{\numberline {5}{\ignorespaces Get the solution by dynamic programming}}{46}{algorithm.5}
+\contentsline {algorithm}{\numberline {6}{\ignorespaces Information exchange protocol}}{48}{algorithm.6}
+\contentsline {algorithm}{\numberline {7}{\ignorespaces Data transmission protocol}}{48}{algorithm.7}
+\contentsline {algorithm}{\numberline {8}{\ignorespaces Maintaining the matrix $\relax \mathversion {bold}{A}$ and its slide-windows}}{60}{algorithm.8}
+\contentsline {algorithm}{\numberline {9}{\ignorespaces Heuristic value calculation}}{61}{algorithm.9}
+\contentsline {algorithm}{\numberline {10}{\ignorespaces Routing}}{63}{algorithm.10}

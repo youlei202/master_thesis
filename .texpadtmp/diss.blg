@@ -6,18 +6,11 @@ A level-1 auxiliary file: body/abstract.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: body/chapter01.aux
 A level-1 auxiliary file: body/chapter02.aux
-A level-1 auxiliary file: body/chapter02_a.aux
 A level-1 auxiliary file: body/chapter03.aux
 A level-1 auxiliary file: body/chapter04.aux
 A level-1 auxiliary file: body/chapter05.aux
-A level-1 auxiliary file: body/chapter05_a.aux
-A level-1 auxiliary file: body/chapter06.aux
-A level-1 auxiliary file: body/chapter07.aux
-A level-1 auxiliary file: body/chapter07_a.aux
-A level-1 auxiliary file: body/chapter08.aux
-A level-1 auxiliary file: body/chapter09.aux
 A level-1 auxiliary file: body/conclusion.aux
-Illegal, another \bibstyle command---line 40 of file diss.aux
+Illegal, another \bibstyle command---line 30 of file diss.aux
  : \bibstyle
  :          {../GBT7714-2005NLang}
 I'm skipping whatever remains of this command
@@ -71,7 +64,7 @@ You can't pop an empty literal stack for entry Keranen2010
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
 You've used 12 entries,
             6888 wiz_defined-function locations,
-            1329 strings with 12598 characters,
+            1322 strings with 12466 characters,
 and the built_in function-call counts, 7492 in all, are:
 = -- 748
 > -- 148

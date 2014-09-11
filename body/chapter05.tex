@@ -127,7 +127,7 @@ w=\left|\{c|c=m_{i,k}+n_{k,j}~and~c>0\}\right|
 \end{displaymath}
 \end{definition}
 
-算法~\ref{alg:chap5_heuristic}用于计算函数值$h(i,d)$。算法的输入为任意节点$i$所维护的矩阵$\bm{A}$。通过调用该算法，最终可对节点$i$所持有的任意一条消息获知其对应的$h(i,*)$的值（$*$为该消息的目的节点）。算法的外层循环遍历节点$i$缓存中的所有消息，如第1行所示。第2--4行初始化三个变量$h,c$和$\bm{M}$，其中$\bm{M}$为矩阵变量。该三个变量将在内层循环的每次迭代中更新。变量$c$为局部变量，用于在每次循环迭代中累加总的路径数。矩阵变量$\bm{M}$初始化为单位矩阵$\bm{\Lambda}$
+算法~\ref{alg:chap5_heuristic}用于计算函数值$h(i,d)$。算法的输入为任意节点$i$所维护的矩阵$\bm{A}$。通过调用该算法，最终可对节点$i$所持有的任意一条消息获知其对应的$h(i,*)$的值（$*$为该消息的目的节点）。算法的外层循环遍历节点$i$缓存中的所有消息，如第1行所示。第2--4行初始化三个变量$h,c$和$\bm{M}$，其中$\bm{M}$为矩阵变量。该三个变量将在内层循环的每次迭代中更新。变量$c$为局部变量，用于在每次循环迭代中累加总的路径数。矩阵变量$\bm{M}$初始化为单位矩阵$\bm{\Lambda}$，在每次循环迭代中都会乘以矩阵$\bm{A}$。第5行与第6行用于获取当前节点的ID和消息$M_k$目的节点的ID。内层循环直到矩阵$\bm{M}$的元素$m_{i,d}$降为0时结束；该元素为0即意味着节点$i$与节点$d$之间不存在$h$跳的路径。最终，$h(i,d)$设为节点$i$与节点$d$之间所有可能路径跳数的平均值，如算法第13行所示。
 
 \begin{algorithm}[tbp] %算法的开始
 \caption{Heuristic value calculation} %算法的标题
@@ -155,12 +155,55 @@ $h(i,*)$\\
 \end{algorithmic}
 \end{algorithm}
 
+
 \begin{figure}[bt]
   \centering
   \includegraphics[width=0.6\textwidth]{paper-HCH/heuristic}
   \caption{跳数计算过程}
-  \label{fig:heuristic}
+  \label{fig:chap5_heuristic}
 \end{figure}
+
+\figurename~\ref{fig:chap5_heuristic}展示了消息从源节点到目的节点跳数的估计过程。假设消息$M_k$在源节点$s$产生，目的节点为$d$，$i$是当前运行算法的节点。对于消息$M_k$而言，从节点$s$到$i$一共经过了6跳，因此有$hop(k)=6$。为了简便起见，在图中，当前节点$i$标号为$1$，目的节点$d$标号为5，如\figurename~\ref{fig:chap5_heuristic}所示。对于内层循环的首次迭代，有
+\begin{displaymath}
+M=\Lambda\bigodot A=\left(
+\begin{array}{ccccc}
+ 0 & 2 & 1 & 3 & 5 \\ 
+ 0 & 0 & 0 & 0 & 0 \\
+ 0 & 0 & 0 & 0 & 2 \\
+ 0 & 0 & 0 & 0 & 7 \\
+ 0 & 0 & 0 & 0 & 0 \\
+\end{array}
+\right)
+\end{displaymath}
+其中，有
+\begin{gather*}
+m_{i,d}=m_{1,5}=5 \\
+h = 0+5 = 5 \\
+c = 0+1 = 1  
+\end{gather*}
+对于第二次迭代，有
+\begin{displaymath}
+M=A\bigodot A = \left(
+\begin{array}{ccccc}
+ 0 & 0 & 0 & 0 & 6.5 \\ 
+ 0 & 0 & 0 & 0 & 0 \\
+ 0 & 0 & 0 & 0 & 0 \\
+ 0 & 0 & 0 & 0 & 0 \\
+ 0 & 0 & 0 & 0 & 0 \\
+\end{array}\right)
+\end{displaymath}
+其中，有
+\begin{gather*}
+m_{i,d}=m_{1,5}=\left.[0+0+(1+2)+(3+7)+0]\right/2=6.5 \\
+h=5+6.5=11.5 \\
+c=1+1=2 
+\end{gather*}
+循环将在第三次迭代开始之前结束，因为元素$m_{i,d}=m_{1,5}=0$，最终得到如下结果
+\begin{displaymath}
+h(i,d)=\frac{h}{c}=\frac{11.5}{2}\approx 5.75
+\end{displaymath}
+注意上述计算结果$h(i,d)$是公式(\ref{eq:h})的一个近似值。在\figurename~\ref{fig:chap5_heuristic}所示例子中，通过公式(\ref{eq:h})可得平均跳数值为6，接近于计算结果5.75。
+
 
 \section{路由协议}
 \label{chap5:路由协议}
@@ -180,8 +223,42 @@ $h(i,*)$\\
   \end{tabular}
 \end{table}
 
+\tablename~\ref{tab:chap5_routing}展示了两个相遇的节点可选的转发策略。在本章路由中，第一条原则是不刻意减少在网络中产生的副本数量。第二条原则旨在将网络中副本数量控制在一定范围之内，即当且仅当相遇的两个节点$u$和$v$都难以将数据包转发到目的节点时，才向网络中注入新的副本。在这种情况下，多拷贝策略被用来提高路由性能表现；在其它情况，只会在$u$和$v$之间选取唯一节点作为中继节点。
+
+\begin{algorithm}[tbp] %算法的开始
+\renewcommand{\algorithmicrequire}{\textbf{For}}
+\caption{Routing} %算法的标题
+\label{alg:chap5_routing} %给算法一个标签，这样方便在文中对算法的引用
+\begin{algorithmic}[1] %这个1 表示每一行都显示数字
+\REQUIRE each node $v\in V$ \textbf{do}
+\STATE $neighbors\leftarrow v.getNeighbors()$
+\FOR{$M_k\in v.messages$}
+    \FOR{$u\in neighbors$}
+        \STATE $s\leftarrow M_k.getSourceID()$
+        \STATE $d\leftarrow M_k.getDestinationID()$
+        \IF{$\mathcal{H}(v,k),\mathcal{H}(u,k)>\overline{hop}(s,d)$}
+            \STATE $extra\leftarrow$ \textbf{true}
+        \ELSE
+            \STATE $extra\leftarrow$ \textbf{false}
+        \ENDIF
+        \IF{$extra=$ \textbf{true}}
+            \STATE $v$ sends an extra copy of $M_k$ to $u$          
+        \ELSIF{$\mathcal{H}(u,k)\leq \overline{hop}(s,d)$}
+            \STATE $v$ turns over its own copy of $M_k$ to $u$
+        \ENDIF
+    \ENDFOR
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+
+算法~\ref{alg:chap5_routing}为路由细节过程。如第1行所示，首先从当前节点$v$取得其邻居节点集合。然后，如2--16行所示，对存于节点$v$缓存中的每条消息，及所有其邻居节点做出路由决策。决策基于\label{chap5:启发函数}小节中的启发函数做出。考虑消息$M_k$，设其源节点为$s$目的节点为$d$。在$\mathcal{H}(v,k)$, $\mathcal{H}(u,k)$的值皆大于$\overline{hop}(s,d)$时，当前节点$v$及其邻居节点$u$其估计跳数皆大于$s$与$d$之间的平均跳数，这意味着对于节点$v$和$u$将消息在平均跳数之内传输至目的节点都很困难，此时多拷贝策略将被触发。
+
+在6--10行，根据$extra$指示变量选择是否加入新的消息$M_k$的拷贝。若$extra=true$，$v$对节点$u$产生一份额外的$M_k$的拷贝，如第12行所示，这对应\tablename~\ref{tab:chap5_routing}的第一行策略。在第13--15行，若$\mathcal{H}(u,k)\leq\overline{hop}(s,d)$，节点$v$将把$M_k$移交给节点$u$，并将其从$v$中缓存移除。在这种情况下，有$\mathcal{H}(u,k)\leq\mathcal{H}(v,k)\leq\overline{hop}(s,d)$；由此认为节点$u$足以将消息$M_k$递交于目的节点；对应\tablename~\ref{tab:chap5_routing}中第三条表目。剩下的唯一一种情况即$\mathcal{H}(v,k)\leq\mathcal{H}(u,k)\leq\overline{hop}(s,d)$，意味着节点$u$不是优于$v$的中继节点选择（针对消息$M_k$而言），且节点$v$自身足以将消息在平均时延内传递至目的节点。在该情况下，$v$不向$u$转发$M_k$，对应\tablename~\ref{tab:chap5_routing}条目二。
+
 \section{仿真实验}
 \label{chap5:仿真实验}
+
+仿真实验基于机会网络模拟器ONE~\cite{Keranen2009}。本章将提出的算法与Epidemic, Spray-and-Wait (S \& W)以及PRoPHET相比较，仿真实验场景包含Helsinki City Model以及Cambridge-iMote。实验可分为如下几组：Helsinki City Model下改变节点缓存大小；Cambridge-iMote下改变节点缓存大小；Helsinki City Model下改变消息TTL；Cambridge-iMote下改变消息TTL。仿真评估标准分为消息投递率，平均时延，网络开销三个。
 
 \subsection{Helsinki City场景}
 
