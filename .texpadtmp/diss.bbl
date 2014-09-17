@@ -1,42 +1,19 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{34}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Conti and Giordano(2014)]{Conti:2014gg}
-\textsc{Conti M, Giordano S}.
-\newblock {Mobile ad hoc networking: milestones, challenges, and new research
-  directions}[J].
-\newblock Communications Magazine, IEEE, 2014, 52(1):85--96.
-
-\bibitem[Henderson et al.(2004)]{Henderson:2004ul}
-\textsc{Henderson T, Kotz D, Abyzov I}.
-\newblock {The changing usage of a mature campus-wide wireless network}[J].
-\newblock 2004:187--201.
-\newblock \url{http://dl.acm.org/citation.cfm?id=1023739}.
-
-\bibitem[Ibrahim et al.(2009)]{Ibrahim:2009we}
-\textsc{Ibrahim M, Nain P, Carreras I}.
-\newblock {Analysis of relay protocols for throwbox-equipped dtns}[J].
-\newblock {\ldots} in Mobile, 2009.
-\newblock \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5291625}.
-
-\bibitem[Jedari and Xia(2013)]{Jedari:2013uo}
-\textsc{Jedari B, Xia F}.
-\newblock {A Survey on Routing and Data Dissemination in Opportunistic Mobile
-  Social Networks}[J].
-\newblock arXiv.org, 2013.
-\newblock \url{http://arxiv.org/abs/1311.0347}.
-
 \bibitem[Vahdat and Becker(2000)]{Vahdat2000}
 \textsc{Vahdat A, Becker D}.
 \newblock {Epidemic Routing for Partially Connected ad hoc Networks}[J].
 \newblock Acta Electronica Sinica, 2000, Cs-2000-06(Tech. Rep.).
-\newblock
-  \url{http://scholar.google.com/scholar?q=related:6bSunIRK3e0J:scholar.google.com/\&hl=en\&num=30\&as\_sdt=0,5
-  papers2://publication/livfe/id/65938}.
+
+\bibitem[Grossglauser and Tse(2002)]{Grossglauser2002}
+\textsc{Grossglauser M, Tse D~N~C}.
+\newblock {Mobility increases the capacity of ad hoc wireless networks}[J].
+\newblock Networking, IEEE/ACM Transactions on, 2002, 10(4):477--486.
 
 \bibitem[Spyropoulos et al.(2005)]{Spyropoulos2005}
 \textsc{Spyropoulos T, Psounis K, Raghavendra C~S}.
@@ -44,9 +21,172 @@
 \newblock {Spray and wait}[C]//Proceeding of the 2005 ACM SIGCOMM workshop on
   Delay-tolerant networking - WDTN '05.
 \newblock New York, New York, USA: ACM Press, 2005:252--259.
-\newblock \url{http://dl.acm.org/citation.cfm?id=1080143
-  papers2://publication/livfe/id/67848
-  http://portal.acm.org/citation.cfm?doid=1080139.1080143}.
+
+\bibitem[Spyropoulos et al.(2007)]{Spyropoulos2007a}
+\textsc{Spyropoulos T, Psounis K, Raghavendra C~S}.
+\newblock
+\newblock
+\newblock {Spray and Focus: Efficient Mobility-Assisted Routing for
+  Heterogeneous and Correlated Mobility}[C]//Fifth Annual IEEE International
+  Conference on Pervasive Computing and Communications Workshops
+  (PerComW'07).[S.l.]: IEEE, 2007:79--85.
+
+\bibitem[Jain et al.(2004)]{Jain2004}
+\textsc{Jain S, Fall K, Patra R}.
+\newblock {Routing in a delay tolerant network}[J].
+\newblock ACM SIGCOMM Computer Communication Review, 2004, 34(4):145--157.
+
+\bibitem[Guo et al.(2013)]{Guo2013}
+\textsc{Guo Z, Wang B, Cui J~H}.
+\newblock {Generic prediction assisted single-copy routing in underwater delay
+  tolerant sensor networks}[J].
+\newblock Ad Hoc Networks, 2013, 11(3):1136--1149.
+
+\bibitem[{Jones, Evan P. C.} et al.(2005)]{Jones2007}
+\textsc{{Jones, Evan P C}, Li L, Ward P~A~S}.
+\newblock
+\newblock {Practical routing in delay-tolerant networks}[C]//Proceeding of the
+  2005 ACM SIGCOMM workshop on Delay-tolerant networking - WDTN '05.
+\newblock New York, New York, USA: ACM Press, 2005:237--243.
+
+\bibitem[Erramilli et al.(2008)]{Erramilli2008}
+\textsc{Erramilli V, Chaintreau A, Crovella M}, et al.
+\newblock
+\newblock {Delegation forwarding}[C]//Proceedings of the 9th ACM international
+  symposium on Mobile ad hoc networking and computing - MobiHoc '08.
+\newblock New York, New York, USA: ACM Press, 2008:251.
+
+\bibitem[Liu and Wu(2009)]{Liu2009}
+\textsc{Liu C, Wu J}.
+\newblock
+\newblock
+\newblock {An optimal probabilistic forwarding protocolin delay tolerant
+  networks}[C]//Proceedings of the tenth ACM international symposium on Mobile
+  ad hoc networking and computing - MobiHoc '09.[S.l.]: ACM Request
+  Permissions, 2009.
+
+\bibitem[Burns et al.(2005)]{Burns:2005gi}
+\textsc{Burns B, Brock O, Levine B~N}.
+\newblock
+\newblock {MV routing and capacity building in disruption tolerant
+  networks}[C]//INFOCOM 2005. 24th Annual Joint Conference of the IEEE Computer
+  and Communications Societies. Proceedings IEEE.
+\newblock .[S.l.]: [s.n.] , 2005:398--408.
+
+\bibitem[El-Azouzi et al.(2013)]{El-Azouzi2013}
+\textsc{El-Azouzi R, De~Pellegrini F, Sidi H~B~A}, et al.
+\newblock {Evolutionary forwarding games in delay tolerant networks:
+  Equilibria, mechanism design and stochastic approximation}[J].
+\newblock Computer Networks, 2013, 57(4):1003--1018.
+
+\bibitem[Zhao et al.(2004)]{Zhao2004}
+\textsc{Zhao W, Ammar M, Zegura E}.
+\newblock
+\newblock {A message ferrying approach for data delivery in sparse mobile ad
+  hoc networks}[C]//Proceedings of the 5th ACM international symposium on
+  Mobile ad hoc networking and computing - MobiHoc '04.
+\newblock New York, New York, USA: ACM Press, 2004:187--198.
+
+\bibitem[Ammar and Zegura(2005)]{Zhao2005}
+\textsc{Ammar M, Zegura E}.
+\newblock
+\newblock
+\newblock {Controlling the mobility of multiple data transport ferries in a
+  delay-tolerant network}[C]//Proceedings IEEE 24th Annual Joint Conference of
+  the IEEE Computer and Communications Societies..[S.l.]: IEEE,
+  2005:1407--1418.
+
+\bibitem[Zhang and Fei(2007)]{Zhang:2007bq}
+\textsc{Zhang Z, Fei Z}.
+\newblock
+\newblock {Route Design for Multiple Ferries in Delay Tolerant
+  Networks}[C]//Wireless Communications and Networking Conference, 2007.WCNC
+  2007. IEEE.
+\newblock .[S.l.]: [s.n.] , 2007:3460--3465.
+
+\bibitem[Banerjee et al.(2007)]{Banerjee:2007hm}
+\textsc{Banerjee N, Corner M~D, Levine B~N}.
+\newblock
+\newblock {An Energy-Efficient Architecture for DTN Throwboxes}[C]//INFOCOM
+  2007. 26th IEEE International Conference on Computer Communications. IEEE.
+\newblock .[S.l.]: [s.n.] , 2007:776--784.
+
+\bibitem[He et al.(2010)]{He:2010ks}
+\textsc{He T, Lee K~W, Sofra N}, et al.
+\newblock
+\newblock {Utility-Based Gateway Deployment for Supporting Multi-Domain
+  DTNs}[C]//Sensor Mesh and Ad Hoc Communications and Networks (SECON), 2010
+  7th Annual IEEE Communications Society Conference on.
+\newblock .[S.l.]: [s.n.] , 2010:1--9.
+
+\bibitem[Wang et al.(2005)]{Wang:2005ka}
+\textsc{Wang Y, Jain S, Martonosi M}, et al.
+\newblock
+\newblock
+\newblock {Erasure-coding based routing for opportunistic networks}[C]//WDTN
+  '05: Proceedings of the 2005 ACM SIGCOMM workshop on Delay-tolerant
+  networking.[S.l.]: ACM Request Permissions, 2005.
+
+\bibitem[Jain et al.(2005)]{Jain2005}
+\textsc{Jain S, Demmer M, Patra R}, et al.
+\newblock
+\newblock {Using redundancy to cope with failures in a delay tolerant
+  network}[C]//Proceedings of the 2005 conference on Applications,
+  technologies, architectures, and protocols for computer communications -
+  SIGCOMM '05.
+\newblock New York, New York, USA: ACM Press, 2005:109.
+
+\bibitem[Zhao et al.(2005)]{Zhao2005a}
+\textsc{Zhao W, Ammar M, Zegura E}.
+\newblock
+\newblock {Multicasting in delay tolerant networks}[C]//Proceeding of the 2005
+  ACM SIGCOMM workshop on Delay-tolerant networking - WDTN '05.
+\newblock New York, New York, USA: ACM Press, 2005:268--275.
+
+\bibitem[Davison(2006)]{Ye2006}
+\textsc{Davison B}.
+\newblock
+\newblock
+\newblock {OS-multicast: On-demand Situation-aware Multicasting in Disruption
+  Tolerant Networks}[C]//2006 IEEE 63rd Vehicular Technology Conference.[S.l.]:
+  IEEE, 2006:96--100.
+
+\bibitem[Yang and Chuah(2006)]{Chuah2009}
+\textsc{Yang P, Chuah M~C}.
+\newblock
+\newblock {Context-aware multicast routing scheme for disruption tolerant
+  networks}[C]//Proceedings of the third ACM international workshop on Mobile
+  Opportunistic Networks - MobiOpp '12.
+\newblock New York, New York, USA: ACM Press, 2006:66.
+
+\bibitem[Wang and Wu(2012)]{Wang:2012up}
+\textsc{Wang Y, Wu J}.
+\newblock {A dynamic multicast tree based routing scheme without replication in
+  delay tolerant networks}[J].
+\newblock Journal of Parallel and Distributed Computing, 2012.
+
+\bibitem[Gao et al.(2009)]{Gao:2009wf}
+\textsc{Gao W, Li Q, Zhao B}, et al.
+\newblock {Multicasting in delay tolerant networks: a social network
+  perspective}[J].
+\newblock {\ldots} symposium on Mobile ad hoc networking {\ldots}, 2009.
+
+\bibitem[Ye et al.(2007)]{Ye:2007cf}
+\textsc{Ye Q, Cheng L, Chuah M~C}, et al.
+\newblock
+\newblock
+\newblock {SHIM: a scalable hierarchical inter-domain multicast approach for
+  disruption tolerant networks}[C]//IWCMC '07: Proceedings of the 2007
+  international conference on Wireless communications and mobile
+  computing.[S.l.]: ACM Request Permissions, 2007.
+
+\bibitem[Yang and Chuah(2008)]{Yang:2008hn}
+\textsc{Yang P, Chuah M}.
+\newblock
+\newblock {Efficient Interdomain Multicast Delivery in Disruption Tolerant
+  Networks}[C]//Mobile Ad-hoc and Sensor Networks, 2008. MSN 2008. The 4th
+  International Conference on.
+\newblock .[S.l.]: [s.n.] , 2008:81--88.
 
 \bibitem[Ker~a nen et al.(2009)]{Keranen2009}
 \textsc{Ker~a nen A, Ott J~o~r, K~a rkk~a inen T}.
@@ -55,29 +195,33 @@
 \newblock {The ONE simulator for DTN protocol evaluation}[C]//Proceedings of
   the Second International ICST Conference on Simulation Tools and
   Techniques.[S.l.]: ICST, 2009:1--10.
-\newblock \url{http://dl.acm.org/citation.cfm?id=1537683
-  file:///Users/lei/Library/Application
-  Support/Papers2/Articles/2009/Ker%C3%A4nen/2009 Ker%C3%A4nen.pdf
-  papers2://publication/doi/10.1109/WD.2011.6098142
-  http://eudl.eu/doi/10.4108/ICST.SIMUTOOLS2009.5674}.
+
+\bibitem[Talipov et al.(2013)]{Talipov2013}
+\textsc{Talipov E, Chon Y, Cha H}.
+\newblock {Content Sharing over Smartphone-Based Delay-Tolerant Networks}[J].
+\newblock Mobile Computing, IEEE Transactions on, 2013, 12(3):581--595.
+
+\bibitem[Henderson et al.(2004)]{Henderson:2004ul}
+\textsc{Henderson T, Kotz D, Abyzov I}.
+\newblock {The changing usage of a mature campus-wide wireless network}[J].
+\newblock 2004:187--201.
+
+\bibitem[Ibrahim et al.(2009)]{Ibrahim:2009we}
+\textsc{Ibrahim M, Nain P, Carreras I}.
+\newblock {Analysis of relay protocols for throwbox-equipped dtns}[J].
+\newblock {\ldots} in Mobile, 2009.
+
+\bibitem[Jedari and Xia(2013)]{Jedari:2013uo}
+\textsc{Jedari B, Xia F}.
+\newblock {A Survey on Routing and Data Dissemination in Opportunistic Mobile
+  Social Networks}[J].
+\newblock arXiv.org, 2013.
 
 \bibitem[Ekman et al.(2008)]{Ekman:2008fp}
 \textsc{Ekman F, Ker{\"a}nen A, Karvo J}, et al.
 \newblock {Working day movement model}[J].
 \newblock MobilityModels '08: Proceeding of the 1st ACM SIGMOBILE workshop on
   Mobility models, 2008:1--8.
-\newblock
-  \url{http://www.netlab.tkk.fi/~jo/papers/2008-mobmod-working-day-model.pdf}.
-
-\bibitem[Erramilli et al.(2008)]{Erramilli2008}
-\textsc{Erramilli V, Chaintreau A, Crovella M}, et al.
-\newblock
-\newblock {Delegation forwarding}[C]//Proceedings of the 9th ACM international
-  symposium on Mobile ad hoc networking and computing - MobiHoc '08.
-\newblock New York, New York, USA: ACM Press, 2008:251.
-\newblock \url{http://dl.acm.org/citation.cfm?id=1374653
-  papers2://publication/livfe/id/67810
-  http://portal.acm.org/citation.cfm?doid=1374618.1374653}.
 
 \bibitem[Daly and Haahr(2007)]{Daly2007}
 \textsc{Daly E~M, Haahr M}.
@@ -86,26 +230,16 @@
   MANETs}[C]//Proceedings of the 8th ACM international symposium on Mobile ad
   hoc networking and computing - MobiHoc '07.
 \newblock New York, New York, USA: ACM Press, 2007:32--40.
-\newblock
-  \url{http://portal.acm.org/citation.cfm?id=1288107.1288115\&coll=DL\&dl=GUIDE\&CFID=105151204\&CFTOKEN=34046091
-  papers2://publication/livfe/id/65951
-  http://portal.acm.org/citation.cfm?doid=1288107.1288115}.
 
 \bibitem[Lindgren et al.(2003)]{AndersLindgren2004}
 \textsc{Lindgren A, Doria A, Schel~e n O}.
 \newblock {Probabilistic routing in intermittently connected networks}[J].
 \newblock ACM SIGMOBILE Mobile Computing and Communications Review, 2003,
   7(3):19--20.
-\newblock
-  \url{http://download.springer.com/static/pdf/410/chp%3A10.1007%2F978-3-540-27767-5\_24.pdf?auth66=1354693724\_8a4222e585bb8b3a99efd48511d18650\&ext=.pdf
-  papers2://publication/uuid/5B1B05F2-4EF0-4071-A037-8F19CA620A96
-  http://portal.acm.org/citation.cfm?doid=961268.961272}.
 
 \bibitem[Ker{\"a}nen et al.(2010)]{Keranen2010}
 \textsc{Ker{\"a}nen A, K{\"a}rkk{\"a}inen T, Ott J}.
 \newblock {Simulating Mobility and DTNs with the ONE}[J].
 \newblock Journal of Communications, 2010, 5(2):92--105.
-\newblock
-  \url{http://www.ojs.academypublisher.com/index.php/jcm/article/viewArticle/050292105}.
 
 \end{thebibliography}

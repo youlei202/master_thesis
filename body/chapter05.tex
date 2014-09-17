@@ -1,4 +1,5 @@
 \chapter{基于跳数的启发式距离向量算法}
+\label{chap:基于跳数的启发式距离向量算法}
 
 本章提出一种用于机会网络的基于跳数的启发式距离向量算法HCH，主要贡献如下：
 
@@ -258,9 +259,11 @@ h(i,d)=\frac{h}{c}=\frac{11.5}{2}\approx 5.75
 \section{仿真实验}
 \label{chap5:仿真实验}
 
-仿真实验基于机会网络模拟器ONE~\cite{Keranen2009}。本章将提出的算法与Epidemic, Spray-and-Wait (S \& W)以及PRoPHET相比较，仿真实验场景包含Helsinki City Model以及Cambridge-iMote。实验可分为如下几组：Helsinki City Model下改变节点缓存大小；Cambridge-iMote下改变节点缓存大小；Helsinki City Model下改变消息TTL；Cambridge-iMote下改变消息TTL。仿真评估标准分为消息投递率，平均时延，网络开销三个。
+仿真实验基于机会网络模拟器ONE~\cite{Keranen2009}。本章将提出的算法与Epidemic, Spray-and-Wait (S \& W)以及PRoPHET相比较，仿真实验场景包含Helsinki City Model以及Cambridge-iMote。实验可分为如下几组：Helsinki City Model下改变节点缓存大小；Cambridge-iMote下改变节点缓存大小；Helsinki City Model下改变消息TTL；Cambridge-iMote下改变消息TTL。仿真评估标准分为消息投递率，平均时延，网络开销三项。
 
 \subsection{Helsinki City场景}
+
+仿真参数设置如\tablename~\ref{tab:chap5_simulation_helsinki}所示。对于\figurename~\ref{fig:chap5_helsinki_buffer}(a)，\ref{fig:chap5_helsinki_buffer}(b)与\ref{fig:chap5_helsinki_buffer}(c)所示实验结果，本章提出的HCH算法具有最高的投递率以及最低的投递时延。HCH算法的网络开销比S \& W高，但比Epidemic及PRoPHET依然低很多。\figurename~\ref{fig:chap5_helsinki_buffer}(a)所示结果，HCH算法
 
 \begin{table}
 \centering
