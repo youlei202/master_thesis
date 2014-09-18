@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  18 SEP 2014 12:19
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  18 SEP 2014 14:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2787,8 +2787,15 @@ Overfull \hbox (1.52097pt too wide) in paragraph at lines 272--295
  [][] 
  []
 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[68]
 File: paper-HCH/helsinki_delivery_buffer.pdf Graphic file (type QTm)
-<use  "paper-HCH/helsinki_delivery_buffer.pdf" >
+ <use  "paper-HCH/helsinki_delivery_buffer.pdf" >
 File: paper-HCH/helsinki_latency_buffer.pdf Graphic file (type QTm)
  <use  "paper-HCH/helsinki_latency_buffer.pdf" >
 File: paper-HCH/helsinki_overhead_buffer.pdf Graphic file (type QTm)
@@ -2799,12 +2806,19 @@ File: paper-HCH/helsinki_latency_ttl.pdf Graphic file (type QTm)
  <use  "paper-HCH/helsinki_latency_ttl.pdf" >
 File: paper-HCH/helsinki_overhead_ttl.pdf Graphic file (type QTm)
  <use  "paper-HCH/helsinki_overhead_ttl.pdf" >
-Overfull \hbox (1.52097pt too wide) in paragraph at lines 329--346
+Overfull \hbox (1.52097pt too wide) in paragraph at lines 335--352
  [][] 
  []
 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.84666pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[69]
 File: paper-HCH/realtrace_delivery_buffer.pdf Graphic file (type QTm)
-<use  "paper-HCH/realtrace_delivery_buffer.pdf" >
+ <use  "paper-HCH/realtrace_delivery_buffer.pdf" >
 File: paper-HCH/realtrace_latency_buffer.pdf Graphic file (type QTm)
  <use  "paper-HCH/realtrace_latency_buffer.pdf" >
 File: paper-HCH/realtrace_overhead_buffer.pdf Graphic file (type QTm)
@@ -2814,42 +2828,38 @@ File: paper-HCH/realtrace_delivery_ttl.pdf Graphic file (type QTm)
 File: paper-HCH/realtrace_latency_ttl.pdf Graphic file (type QTm)
  <use  "paper-HCH/realtrace_latency_ttl.pdf" >
 File: paper-HCH/realtrace_overhead_ttl.pdf Graphic file (type QTm)
- <use  "paper-HCH/realtrace_overhead_ttl.pdf" >)
+ <use  "paper-HCH/realtrace_overhead_ttl.pdf" >
+Underfull \vbox (badness 1400) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.9099pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[68]
+[70])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.84666pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[69]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.9099pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[70]
+[71]
 \openout2 = `body/conclusion.aux'.
 
- (./body/conclusion.tex)
+ (./body/conclusion.tex [72
+
+
+
+])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.7729pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[71
-
-
-
-] [72
+[73] [74
 
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.bbl
@@ -2863,7 +2873,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[73
+[75
 
 ]
 Underfull \hbox (badness 1490) in paragraph at lines 100--106
@@ -2876,80 +2886,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[74]
+[76]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.80452pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[75])
+[77])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.9099pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[76] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lot)
-\tf@lot=\write5
-\openout5 = `diss.lot'.
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.79398pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[77
-
-] [78
-
-] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.lof)
-\tf@lof=\write6
-\openout6 = `diss.lof'.
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.80452pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[79] [80
-
-] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.loa
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 8.
-
-)
-\tf@loa=\write7
-\openout7 = `diss.loa'.
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[81]
+[78]
 \openout2 = `body/pub.aux'.
 
- (./body/pub.tex [82
-
-
-])
+ (./body/pub.tex)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.80452pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[83]
+[79
+
+
+]
 \openout2 = `body/ack.aux'.
 
- (./body/ack.tex [84
+ (./body/ack.tex [80
 
 
 
@@ -2971,7 +2938,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[85] [86
+[81] [82
 
 
 ]
@@ -3005,7 +2972,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[87] [88
+[83] [84
 
 
 ]
@@ -3024,12 +2991,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 28643 strings out of 494004
- 554216 string characters out of 3150891
- 634424 words of memory out of 3000000
- 31109 multiletter control sequences out of 15000+200000
+ 28627 strings out of 494004
+ 553652 string characters out of 3150891
+ 634423 words of memory out of 3000000
+ 31102 multiletter control sequences out of 15000+200000
  70714 words of font info for 362 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  61i,26n,49p,1453b,805s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (96 pages).
+Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (92 pages).

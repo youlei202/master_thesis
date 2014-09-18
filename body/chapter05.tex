@@ -263,7 +263,7 @@ h(i,d)=\frac{h}{c}=\frac{11.5}{2}\approx 5.75
 
 \subsection{Helsinki City场景}
 
-仿真参数设置如\tablename~\ref{tab:chap5_simulation_helsinki}所示。对于\figurename~\ref{fig:chap5_helsinki_buffer}(a)，\ref{fig:chap5_helsinki_buffer}(b)与\ref{fig:chap5_helsinki_buffer}(c)所示实验结果，本章提出的HCH算法具有最高的投递率以及最低的投递时延。HCH算法的网络开销比S \& W高，但比Epidemic及PRoPHET依然低很多。\figurename~\ref{fig:chap5_helsinki_buffer}(a)所示结果，HCH算法
+
 
 \begin{table}
 \centering
@@ -294,6 +294,8 @@ message interval(s) & 35--40 \\
 \end{tabular}
 \end{table}
 
+仿真参数设置如\tablename~\ref{tab:chap5_simulation_helsinki}所示。对于\figurename~\ref{fig:chap5_helsinki_buffer}(a)，\ref{fig:chap5_helsinki_buffer}(b)与\ref{fig:chap5_helsinki_buffer}(c)所示实验结果，本章提出的HCH算法具有最高的投递率以及最低的投递时延。HCH算法的网络开销比S \& W高，但比Epidemic及PRoPHET依然低很多。\figurename~\ref{fig:chap5_helsinki_buffer}(a)所示结果，HCH算法在投递率方面的表现优于PRoPHET以及Epidemic很多，略优于S \& W。如\figurename~\ref{fig:chap5_helsinki_buffer}(b)所示，HCH的平均投递时延比Epidemic及PRoPHET低，比S \& W略低。由于HCH利用启发式方法估计平均跳数，从而自适应地利用多拷贝策略进行路由，避免了一些不必要的网络消息副本冗余。HCH算法所产生的副本数量，要比Epidemic以及PRoPHET少很多。为了投递某条消息，所需要的消息副本数量越少，则意味着越高的投递效率。HCH算法具有比Epidemic以及PRoPHET低很多的网络开销，如\figurename\ref{tab:chap5_simulation_helsinki}(c)所示。从\figurename\ref{tab:chap5_simulation_helsinki}(c)可以看出，S\& W的网络开销小于HCH, 然而在投递率和平均时延方面，HCH皆优于S \& W。
+
 \begin{figure*}[tbp]
 \centering
 \subfigure[buffer size vs delivery\label{helsinki_delivery_buffer}]
@@ -305,6 +307,10 @@ message interval(s) & 35--40 \\
 \caption{[\emph{Helsinki City Scenario}] 改变节点缓存大小的仿真结果}
 \label{fig:chap5_helsinki_buffer}
 \end{figure*}
+
+
+在改变消息TTL的仿真中，节点的缓存大小（只针对行人和轿车，对电车不做设置）设为15 MB。\figurename~\ref{fig:chap5_helsinki_ttl}(a)所示仿真结果中，HCH在投递率方面的表现优于其它三种算法。HCH的平均时延在所有算法中保持最低，如\figurename~\ref{fig:chap5_helsinki_ttl}(b)所示。此外如\figurename~\ref{fig:chap5_helsinki_ttl}(c)，HCH在网络开销方面具有较好的表现。\figurename~\ref{fig:chap5_helsinki_ttl}(a)的结果表明，当节点缓存资源受限时，洪泛路由策略不适用。其余两种基于洪泛的路由算法，其投递率亦较低，这是由于受限的缓存资源导致了较高的丢包率。HCH性能表现在四种路由算法中最优。此外，当消息的TTL设为大于250分钟时，HCH的平均时延比S \& W低，结果如\figurename~\ref{fig:chap5_helsinki_ttl}(b)所示。从\figurename~\ref{fig:chap5_helsinki_ttl}(a),\ref{fig:chap5_helsinki_ttl}(b)以及\ref{fig:chap5_helsinki_ttl}(c)可以看出，在此仿真中，消息的TTL对路由性能表现影响较小。
+
 
 \begin{figure*}[tbp]
 \centering
@@ -345,6 +351,8 @@ message interval(s) & 35--40 \\
 \end{tabular}
 \end{table}
 
+仿真实验如\tablename~\ref{tab:chap5_simulation_trace}所示。在真实数据集的仿真中，缓存大小的设置值相比Helsinki City Scenario要大许多。\figurename~\ref{fig:chap5_trace_buffer}(a)显示HCH的投递率约与Epidemic相同。当缓存大小设为大于110 MB时，HCH在投递率方面由于PRoPHET。如\figurename~\ref{fig:chap5_trace_buffer}(b)所示结果，HCH的投递时延比S \& W高，比PRoPHET以及Epidemic低很多。S \& W算法投递时延低的原因是其计入统计的消息副本数量极其少，因为其成功投递的消息副本数量很少，如\figurename~\ref{fig:chap5_trace_buffer}(a)结果所示。在其路由过程中，有大量在到达目的节点前即被丢弃的消息数据包存在。集中比较Epidemic, PRoPHET，HCH三种算法可以发现，即使HCH的投递率表现相比PRoPHET优势不明显，劣于Epidemic时，其投递时延的性能表现优于该两种基于洪泛的路由算法。此外，从\figurename~\ref{fig:chap5_trace_buffer}(c)可以看出，Epidemic具有最高的网络开销，意味着更多的网络资源将会被消耗。
+
 
 \begin{figure*}[tbp]
 \centering
@@ -357,6 +365,9 @@ message interval(s) & 35--40 \\
 \caption{[\emph{Cambridge-iMote}] Buffer size vs delivery ratio, average latency and overhead ratio.}
 \label{fig:chap5_trace_buffer}
 \end{figure*}
+
+在\figurename~\ref{fig:chap5_realtrace_ttl}所示的仿真中，节点的缓存大小设为100 MB。如\figurename~\ref{fig:chap5_realtrace_ttl}(a)所示，随着消息TTL值的增加，几种路由算法的投递率性能表现都上升。然而在Epidemic, PRoPHET以及HCH三者中，投递率表现并无明显差异。从\figurename~\ref{fig:chap5_realtrace_ttl}(c)可见，HCH的网络开销仅比S \& W高一点，相比Epidemic以及PRoPHET却低很多。\figurename~\ref{fig:chap5_realtrace_ttl}(b)中结果显示，所有四种算法在投递时延方面拥有几乎一样的性能表现。当消息TTL设为较大值时，所有算法都具有相对较高的投递时延，投递率也随之上升。比较\figurename~\ref{fig:chap5_realtrace_ttl}(a)及\ref{fig:chap5_realtrace_ttl}(b)所示结果，随着消息TTL值增大，投递时延上升速度比投递率快很多。由此可推断出在此种情况下，网络中某些消息在短期之内很难完成投递。
+
 
 \begin{figure*}[tbp]
 \centering
@@ -371,5 +382,9 @@ message interval(s) & 35--40 \\
 \label{fig:chap5_realtrace_ttl}
 \end{figure*}
 
+总之，从Helsinki City Scenario仿真可以看出，HCH算法在投递时延以及网络开销方面具有明显优势。此外，HCH是在两类仿真场景中唯一一个都具有良好投递率的算法。
+
 \section{本章小结}
 \label{chap5:本章小结}
+
+本章提出了一种基于跳数的启发式路由协议HCH，利用启发函数，基于跳数信息进行消息投递跳数预测。利用滑动窗口机制，可以动态更新记录平均跳数的矩阵。基于此，定义了启发式函数用于预测当前节点到目的节点之间的潜在跳数。为了便于计算，定义了一种矩阵运算符，从而将跳数的估计过程转化为矩阵运算。仿真实验表明，本章提出的HCH算法在综合性能表现上优于Epidemic, S \& W以及PRoPHET。

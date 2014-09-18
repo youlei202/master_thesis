@@ -257,10 +257,12 @@
       \sjtuunderline[180pt]{\sjtu@value@major}
     \\  
     {\xw\zihao{3}论文~提交~日期} &\songti
-      \sjtuunderline[180pt]{\sjtu@value@defenddate}
+%      \sjtuunderline[180pt]{\sjtu@value@defenddate}
+      \sjtuunderline[180pt]{}
+
     \\
       {\xw\zihao{3}论文~答辩~日期} &\songti
-      \sjtuunderline[180pt]{\sjtu@value@defenddate}
+      \sjtuunderline[180pt]{}
     \\
       {\xw\zihao{3}答辩委\!员\!会主席} &\songti
       \sjtuunderline[180pt]{}
