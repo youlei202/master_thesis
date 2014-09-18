@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  17 SEP 2014 20:12
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  18 SEP 2014 12:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3025,11 +3025,11 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  28643 strings out of 494004
- 554207 string characters out of 3150891
- 634422 words of memory out of 3000000
+ 554216 string characters out of 3150891
+ 634424 words of memory out of 3000000
  31109 multiletter control sequences out of 15000+200000
  70714 words of font info for 362 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 61i,26n,47p,1453b,805s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,26n,49p,1453b,805s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (96 pages).

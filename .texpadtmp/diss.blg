@@ -45,11 +45,11 @@ You can't pop an empty literal stack for entry Erramilli2008
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
 You can't pop an empty literal stack for entry Erramilli2008
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
-You can't pop an empty literal stack for entry Liu2009
+You can't pop an empty literal stack for entry Liu:2009uy
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
-You can't pop an empty literal stack for entry Liu2009
+You can't pop an empty literal stack for entry Liu:2009uy
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
-You can't pop an empty literal stack for entry Liu2009
+You can't pop an empty literal stack for entry Liu:2009uy
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
 You can't pop an empty literal stack for entry Burns:2005gi
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
@@ -156,7 +156,7 @@ You can't pop an empty literal stack for entry Keranen2010
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
 You've used 34 entries,
             6888 wiz_defined-function locations,
-            1439 strings with 15663 characters,
+            1439 strings with 15668 characters,
 and the built_in function-call counts, 20350 in all, are:
 = -- 1966
 > -- 425
