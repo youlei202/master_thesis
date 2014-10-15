@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  18 SEP 2014 14:36
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  15 OCT 2014 19:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1695,6 +1695,9 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
  (./introduction.tex
 
+Package natbib Warning: Citation `' on page 1 undefined on input line 7.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.76237pt.
  We now make it that large for the rest of the document.
@@ -1847,40 +1850,40 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [12]
 File: paper-MPAR/time_slots.pdf Graphic file (type QTm)
  <use  "paper-MPAR/time_slots.pdf" >
-LaTeX Font Info:    Try loading font information for U+bbold on input line 45.
+LaTeX Font Info:    Try loading font information for U+bbold on input line 44.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/bbold/Ubbold.fd)
-LaTeX Font Info:    Calculating math sizes for size <8.43495> on input line 55.
+LaTeX Font Info:    Calculating math sizes for size <8.43495> on input line 54.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <8.43495> not available
-(Font)              size <8> substituted on input line 55.
+(Font)              size <8> substituted on input line 54.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.21747> not available
-(Font)              size <5> substituted on input line 55.
+(Font)              size <5> substituted on input line 54.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <8.43495> not available
-(Font)              size <8> substituted on input line 55.
+(Font)              size <8> substituted on input line 54.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <4.21747> not available
-(Font)              size <5> substituted on input line 55.
+(Font)              size <5> substituted on input line 54.
 
 
 LaTeX Font Warning: Font shape `U/bbold/m/n' in size <8.43495> not available
-(Font)              size <8> substituted on input line 55.
+(Font)              size <8> substituted on input line 54.
 
 
 LaTeX Font Warning: Font shape `U/bbold/m/n' in size <4.21747> not available
-(Font)              size <5> substituted on input line 55.
+(Font)              size <5> substituted on input line 54.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 56.
+LaTeX Font Warning: Command \small invalid in math mode on input line 55.
 
 
 LaTeX Font Warning: Font shape `U/bbold/m/n' in size <10.54> not available
-(Font)              size <10.95> substituted on input line 56.
+(Font)              size <10.95> substituted on input line 55.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1889,7 +1892,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 76.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 75.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
@@ -1904,11 +1907,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [14]
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <8.43495> not available
-(Font)              size <8> substituted on input line 121.
+(Font)              size <8> substituted on input line 120.
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <4.21747> not available
-(Font)              size <5> substituted on input line 121.
+(Font)              size <5> substituted on input line 120.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1917,7 +1920,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
@@ -1949,45 +1952,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
-Overfull \hbox (0.50267pt too wide) detected at line 318
+Overfull \hbox (0.50267pt too wide) detected at line 317
  []$[]  \OML/cmm/m/it/12.05 f\OT1/cmr/m/n/12.05 ([]) = [] \OML/cmm/m/it/12.05 x[] [] []  $ 
  []
 
 
-Overfull \hbox (26.05835pt too wide) in paragraph at lines 311--320
+Overfull \hbox (26.05835pt too wide) in paragraph at lines 310--319
 \EU1/AdobeSongStd(0)/m/it/12.05 有 [] 
  []
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 327.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 326.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 340.
+(Font)              size <14.4> substituted on input line 339.
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 340.
+(Font)              size <14.4> substituted on input line 339.
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 340.
+(Font)              size <14.4> substituted on input line 339.
 
 
 LaTeX Font Warning: Font shape `U/bbold/m/n' in size <15.06> not available
-(Font)              size <14.4> substituted on input line 340.
+(Font)              size <14.4> substituted on input line 339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 340.
+(hyperref)                removing `math shift' on input line 339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 340.
+(hyperref)                removing `subscript' on input line 339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 340.
+(hyperref)                removing `math shift' on input line 339.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1997,31 +2000,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [20]
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 355.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 354.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 355.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 354.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 355.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 354.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 368.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 367.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 368.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 367.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 368.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 367.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 368.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 367.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 395.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 394.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 403.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 402.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2031,10 +2034,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [21]
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 439.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 438.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 439.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 438.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2043,7 +2046,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 549.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 548.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2060,16 +2063,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [24]
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 613.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 612.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 613.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 612.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 613.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 612.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 613.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 612.
 
 File: paper-MPAR/hypercube.pdf Graphic file (type QTm)
 <use  "paper-MPAR/hypercube.pdf" >
@@ -2081,16 +2084,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [25]
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 656.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 655.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 656.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 655.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 660.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 659.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 660.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 659.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2099,12 +2102,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 688--690
+Underfull \hbox (badness 10000) in paragraph at lines 687--689
 
  []
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 705.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 704.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2132,40 +2135,40 @@ File: paper-MPAR/states2.pdf Graphic file (type QTm)
 File: paper-MPAR/states3.pdf Graphic file (type QTm)
  <use  "paper-MPAR/states3.pdf" >
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1131.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1130.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1131.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1130.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1131.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1130.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1131.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1130.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1131.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1130.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1131.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1130.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1209.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1208.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1209.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1208.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1209.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1208.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1209.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1208.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1209.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1208.
 
 
-LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1209.
+LaTeX Warning: Command \nobreakspace invalid in math mode on input line 1208.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2343,52 +2346,52 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1542--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1551
 
  []
 
@@ -2863,9 +2866,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ] (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.bbl
-Underfull \hbox (badness 4621) in paragraph at lines 53--58
-[]\EU1/TeXGyreTermes(0)/m/sc/12.05 Erramilli V, Chaintreau A, Crovella M\EU1/TeXGyreTermes(0)/m/n/12.05 , et al.   Delegation forward-
- []
+
+LaTeX Font Warning: Font shape `EU1/AdobeSongStd(0)/m/sc' undefined
+(Font)              using `EU1/AdobeSongStd(0)/m/n' instead on input line 14.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2876,10 +2879,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [75
 
 ]
-Underfull \hbox (badness 1490) in paragraph at lines 100--106
-[]\EU1/TeXGyreTermes(0)/m/sc/12.05 Zhang Z, Fei Z\EU1/TeXGyreTermes(0)/m/n/12.05 .   Route Design for Multiple Ferries in Delay Tolerant Net-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.9099pt.
@@ -2893,7 +2892,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[77])
+[77]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.9099pt.
@@ -2901,22 +2900,66 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [78]
-\openout2 = `body/pub.aux'.
-
- (./body/pub.tex)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.80452pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[79
+[79]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[80]
+Underfull \hbox (badness 3623) in paragraph at lines 476--481
+[]\EU1/TeXGyreTermes(0)/m/sc/12.05 Erramilli V, Chaintreau A, Crovella M\EU1/TeXGyreTermes(0)/m/n/12.05 , et al.   Delegation forward-
+ []
 
 
-]
+Underfull \hbox (badness 1107) in paragraph at lines 523--529
+[]\EU1/TeXGyreTermes(0)/m/sc/12.05 Zhang Z, Fei Z\EU1/TeXGyreTermes(0)/m/n/12.05 .   Route Design for Multiple Ferries in Delay Tolerant Net-
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.80452pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[81]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.9099pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[82])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.80452pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[83]
+\openout2 = `body/pub.aux'.
+
+ (./body/pub.tex [84
+
+
+])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.80452pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[85]
 \openout2 = `body/ack.aux'.
 
- (./body/ack.tex [80
+ (./body/ack.tex [86
 
 
 
@@ -2938,7 +2981,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[81] [82
+[87] [88
 
 
 ]
@@ -2972,13 +3015,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[83] [84
+[89] [90
 
 
 ]
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 199.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
- (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.aux (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/abstract.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/introduction.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter01.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter02.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter03.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter04.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter05.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/conclusion.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/pub.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/ack.aux))
+(/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.aux (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/abstract.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/introduction.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter01.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter02.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter03.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter04.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/chapter05.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/conclusion.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/pub.aux) (/Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/body/ack.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 199.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 199.
 
@@ -2987,16 +3033,19 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 17.28pt have occurred.
 
 
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 28627 strings out of 494004
- 553652 string characters out of 3150891
- 634423 words of memory out of 3000000
- 31102 multiletter control sequences out of 15000+200000
+ 28825 strings out of 494004
+ 557323 string characters out of 3150891
+ 636738 words of memory out of 3000000
+ 31300 multiletter control sequences out of 15000+200000
  70714 words of font info for 362 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 61i,26n,49p,1453b,805s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,26n,49p,1463b,805s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (92 pages).
+Output written on /Users/lei/Dropbox/我的论文/硕士学位论文/论文/.texpadtmp/diss.pdf (98 pages).

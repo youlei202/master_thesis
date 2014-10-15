@@ -1,7 +1,7 @@
 \chapter{基于消息传输收益的最优队列调度算法}
 \label{chap:基于消息传输收益的最优队列调度算法}
 
-本章尝试改进经典的基于概率预测的路由算法PRoPHET \cite{AndersLindgren2004}。定义了“传输收益”概念，基于此，提出了传输收益最优化，吞吐量相关的概率路由问题（Optimal Throughput-Aware Probabilistic Routing）。该问题被建模为最优决策问题，并在本章中采用动态规划方法解决。在该模型下，提出了一种数据项选择机制，其具有如下特点：
+本章尝试改进经典的基于概率预测的路由算法PRoPHET \upcite{AndersLindgren2004}。定义了“传输收益”概念，基于此，提出了传输收益最优化，吞吐量相关的概率路由问题（Optimal Throughput-Aware Probabilistic Routing）。该问题被建模为最优决策问题，并在本章中采用动态规划方法解决。在该模型下，提出了一种数据项选择机制，其具有如下特点：
 \begin{enumerate}
 \item 每一对节点所对应的潜在连接，其平均数据吞吐量可能比缓存中的消息大小要小。
 \item 每次传输的能量消耗不可忽略，换言之，消息传输不成功会带来无收益的能量损耗。
@@ -40,7 +40,7 @@ $P^{\{a,b\}}$ & 节点 $n_a$ 与 $n_b$ 的共同投递率\\
 
 数学符号如\tablename~\ref{tab:chap4_notations}所示。本模型的时间线设为离散时间，时间轴被划分为多个小的时间槽，每个时间槽的长度定义为一个单位时间。整个节点集合用符号$\mathcal{N}=\{n_i|n_i\in\mathcal{N},1\leq i<|\mathcal{N}|\}$。对于任意一条消息$m_k$，其消息生存时间表示为$TTL(k)$。当消息$m_k$被某节点产生时，$TTL(k)$的值即被指定。若某条消息的$TTL$到期，则消息会被当前节点丢弃。消息$m_k$的大小用符号$S(k)$表示。模型假设任一节点$n_i$知道其自身接口的带宽$B(i)$。该假设的合理性建立在网络中的每个节点往往在通信时都采用统一标准的某种接口，如蓝牙，wifi等。退一步讲，即使接口状态不稳定，也可以利用滑动窗口法对其平均值进行预测。对于任意一对相遇节点$n_i$及$n_j$，令节点$n_i$记录两个值$t_{s_{(i,j)}}$及$t_{e_{(i,j)}}$，分别用于记录两节点间最近一次连接的开始时间及结束时间。于是$t_{e_{(i,j)}}-t_{s_{(i,j)}}$即代表该次连接的持续时间；为简单起见，符号$t_{s_{(i,j)}}$及$t_{e_{(i,j)}}$在无歧义的上下文中，简记为$t_s$和$t_e$。
 
-PRoPHET路由算法\cite{AndersLindgren2004}记录了节点的相遇历史，用于预测节点间的相遇概率，并且考虑到了相遇概率具有传递性的特点。在PRoPHET中，$P_{(a,b)}$即用于衡量节点$n_a$及$n_b$之间投递概率的效用函数，存于节点$n_a$内。$P_{(a,b)}$的计算及更新方法如下式所示。
+PRoPHET路由算法\upcite{AndersLindgren2004}记录了节点的相遇历史，用于预测节点间的相遇概率，并且考虑到了相遇概率具有传递性的特点。在PRoPHET中，$P_{(a,b)}$即用于衡量节点$n_a$及$n_b$之间投递概率的效用函数，存于节点$n_a$内。$P_{(a,b)}$的计算及更新方法如下式所示。
 
 \begin{equation}
 P_{(a,b)}=P_{(a,b)_{old}}+(1-P_{(a,b)_{old}})\times P_{init}
@@ -341,7 +341,7 @@ $n_a$ and $n_b$ are in contact
 \section{仿真实验}
 \label{chap4:仿真实验}
 
-仿真实验结果从仿真器ONE~\cite{Keranen2009}中获得。首先，采用被广泛运用的真实数据集Cambridge-iMote对协议进行仿真；该数据集记录了几组持有手持蓝牙设备的小组成员两个月的接触记录信息。在本实验中，移动的节点主要为Cambridge University的学生组成；在整个实验过程中，这些学生一直携带有iMote移动端。另一个实验场景是基于Helsinki City Scenario的，该仿真基于综合移动模型。仿真分为如下几组：（1）Cambridge-iMote场景改变缓存大小；（2）Cambridge-iMote场景改变消息TTL；（3）Helsinki City Model场景改变改变缓存大小；（4）Helsinki City Model场景改变消息TTL。本节将基于消息投递率，网络开销以及平均时延三个指标，对五种路由协议进行评估比较。
+仿真实验结果从仿真器ONE~\upcite{Keranen2009}中获得。首先，采用被广泛运用的真实数据集Cambridge-iMote对协议进行仿真；该数据集记录了几组持有手持蓝牙设备的小组成员两个月的接触记录信息。在本实验中，移动的节点主要为Cambridge University的学生组成；在整个实验过程中，这些学生一直携带有iMote移动端。另一个实验场景是基于Helsinki City Scenario的，该仿真基于综合移动模型。仿真分为如下几组：（1）Cambridge-iMote场景改变缓存大小；（2）Cambridge-iMote场景改变消息TTL；（3）Helsinki City Model场景改变改变缓存大小；（4）Helsinki City Model场景改变消息TTL。本节将基于消息投递率，网络开销以及平均时延三个指标，对五种路由协议进行评估比较。
 
 \subsection{Cambridge-iMote场景仿真}
 
@@ -475,7 +475,7 @@ message interval(s) & 35--40 \\
 \end{tabular}
 \end{table}
 
-在Helsinki City Scenario\cite{Keranen2010}中，节点持有移动设备，并利用蓝牙接口进行通信，数据率设为250 KBps，传输范围直径设为10 m。在该场景中，每个节点的初始缓存大小设为较小的值，在5 M到55 M之间变动。地图中设有六辆电车沿着指定路径移动，并且配有额外的高速通信接口，数据率为10 MBps，传输直径为1000 m 电车之间可以使用该接口进行通信。其余仿真设置如\tablename~\ref{tab:chap4_simulation}
+在Helsinki City Scenario\upcite{Keranen2010}中，节点持有移动设备，并利用蓝牙接口进行通信，数据率设为250 KBps，传输范围直径设为10 m。在该场景中，每个节点的初始缓存大小设为较小的值，在5 M到55 M之间变动。地图中设有六辆电车沿着指定路径移动，并且配有额外的高速通信接口，数据率为10 MBps，传输直径为1000 m 电车之间可以使用该接口进行通信。其余仿真设置如\tablename~\ref{tab:chap4_simulation}
 
 \begin{figure}[htbp]
 \centering

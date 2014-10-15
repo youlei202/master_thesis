@@ -1,9 +1,432 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{101}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Spyropoulos et al.(2010)]{Spyropoulos:2010tc}
+\textsc{Spyropoulos T, Rais R~N, Turletti T}, et al.
+\newblock {Routing for disruption tolerant networks: taxonomy and design}[J].
+\newblock Wireless Networks, 2010, 16(8):2349--2370.
+
+\bibitem[{王欣}(2013)]{王:2013wq}
+\textsc{{王欣}}.
+\newblock {容迟网络中基于复制策略的单播路由算法研究}[J].
+\newblock 电子设计工程, 2013, 21(6):24--26.
+
+\bibitem[{杨振国}(2012)]{杨:2012vw}
+\textsc{{杨振国}}.
+\newblock
+\newblock
+  {资源受限的延迟容忍网络路由调度问题研究}[D].[S.l.]:
+  中国科学技术大学, 2012.
+
+\bibitem[{肖明军} and {黄刘生}(2007)]{肖:2007um}
+\textsc{{肖明军}, {黄刘生}}.
+\newblock {容迟网络路由算法}[J].
+\newblock 计算机研究与发展, 2007, 46(7):1065--1073.
+
+\bibitem[Maitreyi and Rao(2013)]{Maitreyi2013}
+\textsc{Maitreyi P, Rao M~S}.
+\newblock {IMPACT OF ZERO KNOWLEDGE PROTOCOL ON DELAY TOLERANT NETWORK
+  ROUTING}[J].
+\newblock International Journal of Engineering Research and Science {\&}
+  Technology, 2013, 2:71--78.
+
+\bibitem[Miao et al.(2013)]{Miao2013}
+\textsc{Miao J, Hasan O, Mokhtar S~B}, et al.
+\newblock {An investigation on the unwillingness of nodes to participate in
+  mobile delay tolerant network routing}[J].
+\newblock International Journal of Information Management, 2013,
+  33(2):252--262.
+
+\bibitem[Mart i~n Campillo et al.(2013)]{Martin-Campillo2013}
+\textsc{Mart i~n Campillo A, Crowcroft J, Yoneki E}, et al.
+\newblock {Evaluating opportunistic networks in disaster scenarios}[J].
+\newblock Journal of Network and Computer Applications, 2013, 36(2):870--880.
+
+\bibitem[Desta et al.(2013)]{Desta:2013gj}
+\textsc{Desta M~S, Hyytia E, Ker{\"a}nen A}, et al.
+\newblock
+\newblock {Evaluating (Geo) content sharing with the ONE simulator}[C]//the
+  11th ACM international symposium.
+\newblock New York, New York, USA: ACM Press, 2013:37--40.
+
+\bibitem[Wei et al.(2013){\natexlab{a}}]{Wei:2013da}
+\textsc{Wei K, Zeng D, Guo S}, et al.
+\newblock {On Social Delay-Tolerant Networking: Aggregation, Tie Detection, and
+  Routing}[J].
+\newblock Parallel and Distributed Systems, IEEE Transactions on, 2013(99):1.
+
+\bibitem[Shrestha and Sassatelli(2013)]{Shrestha:2013fj}
+\textsc{Shrestha N, Sassatelli L}.
+\newblock
+\newblock {On Optimality of Routing Policies in Delay-Tolerant Mobile Social
+  Networks}[C]//Vehicular Technology Conference (VTC Spring), 2013 IEEE 77th.
+\newblock .[S.l.]: [s.n.] , 2013:1--5.
+
+\bibitem[Aijaz et al.(2013)]{Aijaz:2013gq}
+\textsc{Aijaz A, Aghvami H, Amani M}.
+\newblock {A survey on mobile data offloading: technical and business
+  perspectives}[J].
+\newblock Wireless Communications, IEEE, 2013, 20(2):104--112.
+
+\bibitem[{杨振奇}(2009)]{杨:2009tc}
+\textsc{{杨振奇}}.
+\newblock
+\newblock {延迟容忍的移动传感网络路由算法研究}[D].[S.l.]:
+  中国科学技术大学, 2009.
+
+\bibitem[{袁婧}(2009)]{袁:2009vf}
+\textsc{{袁婧}}.
+\newblock {分裂无线传感器网络路由协议综述}[J].
+\newblock 消费导刊, 2009(12):200--200.
+
+\bibitem[Spyropoulos et al.(2007){\natexlab{a}}]{Spyropoulos2007}
+\textsc{Spyropoulos T, Fdida S, Kirkpatrick S}.
+\newblock {Future internet}[J].
+\newblock ACM SIGCOMM Computer Communication Review, 2007, 37(2):101.
+
+\bibitem[Brunner et al.(2005)]{Brunner2005}
+\textsc{Brunner M, Eggert L, Fall K}, et al.
+\newblock {Dagstuhl seminar on disruption tolerant networking}[J].
+\newblock ACM SIGCOMM Computer Communication Review, 2005, 35(3):69--72.
+
+\bibitem[Wang et al.(2007)]{Wang2007}
+\textsc{Wang Y, Lin F, Wu H}.
+\newblock {Cross-layer protocol design for delay/fault-tolerant mobile sensor
+  networks}[J].
+\newblock ACM SIGMOBILE Mobile Computing and Communications Review, 2007,
+  11(2):71.
+
+\bibitem[Xu et al.(2009)]{Xu:2009fx}
+\textsc{Xu B, Wolfson O, Naiman C}.
+\newblock {Machine learning in disruption-tolerant MANETs}[J].
+\newblock ACM Transactions on Autonomous and Adaptive Systems, 2009,
+  4(4):1--36.
+
+\bibitem[Mahendran and Murthy(2013)]{Mahendran2013}
+\textsc{Mahendran V, Murthy C~S~R}.
+\newblock {Buffer Dimensioning of DTN Replication-Based Routing Nodes}[J].
+\newblock IEEE Communications Letters, 2013, 17(1):123--126.
+
+\bibitem[Zhu et al.(2013)]{Zhu2013a}
+\textsc{Zhu Y, Xu B, Shi X}, et al.
+\newblock {A Survey of Social-Based Routing in Delay Tolerant Networks:
+  Positive and Negative Social Effects}[J].
+\newblock Communications Surveys {\&} Tutorials, IEEE, 2013, 15(1):387--401.
+
+\bibitem[Li and Shen(2013)]{Li2013}
+\textsc{Li Z, Shen H}.
+\newblock {SEDUM: Exploiting Social Networks in Utility--Based Distributed
+  Routing for DTNs}[J].
+\newblock IEEE Transactions on Computers, 2013, 62(1):83--97.
+
+\bibitem[Talipov et al.(2013)]{Talipov2013}
+\textsc{Talipov E, Chon Y, Cha H}.
+\newblock {Content Sharing over Smartphone-Based Delay-Tolerant Networks}[J].
+\newblock Mobile Computing, IEEE Transactions on, 2013, 12(3):581--595.
+
+\bibitem[Borrego and Robles(2013)]{Borrego2013}
+\textsc{Borrego C, Robles S}.
+\newblock {A store-carry-process-and-forward paradigm for intelligent sensor
+  grids}[J].
+\newblock Information Sciences, 2013, 222(C):113--125.
+
+\bibitem[Gong and Yu(2013)]{Gong:2013cy}
+\textsc{Gong H, Yu L}.
+\newblock {Study on Routing Protocols for Delay Tolerant Mobile Networks}[J].
+\newblock International Journal of Distributed Sensor Networks, 2013,
+  2013(4):1--16.
+
+\bibitem[Jiang et al.(2013)]{Jiang:2013df}
+\textsc{Jiang H, Sun Y, Sun R}, et al.
+\newblock {Fuzzy-Logic-Based Energy Optimized Routing for Wireless Sensor
+  Networks}[J].
+\newblock International Journal of Distributed Sensor Networks, 2013,
+  2013(2):1--8.
+
+\bibitem[Ferretti(2013)]{Ferretti2013}
+\textsc{Ferretti S}.
+\newblock {Shaping opportunistic networks}[J].
+\newblock Computer Communications, 2013, 36(5):481--503.
+
+\bibitem[Ginzboorg et al.(2013)]{Ginzboorg2013}
+\textsc{Ginzboorg P, Niemi V, Ott J~o~r}.
+\newblock {Fragmentation algorithms for DTN links}[J].
+\newblock Computer Communications, 2013, 36(3):279--290.
+
+\bibitem[Cha et al.(2013)]{Cha2013}
+\textsc{Cha S, Talipov E, Cha H}.
+\newblock {Data delivery scheme for intermittently connected mobile sensor
+  networks}[J].
+\newblock Computer Communications, 2013, 36(5):504--519.
+
+\bibitem[Mtibaa and Harras(2013)]{Mtibaa2013a}
+\textsc{Mtibaa A, Harras K~A}.
+\newblock {CAF: Community aware framework for large scale mobile opportunistic
+  networks}[J].
+\newblock Computer Communications, 2013, 36(2):180--190.
+
+\bibitem[Lin and Jiang(2013)]{Lin2013}
+\textsc{Lin Z, Jiang X}.
+\newblock {Universal scheme improving probabilistic routing in delay-tolerant
+  networks}[J].
+\newblock Computer Communications, 2013, 36(8):849--860.
+
+\bibitem[Wei et al.(2013){\natexlab{b}}]{Wei:2013dr}
+\textsc{Wei K, Zeng D, Guo S}, et al.
+\newblock
+\newblock {Social-Aware Relay Node Selection in Delay Tolerant
+  Networks}[C]//Computer Communications and Networks (ICCCN), 2013 22nd
+  International Conference on.
+\newblock .[S.l.]: [s.n.] , 2013{\natexlab{b}}:1--7.
+
+\bibitem[Wong and Jia(2013)]{Wong:2013jx}
+\textsc{Wong G~K~W, Jia X}.
+\newblock
+\newblock {A novel socially-aware opportunistic routing algorithm in mobile
+  social networks}[C]//Computing, Networking and Communications (ICNC), 2013
+  International Conference on.
+\newblock .[S.l.]: [s.n.] , 2013:514--518.
+
+\bibitem[Li and Garcia-Luna-Aceves(2013)]{Li:2013fl}
+\textsc{Li Q, Garcia-Luna-Aceves J~J}.
+\newblock
+\newblock {Opportunistic routing using prefix ordering and self-reported social
+  groups}[C]//Computing, Networking and Communications (ICNC), 2013
+  International Conference on.
+\newblock .[S.l.]: [s.n.] , 2013:28--34.
+
+\bibitem[Xiao et al.(2013)]{Xiao:2013bv}
+\textsc{Xiao M, Wu J, Huang L}.
+\newblock {Community-Aware Opportunistic Routing in Mobile Social Networks}[J].
+\newblock 2013.
+
+\bibitem[Sundararaj and Vellaiyan(2010)]{Sundararaj}
+\textsc{Sundararaj L, Vellaiyan P}.
+\newblock {Delay Tolerant Networking routing as a Game Theory problem--An
+  Overview}[J].
+\newblock Acta Electronica Sinica, 2010, 2(3):159--172.
+
+\bibitem[Ronan and O'Connor(2011)]{Ronan2011}
+\textsc{Ronan J, O'Connor C}.
+\newblock
+\newblock {A further comparison of different TCP/IP and DTN protocols over the
+  D-STAR Digital Data mode}[C]//TAPR and ARRL 30th Digital Communications
+  Conference.
+\newblock .[S.l.]: [s.n.] , 2011:23--25.
+
+\bibitem[Voyiatzis(2012)]{Voyiatzis2012}
+\textsc{Voyiatzis A}.
+\newblock {A Survey of Delay-and Disruption-Tolerant Networking
+  Applications}[J].
+\newblock Acta Electronica Sinica, 2012, 5(1):331--344.
+
+\bibitem[Kumar and Nagrath(2012)]{Kumar2012}
+\textsc{Kumar A, Nagrath P}.
+\newblock {Analysis of Community Behavior of Delay Tolerant Protocols}[J].
+\newblock Acta Electronica Sinica, 2012, 60(2):46--51.
+
+\bibitem[Parikh and Durst(2005)]{Parikh2005}
+\textsc{Parikh S, Durst R~C}.
+\newblock {Disruption tolerant networking for marine corps CONDOR}[J].
+\newblock Acta Electronica Sinica, 2005:325--330.
+
+\bibitem[Ott and Kutscher(2005)]{Ott2005}
+\textsc{Ott J, Kutscher D}.
+\newblock {Applying dtn to mobile internet access: An experiment with http}[J].
+\newblock Acta Electronica Sinica, 2005.
+
+\bibitem[Boloni and Turgut(2011)]{Boloni:2011tj}
+\textsc{Boloni L, Turgut D}.
+\newblock
+\newblock
+\newblock {Protecting bridges: reorganizing sensor networks after catastrophic
+  events}[C]//Wireless Communications and Mobile Computing Conference (IWCMC),
+  2011 7th International.[S.l.]: IEEE, 2011:2028--2033.
+
+\bibitem[Zhang et al.(2011)]{Zhang2011}
+\textsc{Zhang G, Cai X, Han T}, et al.
+\newblock
+\newblock
+\newblock {An implementation of DTN testbed based on DTN2}[C]//Proceedings of
+  the third ACM international workshop on Mobile Opportunistic Networks -
+  MobiOpp '12.[S.l.]: IEEE, 2011:3393--3396.
+
+\bibitem[Flocchini et al.(2012)]{Flocchini2013}
+\textsc{Flocchini P, Mans B, Santoro N}.
+\newblock {On the exploration of time-varying networks}[J].
+\newblock Theoretical Computer Science, 2012, 469:53--68.
+
+\bibitem[Baier et al.(2012)]{Baier:2012hb}
+\textsc{Baier P, Durr F, Rothermel K}.
+\newblock
+\newblock
+\newblock {TOMP: Opportunistic traffic offloading using movement
+  predictions}[C]//LCN '12: Proceedings of the 2012 IEEE 37th Conference on
+  Local Computer Networks (LCN 2012.[S.l.]: IEEE Computer Society, 2012:50--58.
+
+\bibitem[Moreira et al.(2012)]{Moreira:2012fa}
+\textsc{Moreira W, Mendes P, Sargento S}.
+\newblock {Opportunistic routing based on daily routines}[J].
+\newblock World of Wireless, Mobile and Multimedia Networks (WoWMoM), 2012 IEEE
+  International Symposium on a, 2012:1--6.
+
+\bibitem[Li et al.(2011)]{Li2011}
+\textsc{Li Y, Hui P, Jin D}, et al.
+\newblock
+\newblock
+\newblock {Performance Evaluation of Routing Schemes for Energy-Constrained
+  Delay Tolerant Networks}[C]//Proceedings of the third ACM international
+  workshop on Mobile Opportunistic Networks - MobiOpp '12.[S.l.]: IEEE,
+  2011:1--5.
+
+\bibitem[Zhu et al.(2014){\natexlab{a}}]{Zhu2013}
+\textsc{Zhu H, Du S, Gao Z}, et al.
+\newblock {A Probabilistic Misbehavior Detection Scheme toward Efficient Trust
+  Establishment in Delay-Tolerant Networks}[J].
+\newblock IEEE Transactions on Parallel and Distributed Systems, 2014,
+  25(1):22--32.
+
+\bibitem[Conti and Giordano(2014)]{Conti:2014gg}
+\textsc{Conti M, Giordano S}.
+\newblock {Mobile ad hoc networking: milestones, challenges, and new research
+  directions}[J].
+\newblock Communications Magazine, IEEE, 2014, 52(1):85--96.
+
+\bibitem[Mehmeti and Spyropoulos(2014)]{Mehmeti:2014gt}
+\textsc{Mehmeti F, Spyropoulos T}.
+\newblock
+\newblock {Is it worth to be patient? Analysis and optimization of delayed
+  mobile data offloading}[C]//INFOCOM, 2014 Proceedings IEEE.
+\newblock .[S.l.]: [s.n.] , 2014:2364--2372.
+
+\bibitem[Zhang et al.(2014)]{Zhang:2014dj}
+\textsc{Zhang D, Zhang D, Zhang D}, et al.
+\newblock {BASA: building mobile Ad-Hoc social networks on top of android}[J].
+\newblock Network, IEEE, 2014, 28(1):4--9.
+
+\bibitem[Zhu et al.(2014){\natexlab{b}}]{Zhu:2014il}
+\textsc{Zhu K, Li W, Fu X}.
+\newblock {SMART: A Social and Mobile Aware Routing Strategy for Disruption
+  Tolerant Networks}[J].
+\newblock Vehicular Technology, IEEE Transactions on, 2014(99):1.
+
+\bibitem[Wang et al.(2014)]{Wang:2014tt}
+\textsc{Wang X, Chen M, Kwon T}, et al.
+\newblock {Mobile traffic offloading by exploiting social network services and
+  leveraging opportunistic device-to-device sharing}[J].
+\newblock Wireless {\ldots}, 2014.
+
+\bibitem[Medjiah et al.(2014)]{Medjiah:2014hr}
+\textsc{Medjiah S, Taleb T, Ahmed T}.
+\newblock {Sailing over Data Mules in Delay-Tolerant Networks}[J].
+\newblock Wireless Communications, IEEE Transactions on, 2014, 13(1):5--13.
+
+\bibitem[Xia et al.(2013)]{Xia:2013eb}
+\textsc{Xia F, Liu L, Li J}, et al.
+\newblock {Socially-Aware Networking: A Survey}[J].
+\newblock arXiv.org, 2013.
+
+\bibitem[Abdelkader et al.(2013)]{Abdelkader:2013jl}
+\textsc{Abdelkader T, Naik K, Nayak A}, et al.
+\newblock {SGBR: A Routing Protocol for Delay Tolerant Networks Using Social
+  Grouping}[J].
+\newblock IEEE Transactions on Parallel and Distributed Systems, 2013,
+  24(12):2472--2481.
+
+\bibitem[W~j Hsu and Helmy(2013)]{WjHsu:2013vb}
+\textsc{W~j Hsu T~S~K~P, Helmy A}.
+\newblock {Modeling Time-Variant User Mobility in Wireless Mobile Networks}[J].
+\newblock 2013:1--9.
+
+\bibitem[Jedari and Xia(2013)]{Jedari:2013uo}
+\textsc{Jedari B, Xia F}.
+\newblock {A Survey on Routing and Data Dissemination in Opportunistic Mobile
+  Social Networks}[J].
+\newblock arXiv.org, 2013.
+
+\bibitem[Rothfus et al.(2013)]{Rothfus:2013gj}
+\textsc{Rothfus D, Dunning C, Chen X}.
+\newblock
+\newblock {Social-similarity-based routing algorithm in Delay Tolerant
+  Networks}[C]//Communications (ICC), 2013 IEEE International Conference on.
+\newblock .[S.l.]: [s.n.] , 2013:1862--1866.
+
+\bibitem[Deng et al.(2013)]{Deng:2013fr}
+\textsc{Deng X, Chang L, Tao J}, et al.
+\newblock
+\newblock {Social profile-based multicast routing scheme for delay-tolerant
+  networks}[C]//Communications (ICC), 2013 IEEE International Conference on.
+\newblock .[S.l.]: [s.n.] , 2013:1857--1861.
+
+\bibitem[Wei et al.(2013){\natexlab{c}}]{Wei:2013hc}
+\textsc{Wei K, Duan R, Shi G}, et al.
+\newblock {Distribution of inter-contact time: An analysis-based on social
+  relationships}[J].
+\newblock Communications and Networks, Journal of, 2013, 15(5):504--513.
+
+\bibitem[Fan and Leng(2013)]{Fan:2013fv}
+\textsc{Fan B, Leng S}.
+\newblock
+\newblock {Contact Probability based Routing protocol for Mobile Social
+  Networks}[C]//Communications Workshops (ICC), 2013 IEEE International
+  Conference on.
+\newblock .[S.l.]: [s.n.] , 2013:179--183.
+
+\bibitem[Xin~Kang(2013)]{XinKang:2013ui}
+\textsc{Xin~Kang Y~K~C~S~S}.
+\newblock {Mobile Data Offloading through A Third-Party WiFi Access Point: An
+  Operator's Perspective}[J].
+\newblock 2013:1--6.
+
+\bibitem[Xiao~Chen and Wu(2013)]{XiaoChen:2013to}
+\textsc{Xiao~Chen J~S~T~G, Wu J}.
+\newblock {Probability Delegation Forwarding in Delay Tolerant Networks}[J].
+\newblock 2013:1--6.
+
+\bibitem[Wu and Jie(2013)]{Wu:2013tk}
+\textsc{Wu F~L, Jie}.
+\newblock {LocalCom: A Community-based Epidemic Forwarding Scheme in
+  Disruption-tolerant Networks}[J].
+\newblock 2013:1--9.
+
+\bibitem[P~U~Tournoux and Whitbeck(2013)]{PUTournoux:2013th}
+\textsc{P~U~Tournoux J~L~F~B~V~C~M~D~d~A, Whitbeck J}.
+\newblock {The Accordion Phenomenon: Analysis, Characterization, and Impact on
+  DTN Routing}[J].
+\newblock 2013:1--9.
+
+\bibitem[Ciobanu et al.(2013)]{Ciobanu:2013gb}
+\textsc{Ciobanu R~I, Dobre C, Cristea V}.
+\newblock {SPRINT: Social prediction-based opportunistic routing}[J].
+\newblock World of Wireless, Mobile and Multimedia Networks (WoWMoM), 2013 IEEE
+  14th International Symposium and Workshops on a, 2013:1--7.
+
+\bibitem[Yuan and Ma(2013)]{Yuan:2013hj}
+\textsc{Yuan P, Ma H}.
+\newblock {Opportunistic forwarding with hotspot entropy}[J].
+\newblock World of Wireless, Mobile and Multimedia Networks (WoWMoM), 2013 IEEE
+  14th International Symposium and Workshops on a, 2013:1--9.
+
+\bibitem[Hu et al.(2013)]{Hu:2013tw}
+\textsc{Hu J, Yang L~L, Hanzo L}.
+\newblock {Mobile Social Networking aided content dissemination in
+  heterogeneous networks}[J].
+\newblock China Communications, 2013, 10(6):1--13.
+
+\bibitem[Anthonysamy et al.(2013)]{Anthonysamy:2013wf}
+\textsc{Anthonysamy P, Greenwood P, Rashid A}.
+\newblock {Social Networking Privacy: Understanding the Disconnect from Policy
+  to Controls}[J].
+\newblock Computer, 2013, 46(6):60--67.
+
+\bibitem[Crowcroft et al.(2008)]{Crowcroft2008}
+\textsc{Crowcroft J, Yoneki E, Hui P}, et al.
+\newblock {Promoting tolerance for delay tolerant network research}[J].
+\newblock ACM SIGCOMM Computer Communication Review, 2008, 38(5):63--68.
 
 \bibitem[Vahdat and Becker(2000)]{Vahdat2000}
 \textsc{Vahdat A, Becker D}.
@@ -22,14 +445,14 @@
   Delay-tolerant networking - WDTN '05.
 \newblock New York, New York, USA: ACM Press, 2005:252--259.
 
-\bibitem[Spyropoulos et al.(2007)]{Spyropoulos2007a}
+\bibitem[Spyropoulos et al.(2007){\natexlab{b}}]{Spyropoulos2007a}
 \textsc{Spyropoulos T, Psounis K, Raghavendra C~S}.
 \newblock
 \newblock
 \newblock {Spray and Focus: Efficient Mobility-Assisted Routing for
   Heterogeneous and Correlated Mobility}[C]//Fifth Annual IEEE International
   Conference on Pervasive Computing and Communications Workshops
-  (PerComW'07).[S.l.]: IEEE, 2007:79--85.
+  (PerComW'07).[S.l.]: IEEE, 2007{\natexlab{b}}:79--85.
 
 \bibitem[Jain et al.(2004)]{Jain2004}
 \textsc{Jain S, Fall K, Patra R}.
@@ -196,11 +619,6 @@
   the Second International ICST Conference on Simulation Tools and
   Techniques.[S.l.]: ICST, 2009:1--10.
 
-\bibitem[Talipov et al.(2013)]{Talipov2013}
-\textsc{Talipov E, Chon Y, Cha H}.
-\newblock {Content Sharing over Smartphone-Based Delay-Tolerant Networks}[J].
-\newblock Mobile Computing, IEEE Transactions on, 2013, 12(3):581--595.
-
 \bibitem[Henderson et al.(2004)]{Henderson:2004ul}
 \textsc{Henderson T, Kotz D, Abyzov I}.
 \newblock {The changing usage of a mature campus-wide wireless network}[J].
@@ -210,12 +628,6 @@
 \textsc{Ibrahim M, Nain P, Carreras I}.
 \newblock {Analysis of relay protocols for throwbox-equipped dtns}[J].
 \newblock {\ldots} in Mobile, 2009.
-
-\bibitem[Jedari and Xia(2013)]{Jedari:2013uo}
-\textsc{Jedari B, Xia F}.
-\newblock {A Survey on Routing and Data Dissemination in Opportunistic Mobile
-  Social Networks}[J].
-\newblock arXiv.org, 2013.
 
 \bibitem[Ekman et al.(2008)]{Ekman:2008fp}
 \textsc{Ekman F, Ker{\"a}nen A, Karvo J}, et al.
