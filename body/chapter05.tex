@@ -256,7 +256,7 @@ h(i,d)=\frac{h}{c}=\frac{11.5}{2}\approx 5.75
 
 在6--10行，根据$extra$指示变量选择是否加入新的消息$M_k$的拷贝。若$extra=true$，$v$对节点$u$产生一份额外的$M_k$的拷贝，如第12行所示，这对应\tablename~\ref{tab:chap5_routing}的第一行策略。在第13--15行，若$\mathcal{H}(u,k)\leq\overline{hop}(s,d)$，节点$v$将把$M_k$移交给节点$u$，并将其从$v$中缓存移除。在这种情况下，有$\mathcal{H}(u,k)\leq\mathcal{H}(v,k)\leq\overline{hop}(s,d)$；由此认为节点$u$足以将消息$M_k$递交于目的节点；对应\tablename~\ref{tab:chap5_routing}中第三条表目。剩下的唯一一种情况即$\mathcal{H}(v,k)\leq\mathcal{H}(u,k)\leq\overline{hop}(s,d)$，意味着节点$u$不是优于$v$的中继节点选择（针对消息$M_k$而言），且节点$v$自身足以将消息在平均时延内传递至目的节点。在该情况下，$v$不向$u$转发$M_k$，对应\tablename~\ref{tab:chap5_routing}条目二。
 
-\section{仿真实验}
+\section{仿真实验及分析}
 \label{chap5:仿真实验}
 
 仿真实验基于机会网络模拟器ONE~\upcite{Keranen2009}。本章将提出的算法与Epidemic, Spray-and-Wait (S \& W)以及PRoPHET相比较，仿真实验场景包含Helsinki City Model以及Cambridge-iMote。实验可分为如下几组：Helsinki City Model下改变节点缓存大小；Cambridge-iMote下改变节点缓存大小；Helsinki City Model下改变消息TTL；Cambridge-iMote下改变消息TTL。仿真评估标准分为消息投递率，平均时延，网络开销三项。

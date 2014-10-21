@@ -3,14 +3,13 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: diss.aux
 The style file: ../GBT7714-2005NLang.bst
 A level-1 auxiliary file: body/abstract.aux
-A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: body/chapter01.aux
 A level-1 auxiliary file: body/chapter02.aux
 A level-1 auxiliary file: body/chapter03.aux
 A level-1 auxiliary file: body/chapter04.aux
 A level-1 auxiliary file: body/chapter05.aux
 A level-1 auxiliary file: body/conclusion.aux
-Illegal, another \bibstyle command---line 30 of file diss.aux
+Illegal, another \bibstyle command---line 29 of file diss.aux
  : \bibstyle
  :          {../GBT7714-2005NLang}
 I'm skipping whatever remains of this command
@@ -376,7 +375,7 @@ You can't pop an empty literal stack for entry Keranen2010
 while executing---line 3617 of file ../GBT7714-2005NLang.bst
 You've used 101 entries,
             6888 wiz_defined-function locations,
-            1816 strings with 26926 characters,
+            1815 strings with 26910 characters,
 and the built_in function-call counts, 58252 in all, are:
 = -- 5681
 > -- 1209
