@@ -459,7 +459,6 @@
      {\chapter{\sjtu@label@publications}%
       \@mkboth{\MakeUppercase\sjtu@label@publications}
               {\MakeUppercase\sjtu@label@publications}%
-（以下列出成果，笔者均为一作或第一申请人，二作及二作以后成果不予列出）
       \list{\@biblabel{\@arabic\c@enumiv}}%
            {\settowidth\labelwidth{\@biblabel{#1}}%
             \leftmargin\labelwidth

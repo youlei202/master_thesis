@@ -13,9 +13,11 @@
 目前，针对容迟网络的研究主要集中在路由协议领域，如何做出正确高效的路由选择是无线网络领域内的关键技术和主要研究课题。容迟网络的主要目标是支持具有链路间歇性连通、时延大、错误率高等通信特征的不同网络的互联和互操作；由于节点移动性、链路间歇连通、网络频繁割裂等特点，容迟网络中的源节点和目的节点之间在多数情景下不存在一条连通路径，因此节点采用“存储-携带-转发”的路由模式。%随着手机、平板电脑、PDA等手持设备的大量普及，引入社交网络分析技术，传统的容迟网络正在向社交容迟网络变迁，形成一类新兴容迟自组网。
 本论文重点对如何设计用于移动容迟网络的高效实用的路由算法进行研究，
 %由于容延网络中的节点具有高度移动性并且稀疏部署，这将导致容延网络中的拓扑结构动态变化以及链路时断时续，给路由设计带来很大的困难和挑战。此外，在不同的应用场景中，节点所能收集到的信息也各不相同，在这些场景中，需要节点利用收集到的信息，实现自适应的路由算法。
-论文的研究工作主要集中于三点: （1）基于移动模式最优节点群组选取算法；其从节点的移动记录中提取出节点 (群组) 的移动模 式,并利用节点共同常访地点预测消息的投递概率；该算法选取具有最优消 息投递概率的节点群组,证明了该问题的 NP-hard 难解性,同时指出了求解该问 题采用 online 算法的难度,并提出了启发式算法进行求解。（2）基于消息传输收益的最优队列调度算法；为了衡量每条消息的传输收益,定义了收益效用函数,并根据计 算出的每条消息的传输收益值,将该问题建模为组合最优化问题,并采用动态规划(Dynamic Programming, DP)算法解决。（3）基于跳数的启发式距离向量算法；其利用网络中的数据包携带节 点之间平均跳数信息。定义了一个启发式函数用以估计消息距离目的节点所需的跳数。为了便于计算,将启发式函数的计算转化为矩阵乘法运算。
+论文的研究工作主要集中于三点: （1）研究基于移动模式最优节点群组选取算法；其从节点的移动记录中提取出节点 (群组) 的移动模 式,并利用节点共同常访地点预测消息的投递概率；该算法选取具有最优消 息投递概率的节点群组,证明了该问题的 NP-hard 难解性,同时指出了求解该问 题采用 online 算法的难度,并提出了启发式算法进行求解。（2）研究基于消息传输收益的最优队列调度算法；为了衡量每条消息的传输收益,定义了收益效用函数,并根据计 算出的每条消息的传输收益值,将该问题建模为组合最优化问题,并采用动态规划(Dynamic Programming, DP)算法解决。（3）研究基于跳数的启发式距离向量算法；其利用网络中的数据包携带节 点之间平均跳数信息。定义了一个启发式函数用以估计消息距离目的节点所需的跳数。为了便于计算,将启发式函数的计算转化为矩阵乘法运算。
 
-仿真实验及分析验证了论文工作的可靠性及合理性，从实验获得数据看出，提出的三种算法在对应应用场景中，其综合性能表现均优于现有算法，因此本文工作对容迟网络领域路由研究具有较好的理论价值；本文提出的路由算法及消息调度算法，均可用于多变的网络场景，如车联网、移动社会网等，具有较强的应用价值。
+仿真实验及分析验证了论文工作的可靠性及合理性，从实验获得数据看出，提出的三种算法在对应应用场景中，其综合性能表现均优于现有算法。
+
+本文工作对容迟网络领域路由研究具有较高的理论价值；本文提出的路由算法及消息调度算法可用于多变的网络场景，如车联网、移动社会网等，具有较大的应用价值。
 
 
 \begin{figure}[!b]
@@ -27,11 +29,13 @@
 
 \begin{englishabstract}
 
-The objective of the architecture for Delay Tolerant Network (DTNs) is to support the networking between nodes under the circumstance with intermittent connectivity, high end-to-end latency and high transmission error ratio. Due to the mobility of nodes, there usually does not exist an end-to-end connected path. Therefore, nodes in DTNs communicate in a hop by hop ``store-carry-forward'' manner. In recent years, research on DTNs mainly focused on routing protocols, and thus it becomes a hot topic in DTNs that how to make a correct and efficient routing strategy adaptively. The protocols in DTNs can be categorized into two types, replication based routing and forwarding based routing. The main contribution of this thesis are focused on three aspects: (1) Movement pattern-aware relay node group selection algorithm. We propose a Movement Pattern-Aware optimal Routing (MPAR) for SDTNs, by choosing the optimal relay node(s) set for each message. Concretely, the movement pattern of a group of node(s) can be extracted from the movement records of nodes. the routing problem is formally defined as a $NP-Complete$ combinatorial optimization problem.
+The objective of the architecture for Delay Tolerant Network (DTNs) is to support the networking between nodes under the circumstance with intermittent connectivity, high end-to-end latency and high transmission error ratio. Due to the mobility of nodes, there usually does not exist an end-to-end connected path. Therefore, nodes in DTNs communicate in a hop by hop ``store-carry-forward'' manner. In recent years, research on DTNs mainly focused on routing protocols, and thus it becomes a hot topic in DTNs that how to make a correct and efficient routing strategy adaptively. The main contribution of this thesis are focused on three aspects: (1) Movement pattern-aware relay node group selection algorithm. We propose a Movement Pattern-Aware optimal Routing (MPAR) for SDTNs, by choosing the optimal relay node(s) set for each message. Concretely, the movement pattern of a group of node(s) can be extracted from the movement records of nodes. the routing problem is formally defined as a $NP-Complete$ combinatorial optimization problem.
 We also demonstrate the difficulty for an online algorithm to solve the routing problem. 
 (2) Message transmit profit based optimal schedule algorithm. We try to improve the routing performance by resorting to an efficient data item selection mechanism that takes the bandwidth and connection duration time into consideration. A specific data item selection mechanism for a probability-based routing is devised, which is formally defined as an optimal decision-making problem and solved by the dynamic programming technique. (3) Hop count based heuristic distance vector protocol. we propose a hop count based heuristic routing protocol by utilizing the information carried by the peripatetic packets in the network. A heuristic function is defined to help in making the routing decision. We formally define a custom operation for square matrices so as to transform the heuristic value calculation into matrix manipulation.
 
-The reasonability and reliability of the work in this thesis has been proved by the simulation. It can be seen from the results that all the three proposed algorithms outperform current ones. The work in this thesis can be extended thus applied to some real network scenarios, e.g. Vehicular Ad Hoc Network (VANET) and Mobile Social Network (MSN). Therefore, the work possesses theoretical and practical significance.
+The reasonability and reliability of the work in this thesis has been proved by the simulation. It can be seen from the results that all the three proposed algorithms outperform current ones. 
+
+The work in this thesis can be extended thus applied to some real network scenarios, e.g. Vehicular Ad Hoc Network (VANET) and Mobile Social Network (MSN). Therefore, the work possesses theoretical and practical significance.
 
 \begin{figure}[!b]
 \englishkeywords{\large \textbf{opportunistic network; cellular network; routing protocol; data dissemination; optimization algorithm}}

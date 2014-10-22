@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  21 OCT 2014 09:47
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2012.8.1)  21 OCT 2014 11:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3038,7 +3038,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  28803 strings out of 494004
  556390 string characters out of 3150891
- 635703 words of memory out of 3000000
+ 635667 words of memory out of 3000000
  31286 multiletter control sequences out of 15000+200000
  70698 words of font info for 360 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
